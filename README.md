@@ -48,3 +48,4 @@ THINGS OF NOTE:
 
 RESOURCES:
 [tessaract](https://github.com/ldiqual/tesseract-ios)
+[KSolo's Timeline](https://github.com/fireflies-2014/phase-3-guide/blob/reorganize/resources/final-projects.md)
