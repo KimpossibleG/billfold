@@ -33,10 +33,10 @@ a. add from contacts*
 2. Take a pic of the receipt    
 3. Divvy it up   
 a.  Click on an item   
-  Select appropriate person
-Selecting multiple people splits evenly
-update split percentages*
-paypal request*
+b. Select appropriate person   
+c. Selecting multiple people splits evenly   
+d. update split percentages*   
+e. paypal request*   
 
 ### Dependencies:
   - if we use paypal, we need user authentication
