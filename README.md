@@ -32,11 +32,14 @@ NB: * indicates stretch
 a. add from contacts*
 2. Take a pic of the receipt    
 3. Divvy it up   
-a.  Click on an item   
-b. Select appropriate person   
-c. Selecting multiple people splits evenly   
-d. update split percentages*   
-e. paypal request*   
+a. Click on a person   
+b. Select appropriate items from list for that person   
+c. Pass it on   
+- If multiple people select an item, it gets split evenly between them   
+- Taxes are allocated proportionately based on individual bill totals   
+d. Confirm that all items have been selected
+e. update split percentages*   
+f. paypal request*   
 
 ### Dependencies:
   - if we use paypal, we need user authentication
