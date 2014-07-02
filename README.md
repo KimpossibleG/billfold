@@ -28,11 +28,11 @@ NB: * indicates stretch
 
 - restaurant bills only
 
-1. Enter the diners
+1. Enter the diners   
 a. add from contacts*
-2. Take a pic of the receipt 
-3. Divvy it up
-a.  Click on an item
+2. Take a pic of the receipt    
+3. Divvy it up   
+a.  Click on an item   
   Select appropriate person
 Selecting multiple people splits evenly
 update split percentages*
