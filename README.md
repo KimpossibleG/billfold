@@ -11,3 +11,28 @@ As a user, I can...
 - verify that each item on the bill has been covered
 - send a paypal request to a person for their share
 - track my own expenses and running totals
+
+MVP:
+- restaurant/bill
+
+1/ Enter the diners
+  - stretch: add from contacts
+2/ Take a pic of the receipt 
+3/ Divvy it up
+  - stretch: paypal request
+
+  Dependencies:
+  - if we use paypal, we need user authentication
+
+MILESTONES:
+- get it on a phone by Friday at 2 pm
+
+THINGS WE NEED TO LEARN:
+- Swift
+- OCR: Tessaract (the image/word parser)
+
+THINGS OF NOTE:
+- Memory Lane code:
+  - http://github.com/sassygrody/memory_lane_swift
+- Kevin Swift Solorio
+- Might be cool to add some Twilio
