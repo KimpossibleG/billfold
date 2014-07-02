@@ -1,6 +1,22 @@
 billfold
 ========
 
+## Pickles-Approved Git Process
+
+### To start working on the app:
+1. git clone "the master"
+2. git checkout -b "your_branch_name"
+3. git pull origin master
+
+### To submit a pull request:
+1. git checkout {your_branch_name}
+2. git add/commit your changes
+3. git pull origin master (will try to merge; fix conflicts if necessary)
+4. git add/commit any changes
+5. git push origin {your_branch_name}
+6. On GitHub, submit a pull request
+
+
 NOT MVP:
 As a user, I can...
 - take a photo of a bill/receipt
