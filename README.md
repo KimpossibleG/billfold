@@ -36,3 +36,6 @@ THINGS OF NOTE:
   - http://github.com/sassygrody/memory_lane_swift
 - Kevin Swift Solorio
 - Might be cool to add some Twilio
+
+RESOURCES:
+[tessaract](https://github.com/ldiqual/tesseract-ios)
