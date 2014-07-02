@@ -1,6 +1,7 @@
 billfold
 ========
 
+NOT MVP:
 As a user, I can...
 - take a photo of a bill/receipt
 - have that bill parsed by item
@@ -13,12 +14,16 @@ As a user, I can...
 - track my own expenses and running totals
 
 MVP:
-- restaurant/bill
+- restaurant bills only
 
 1/ Enter the diners
   - stretch: add from contacts
 2/ Take a pic of the receipt 
 3/ Divvy it up
+  - Click on an item
+  - Select appropriate person
+  - Selecting multiple people splits evenly
+  - stretch: update split percentages
   - stretch: paypal request
 
   Dependencies:
@@ -36,6 +41,10 @@ THINGS OF NOTE:
   - http://github.com/sassygrody/memory_lane_swift
 - Kevin Swift Solorio
 - Might be cool to add some Twilio
+- 
+
+
+
 
 RESOURCES:
 [tessaract](https://github.com/ldiqual/tesseract-ios)
