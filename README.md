@@ -29,14 +29,14 @@ NB: * indicates stretch
 - restaurant bills only
 
 1. Enter the diners
-- add from contacts*
+add from contacts*
 2. Take a pic of the receipt 
 3. Divvy it up
-- Click on an item
-- Select appropriate person
-- Selecting multiple people splits evenly
-- update split percentages*
-- paypal request*
+Click on an item
+Select appropriate person
+Selecting multiple people splits evenly
+update split percentages*
+paypal request*
 
 ### Dependencies:
   - if we use paypal, we need user authentication
