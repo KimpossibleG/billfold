@@ -6,8 +6,7 @@ billfold
 - [tessaract](https://github.com/ldiqual/tesseract-ios)
 - [KSolo's Timeline](https://github.com/fireflies-2014/phase-3-guide/blob/reorganize/resources/final-projects.md)
 - [Our Schedule](https://github.com/KimpossibleG/billfold/blob/master/schedule)
-- The xCode OS X Server Test Suite [instructions](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/xcode_guide-continuous_integration/200-Adopting_a_Continuous_Integration_Workflow/adopt_continuous_integration.html)
-- 
+
 
 
 ## Pickles-Approved Git Process
