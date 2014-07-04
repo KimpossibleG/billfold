@@ -57,7 +57,6 @@ class DinerViewController: UITableViewController {
     override func viewDidAppear(animated: Bool){
         
         var dinersAndFoodAndPrices = [["mikee": ["quinoa": 15, "tofu": 12]], ["rick": ["hamburger": 20]]]
-        
         for diner in dinersAndFoodAndPrices {
             for (dinerName, foodItems) in diner {
                 println(dinerName)
