@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17F150451966434000F35CAF /* Tesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17F14FAA1966434000F35CAF /* Tesseract.mm */; };
+		17F150461966434000F35CAF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 17F14FAB1966434000F35CAF /* LICENSE */; };
+		17F150471966434000F35CAF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 17F14FAC1966434000F35CAF /* README.md */; };
+		17F150481966434000F35CAF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 17F14FAE1966434000F35CAF /* .gitignore */; };
+		17F150491966434000F35CAF /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F150421966434000F35CAF /* liblept.a */; };
+		17F1504A1966434000F35CAF /* libtesseract_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F150431966434000F35CAF /* libtesseract_all.a */; };
+		17F1504B1966434000F35CAF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 17F150441966434000F35CAF /* README.md */; };
+		17F1504D1966434E00F35CAF /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 17F1504C1966434E00F35CAF /* tessdata */; };
+		17F15052196644E000F35CAF /* STesseract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F15051196644E000F35CAF /* STesseract.swift */; };
 		AAA0020D19662AF2000D2D24 /* DinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0020C19662AF2000D2D24 /* DinerViewController.swift */; };
 		AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0021019662B61000D2D24 /* AddDinerViewController.swift */; };
 		AAEE459419662032007660E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE459319662032007660E7 /* AppDelegate.swift */; };
@@ -26,6 +35,160 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17F14FA91966434000F35CAF /* Tesseract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tesseract.h; sourceTree = "<group>"; };
+		17F14FAA1966434000F35CAF /* Tesseract.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tesseract.mm; sourceTree = "<group>"; };
+		17F14FAB1966434000F35CAF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		17F14FAC1966434000F35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		17F14FAE1966434000F35CAF /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		17F14FB11966434000F35CAF /* allheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allheaders.h; sourceTree = "<group>"; };
+		17F14FB21966434000F35CAF /* alltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = alltypes.h; sourceTree = "<group>"; };
+		17F14FB31966434000F35CAF /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array.h; sourceTree = "<group>"; };
+		17F14FB41966434000F35CAF /* arrayaccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arrayaccess.h; sourceTree = "<group>"; };
+		17F14FB51966434000F35CAF /* bbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bbuffer.h; sourceTree = "<group>"; };
+		17F14FB61966434000F35CAF /* bmf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmf.h; sourceTree = "<group>"; };
+		17F14FB71966434000F35CAF /* bmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmp.h; sourceTree = "<group>"; };
+		17F14FB81966434000F35CAF /* ccbord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccbord.h; sourceTree = "<group>"; };
+		17F14FB91966434000F35CAF /* dewarp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dewarp.h; sourceTree = "<group>"; };
+		17F14FBA1966434000F35CAF /* endianness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endianness.h; sourceTree = "<group>"; };
+		17F14FBB1966434000F35CAF /* environ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = environ.h; sourceTree = "<group>"; };
+		17F14FBC1966434000F35CAF /* freetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = freetype.h; sourceTree = "<group>"; };
+		17F14FBD1966434000F35CAF /* gplot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gplot.h; sourceTree = "<group>"; };
+		17F14FBE1966434000F35CAF /* heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heap.h; sourceTree = "<group>"; };
+		17F14FBF1966434000F35CAF /* imageio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageio.h; sourceTree = "<group>"; };
+		17F14FC01966434000F35CAF /* jbclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jbclass.h; sourceTree = "<group>"; };
+		17F14FC11966434000F35CAF /* leptwin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leptwin.h; sourceTree = "<group>"; };
+		17F14FC21966434000F35CAF /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		17F14FC31966434000F35CAF /* morph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = morph.h; sourceTree = "<group>"; };
+		17F14FC41966434000F35CAF /* pix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pix.h; sourceTree = "<group>"; };
+		17F14FC51966434000F35CAF /* ptra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptra.h; sourceTree = "<group>"; };
+		17F14FC61966434000F35CAF /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		17F14FC71966434000F35CAF /* readbarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readbarcode.h; sourceTree = "<group>"; };
+		17F14FC81966434000F35CAF /* regutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regutils.h; sourceTree = "<group>"; };
+		17F14FC91966434000F35CAF /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		17F14FCA1966434000F35CAF /* sudoku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sudoku.h; sourceTree = "<group>"; };
+		17F14FCB1966434000F35CAF /* watershed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = watershed.h; sourceTree = "<group>"; };
+		17F14FCD1966434000F35CAF /* ambigs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ambigs.h; sourceTree = "<group>"; };
+		17F14FCE1966434000F35CAF /* apitypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apitypes.h; sourceTree = "<group>"; };
+		17F14FCF1966434000F35CAF /* baseapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseapi.h; sourceTree = "<group>"; };
+		17F14FD01966434000F35CAF /* basedir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basedir.h; sourceTree = "<group>"; };
+		17F14FD11966434000F35CAF /* bits16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bits16.h; sourceTree = "<group>"; };
+		17F14FD21966434000F35CAF /* bitvector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitvector.h; sourceTree = "<group>"; };
+		17F14FD31966434000F35CAF /* blckerr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blckerr.h; sourceTree = "<group>"; };
+		17F14FD41966434000F35CAF /* blobbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blobbox.h; sourceTree = "<group>"; };
+		17F14FD51966434000F35CAF /* blobs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blobs.h; sourceTree = "<group>"; };
+		17F14FD61966434000F35CAF /* blread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blread.h; sourceTree = "<group>"; };
+		17F14FD71966434000F35CAF /* boxread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boxread.h; sourceTree = "<group>"; };
+		17F14FD81966434000F35CAF /* boxword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boxword.h; sourceTree = "<group>"; };
+		17F14FD91966434000F35CAF /* capi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = capi.h; sourceTree = "<group>"; };
+		17F14FDA1966434000F35CAF /* ccstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccstruct.h; sourceTree = "<group>"; };
+		17F14FDB1966434000F35CAF /* ccutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccutil.h; sourceTree = "<group>"; };
+		17F14FDC1966434000F35CAF /* clst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clst.h; sourceTree = "<group>"; };
+		17F14FDD1966434000F35CAF /* control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = control.h; sourceTree = "<group>"; };
+		17F14FDE1966434000F35CAF /* coutln.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coutln.h; sourceTree = "<group>"; };
+		17F14FDF1966434000F35CAF /* crakedge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crakedge.h; sourceTree = "<group>"; };
+		17F14FE01966434000F35CAF /* cube_reco_context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cube_reco_context.h; sourceTree = "<group>"; };
+		17F14FE11966434000F35CAF /* cubeclassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cubeclassifier.h; sourceTree = "<group>"; };
+		17F14FE21966434000F35CAF /* detlinefit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detlinefit.h; sourceTree = "<group>"; };
+		17F14FE31966434000F35CAF /* docqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = docqual.h; sourceTree = "<group>"; };
+		17F14FE41966434000F35CAF /* dppoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dppoint.h; sourceTree = "<group>"; };
+		17F14FE51966434000F35CAF /* elst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = elst.h; sourceTree = "<group>"; };
+		17F14FE61966434000F35CAF /* elst2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = elst2.h; sourceTree = "<group>"; };
+		17F14FE71966434000F35CAF /* equationdetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = equationdetect.h; sourceTree = "<group>"; };
+		17F14FE81966434000F35CAF /* errcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errcode.h; sourceTree = "<group>"; };
+		17F14FE91966434000F35CAF /* fileerr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileerr.h; sourceTree = "<group>"; };
+		17F14FEA1966434000F35CAF /* fixspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fixspace.h; sourceTree = "<group>"; };
+		17F14FEB1966434000F35CAF /* fontinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fontinfo.h; sourceTree = "<group>"; };
+		17F14FEC1966434000F35CAF /* genblob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genblob.h; sourceTree = "<group>"; };
+		17F14FED1966434000F35CAF /* genericvector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genericvector.h; sourceTree = "<group>"; };
+		17F14FEE1966434000F35CAF /* globaloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globaloc.h; sourceTree = "<group>"; };
+		17F14FEF1966434000F35CAF /* hashfn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hashfn.h; sourceTree = "<group>"; };
+		17F14FF01966434000F35CAF /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		17F14FF11966434000F35CAF /* host.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = host.h; sourceTree = "<group>"; };
+		17F14FF21966434000F35CAF /* hosthplb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hosthplb.h; sourceTree = "<group>"; };
+		17F14FF31966434000F35CAF /* hpddef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hpddef.h; sourceTree = "<group>"; };
+		17F14FF41966434000F35CAF /* hpdsizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hpdsizes.h; sourceTree = "<group>"; };
+		17F14FF51966434000F35CAF /* imgscale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgscale.h; sourceTree = "<group>"; };
+		17F14FF61966434000F35CAF /* indexmapbidi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = indexmapbidi.h; sourceTree = "<group>"; };
+		17F14FF71966434000F35CAF /* ipoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ipoints.h; sourceTree = "<group>"; };
+		17F14FF81966434000F35CAF /* linlsq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linlsq.h; sourceTree = "<group>"; };
+		17F14FF91966434000F35CAF /* lsterr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lsterr.h; sourceTree = "<group>"; };
+		17F14FFA1966434000F35CAF /* ltrresultiterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ltrresultiterator.h; sourceTree = "<group>"; };
+		17F14FFB1966434000F35CAF /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		17F14FFC1966434000F35CAF /* memry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memry.h; sourceTree = "<group>"; };
+		17F14FFD1966434000F35CAF /* mfcpch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mfcpch.h; sourceTree = "<group>"; };
+		17F14FFE1966434000F35CAF /* mod128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mod128.h; sourceTree = "<group>"; };
+		17F14FFF1966434000F35CAF /* mutableiterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mutableiterator.h; sourceTree = "<group>"; };
+		17F150001966434000F35CAF /* ndminx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ndminx.h; sourceTree = "<group>"; };
+		17F150011966434000F35CAF /* normalis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = normalis.h; sourceTree = "<group>"; };
+		17F150021966434000F35CAF /* notdll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = notdll.h; sourceTree = "<group>"; };
+		17F150031966434000F35CAF /* nwmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nwmain.h; sourceTree = "<group>"; };
+		17F150041966434000F35CAF /* ocrblock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocrblock.h; sourceTree = "<group>"; };
+		17F150051966434000F35CAF /* ocrclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocrclass.h; sourceTree = "<group>"; };
+		17F150061966434000F35CAF /* ocrpara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocrpara.h; sourceTree = "<group>"; };
+		17F150071966434000F35CAF /* ocrrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocrrow.h; sourceTree = "<group>"; };
+		17F150081966434000F35CAF /* osdetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osdetect.h; sourceTree = "<group>"; };
+		17F150091966434000F35CAF /* otsuthr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = otsuthr.h; sourceTree = "<group>"; };
+		17F1500A1966434000F35CAF /* output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = output.h; sourceTree = "<group>"; };
+		17F1500B1966434000F35CAF /* pageiterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pageiterator.h; sourceTree = "<group>"; };
+		17F1500C1966434000F35CAF /* pageres.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pageres.h; sourceTree = "<group>"; };
+		17F1500D1966434000F35CAF /* paragraphs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paragraphs.h; sourceTree = "<group>"; };
+		17F1500E1966434000F35CAF /* paragraphs_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paragraphs_internal.h; sourceTree = "<group>"; };
+		17F1500F1966434000F35CAF /* params.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = params.h; sourceTree = "<group>"; };
+		17F150101966434000F35CAF /* params_training_featdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = params_training_featdef.h; sourceTree = "<group>"; };
+		17F150111966434000F35CAF /* paramsd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paramsd.h; sourceTree = "<group>"; };
+		17F150121966434000F35CAF /* pdblock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pdblock.h; sourceTree = "<group>"; };
+		17F150131966434000F35CAF /* pgedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pgedit.h; sourceTree = "<group>"; };
+		17F150141966434000F35CAF /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
+		17F150151966434000F35CAF /* points.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = points.h; sourceTree = "<group>"; };
+		17F150161966434000F35CAF /* polyaprx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = polyaprx.h; sourceTree = "<group>"; };
+		17F150171966434000F35CAF /* polyblk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = polyblk.h; sourceTree = "<group>"; };
+		17F150181966434000F35CAF /* publictypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = publictypes.h; sourceTree = "<group>"; };
+		17F150191966434000F35CAF /* qrsequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrsequence.h; sourceTree = "<group>"; };
+		17F1501A1966434000F35CAF /* quadlsq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quadlsq.h; sourceTree = "<group>"; };
+		17F1501B1966434000F35CAF /* quadratc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quadratc.h; sourceTree = "<group>"; };
+		17F1501C1966434000F35CAF /* quspline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quspline.h; sourceTree = "<group>"; };
+		17F1501D1966434000F35CAF /* ratngs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ratngs.h; sourceTree = "<group>"; };
+		17F1501E1966434000F35CAF /* rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rect.h; sourceTree = "<group>"; };
+		17F1501F1966434000F35CAF /* rejctmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rejctmap.h; sourceTree = "<group>"; };
+		17F150201966434000F35CAF /* reject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reject.h; sourceTree = "<group>"; };
+		17F150211966434000F35CAF /* resultiterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resultiterator.h; sourceTree = "<group>"; };
+		17F150221966434000F35CAF /* scaleimg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scaleimg.h; sourceTree = "<group>"; };
+		17F150231966434000F35CAF /* scanutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scanutils.h; sourceTree = "<group>"; };
+		17F150241966434000F35CAF /* seam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seam.h; sourceTree = "<group>"; };
+		17F150251966434000F35CAF /* secname.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secname.h; sourceTree = "<group>"; };
+		17F150261966434000F35CAF /* serialis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serialis.h; sourceTree = "<group>"; };
+		17F150271966434000F35CAF /* sorthelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sorthelper.h; sourceTree = "<group>"; };
+		17F150281966434000F35CAF /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
+		17F150291966434000F35CAF /* statistc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statistc.h; sourceTree = "<group>"; };
+		17F1502A1966434000F35CAF /* stderr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stderr.h; sourceTree = "<group>"; };
+		17F1502B1966434000F35CAF /* stepblob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stepblob.h; sourceTree = "<group>"; };
+		17F1502C1966434000F35CAF /* strngs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strngs.h; sourceTree = "<group>"; };
+		17F1502D1966434000F35CAF /* tessbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tessbox.h; sourceTree = "<group>"; };
+		17F1502E1966434000F35CAF /* tesscallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tesscallback.h; sourceTree = "<group>"; };
+		17F1502F1966434000F35CAF /* tessdatamanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tessdatamanager.h; sourceTree = "<group>"; };
+		17F150301966434000F35CAF /* tessedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tessedit.h; sourceTree = "<group>"; };
+		17F150311966434000F35CAF /* tesseract_cube_combiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tesseract_cube_combiner.h; sourceTree = "<group>"; };
+		17F150321966434000F35CAF /* tesseractclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tesseractclass.h; sourceTree = "<group>"; };
+		17F150331966434000F35CAF /* tesseractmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tesseractmain.h; sourceTree = "<group>"; };
+		17F150341966434000F35CAF /* tessvars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tessvars.h; sourceTree = "<group>"; };
+		17F150351966434000F35CAF /* tfacep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tfacep.h; sourceTree = "<group>"; };
+		17F150361966434000F35CAF /* tfacepp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tfacepp.h; sourceTree = "<group>"; };
+		17F150371966434000F35CAF /* thresholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thresholder.h; sourceTree = "<group>"; };
+		17F150381966434000F35CAF /* tprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tprintf.h; sourceTree = "<group>"; };
+		17F150391966434000F35CAF /* unichar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unichar.h; sourceTree = "<group>"; };
+		17F1503A1966434000F35CAF /* unicharmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unicharmap.h; sourceTree = "<group>"; };
+		17F1503B1966434000F35CAF /* unicharset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unicharset.h; sourceTree = "<group>"; };
+		17F1503C1966434000F35CAF /* unicity_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unicity_table.h; sourceTree = "<group>"; };
+		17F1503D1966434000F35CAF /* unicodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unicodes.h; sourceTree = "<group>"; };
+		17F1503E1966434000F35CAF /* vecfuncs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vecfuncs.h; sourceTree = "<group>"; };
+		17F1503F1966434000F35CAF /* werd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = werd.h; sourceTree = "<group>"; };
+		17F150401966434000F35CAF /* werdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = werdit.h; sourceTree = "<group>"; };
+		17F150421966434000F35CAF /* liblept.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblept.a; sourceTree = "<group>"; };
+		17F150431966434000F35CAF /* libtesseract_all.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtesseract_all.a; sourceTree = "<group>"; };
+		17F150441966434000F35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		17F1504C1966434E00F35CAF /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = BillFold/tessdata; sourceTree = "<group>"; };
+		17F15050196643BF00F35CAF /* BillFold-Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BillFold-Bridge-Header.h"; sourceTree = "<group>"; };
+		17F15051196644E000F35CAF /* STesseract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STesseract.swift; sourceTree = "<group>"; };
 		AAA0020C19662AF2000D2D24 /* DinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerViewController.swift; sourceTree = "<group>"; };
 		AAA0021019662B61000D2D24 /* AddDinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDinerViewController.swift; sourceTree = "<group>"; };
 		AAEE458E19662032007660E7 /* BillFold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillFold.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +206,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F1504A1966434000F35CAF /* libtesseract_all.a in Frameworks */,
+				17F150491966434000F35CAF /* liblept.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +221,220 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17F14FA71966434000F35CAF /* tesseract-ios */ = {
+			isa = PBXGroup;
+			children = (
+				17F14FA81966434000F35CAF /* Classes */,
+				17F14FAB1966434000F35CAF /* LICENSE */,
+				17F14FAC1966434000F35CAF /* README.md */,
+			);
+			name = "tesseract-ios";
+			path = "BillFold/tesseract-ios";
+			sourceTree = "<group>";
+		};
+		17F14FA81966434000F35CAF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				17F14FA91966434000F35CAF /* Tesseract.h */,
+				17F14FAA1966434000F35CAF /* Tesseract.mm */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		17F14FAD1966434000F35CAF /* tesseract-ios-lib */ = {
+			isa = PBXGroup;
+			children = (
+				17F14FAE1966434000F35CAF /* .gitignore */,
+				17F14FAF1966434000F35CAF /* include */,
+				17F150411966434000F35CAF /* lib */,
+				17F150441966434000F35CAF /* README.md */,
+			);
+			name = "tesseract-ios-lib";
+			path = "BillFold/tesseract-ios-lib";
+			sourceTree = "<group>";
+		};
+		17F14FAF1966434000F35CAF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				17F14FB01966434000F35CAF /* leptonica */,
+				17F14FCC1966434000F35CAF /* tesseract */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		17F14FB01966434000F35CAF /* leptonica */ = {
+			isa = PBXGroup;
+			children = (
+				17F14FB11966434000F35CAF /* allheaders.h */,
+				17F14FB21966434000F35CAF /* alltypes.h */,
+				17F14FB31966434000F35CAF /* array.h */,
+				17F14FB41966434000F35CAF /* arrayaccess.h */,
+				17F14FB51966434000F35CAF /* bbuffer.h */,
+				17F14FB61966434000F35CAF /* bmf.h */,
+				17F14FB71966434000F35CAF /* bmp.h */,
+				17F14FB81966434000F35CAF /* ccbord.h */,
+				17F14FB91966434000F35CAF /* dewarp.h */,
+				17F14FBA1966434000F35CAF /* endianness.h */,
+				17F14FBB1966434000F35CAF /* environ.h */,
+				17F14FBC1966434000F35CAF /* freetype.h */,
+				17F14FBD1966434000F35CAF /* gplot.h */,
+				17F14FBE1966434000F35CAF /* heap.h */,
+				17F14FBF1966434000F35CAF /* imageio.h */,
+				17F14FC01966434000F35CAF /* jbclass.h */,
+				17F14FC11966434000F35CAF /* leptwin.h */,
+				17F14FC21966434000F35CAF /* list.h */,
+				17F14FC31966434000F35CAF /* morph.h */,
+				17F14FC41966434000F35CAF /* pix.h */,
+				17F14FC51966434000F35CAF /* ptra.h */,
+				17F14FC61966434000F35CAF /* queue.h */,
+				17F14FC71966434000F35CAF /* readbarcode.h */,
+				17F14FC81966434000F35CAF /* regutils.h */,
+				17F14FC91966434000F35CAF /* stack.h */,
+				17F14FCA1966434000F35CAF /* sudoku.h */,
+				17F14FCB1966434000F35CAF /* watershed.h */,
+			);
+			path = leptonica;
+			sourceTree = "<group>";
+		};
+		17F14FCC1966434000F35CAF /* tesseract */ = {
+			isa = PBXGroup;
+			children = (
+				17F14FCD1966434000F35CAF /* ambigs.h */,
+				17F14FCE1966434000F35CAF /* apitypes.h */,
+				17F14FCF1966434000F35CAF /* baseapi.h */,
+				17F14FD01966434000F35CAF /* basedir.h */,
+				17F14FD11966434000F35CAF /* bits16.h */,
+				17F14FD21966434000F35CAF /* bitvector.h */,
+				17F14FD31966434000F35CAF /* blckerr.h */,
+				17F14FD41966434000F35CAF /* blobbox.h */,
+				17F14FD51966434000F35CAF /* blobs.h */,
+				17F14FD61966434000F35CAF /* blread.h */,
+				17F14FD71966434000F35CAF /* boxread.h */,
+				17F14FD81966434000F35CAF /* boxword.h */,
+				17F14FD91966434000F35CAF /* capi.h */,
+				17F14FDA1966434000F35CAF /* ccstruct.h */,
+				17F14FDB1966434000F35CAF /* ccutil.h */,
+				17F14FDC1966434000F35CAF /* clst.h */,
+				17F14FDD1966434000F35CAF /* control.h */,
+				17F14FDE1966434000F35CAF /* coutln.h */,
+				17F14FDF1966434000F35CAF /* crakedge.h */,
+				17F14FE01966434000F35CAF /* cube_reco_context.h */,
+				17F14FE11966434000F35CAF /* cubeclassifier.h */,
+				17F14FE21966434000F35CAF /* detlinefit.h */,
+				17F14FE31966434000F35CAF /* docqual.h */,
+				17F14FE41966434000F35CAF /* dppoint.h */,
+				17F14FE51966434000F35CAF /* elst.h */,
+				17F14FE61966434000F35CAF /* elst2.h */,
+				17F14FE71966434000F35CAF /* equationdetect.h */,
+				17F14FE81966434000F35CAF /* errcode.h */,
+				17F14FE91966434000F35CAF /* fileerr.h */,
+				17F14FEA1966434000F35CAF /* fixspace.h */,
+				17F14FEB1966434000F35CAF /* fontinfo.h */,
+				17F14FEC1966434000F35CAF /* genblob.h */,
+				17F14FED1966434000F35CAF /* genericvector.h */,
+				17F14FEE1966434000F35CAF /* globaloc.h */,
+				17F14FEF1966434000F35CAF /* hashfn.h */,
+				17F14FF01966434000F35CAF /* helpers.h */,
+				17F14FF11966434000F35CAF /* host.h */,
+				17F14FF21966434000F35CAF /* hosthplb.h */,
+				17F14FF31966434000F35CAF /* hpddef.h */,
+				17F14FF41966434000F35CAF /* hpdsizes.h */,
+				17F14FF51966434000F35CAF /* imgscale.h */,
+				17F14FF61966434000F35CAF /* indexmapbidi.h */,
+				17F14FF71966434000F35CAF /* ipoints.h */,
+				17F14FF81966434000F35CAF /* linlsq.h */,
+				17F14FF91966434000F35CAF /* lsterr.h */,
+				17F14FFA1966434000F35CAF /* ltrresultiterator.h */,
+				17F14FFB1966434000F35CAF /* matrix.h */,
+				17F14FFC1966434000F35CAF /* memry.h */,
+				17F14FFD1966434000F35CAF /* mfcpch.h */,
+				17F14FFE1966434000F35CAF /* mod128.h */,
+				17F14FFF1966434000F35CAF /* mutableiterator.h */,
+				17F150001966434000F35CAF /* ndminx.h */,
+				17F150011966434000F35CAF /* normalis.h */,
+				17F150021966434000F35CAF /* notdll.h */,
+				17F150031966434000F35CAF /* nwmain.h */,
+				17F150041966434000F35CAF /* ocrblock.h */,
+				17F150051966434000F35CAF /* ocrclass.h */,
+				17F150061966434000F35CAF /* ocrpara.h */,
+				17F150071966434000F35CAF /* ocrrow.h */,
+				17F150081966434000F35CAF /* osdetect.h */,
+				17F150091966434000F35CAF /* otsuthr.h */,
+				17F1500A1966434000F35CAF /* output.h */,
+				17F1500B1966434000F35CAF /* pageiterator.h */,
+				17F1500C1966434000F35CAF /* pageres.h */,
+				17F1500D1966434000F35CAF /* paragraphs.h */,
+				17F1500E1966434000F35CAF /* paragraphs_internal.h */,
+				17F1500F1966434000F35CAF /* params.h */,
+				17F150101966434000F35CAF /* params_training_featdef.h */,
+				17F150111966434000F35CAF /* paramsd.h */,
+				17F150121966434000F35CAF /* pdblock.h */,
+				17F150131966434000F35CAF /* pgedit.h */,
+				17F150141966434000F35CAF /* platform.h */,
+				17F150151966434000F35CAF /* points.h */,
+				17F150161966434000F35CAF /* polyaprx.h */,
+				17F150171966434000F35CAF /* polyblk.h */,
+				17F150181966434000F35CAF /* publictypes.h */,
+				17F150191966434000F35CAF /* qrsequence.h */,
+				17F1501A1966434000F35CAF /* quadlsq.h */,
+				17F1501B1966434000F35CAF /* quadratc.h */,
+				17F1501C1966434000F35CAF /* quspline.h */,
+				17F1501D1966434000F35CAF /* ratngs.h */,
+				17F1501E1966434000F35CAF /* rect.h */,
+				17F1501F1966434000F35CAF /* rejctmap.h */,
+				17F150201966434000F35CAF /* reject.h */,
+				17F150211966434000F35CAF /* resultiterator.h */,
+				17F150221966434000F35CAF /* scaleimg.h */,
+				17F150231966434000F35CAF /* scanutils.h */,
+				17F150241966434000F35CAF /* seam.h */,
+				17F150251966434000F35CAF /* secname.h */,
+				17F150261966434000F35CAF /* serialis.h */,
+				17F150271966434000F35CAF /* sorthelper.h */,
+				17F150281966434000F35CAF /* split.h */,
+				17F150291966434000F35CAF /* statistc.h */,
+				17F1502A1966434000F35CAF /* stderr.h */,
+				17F1502B1966434000F35CAF /* stepblob.h */,
+				17F1502C1966434000F35CAF /* strngs.h */,
+				17F1502D1966434000F35CAF /* tessbox.h */,
+				17F1502E1966434000F35CAF /* tesscallback.h */,
+				17F1502F1966434000F35CAF /* tessdatamanager.h */,
+				17F150301966434000F35CAF /* tessedit.h */,
+				17F150311966434000F35CAF /* tesseract_cube_combiner.h */,
+				17F150321966434000F35CAF /* tesseractclass.h */,
+				17F150331966434000F35CAF /* tesseractmain.h */,
+				17F150341966434000F35CAF /* tessvars.h */,
+				17F150351966434000F35CAF /* tfacep.h */,
+				17F150361966434000F35CAF /* tfacepp.h */,
+				17F150371966434000F35CAF /* thresholder.h */,
+				17F150381966434000F35CAF /* tprintf.h */,
+				17F150391966434000F35CAF /* unichar.h */,
+				17F1503A1966434000F35CAF /* unicharmap.h */,
+				17F1503B1966434000F35CAF /* unicharset.h */,
+				17F1503C1966434000F35CAF /* unicity_table.h */,
+				17F1503D1966434000F35CAF /* unicodes.h */,
+				17F1503E1966434000F35CAF /* vecfuncs.h */,
+				17F1503F1966434000F35CAF /* werd.h */,
+				17F150401966434000F35CAF /* werdit.h */,
+			);
+			path = tesseract;
+			sourceTree = "<group>";
+		};
+		17F150411966434000F35CAF /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				17F150421966434000F35CAF /* liblept.a */,
+				17F150431966434000F35CAF /* libtesseract_all.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		AAEE458519662032007660E7 = {
 			isa = PBXGroup;
 			children = (
+				17F15050196643BF00F35CAF /* BillFold-Bridge-Header.h */,
+				17F1504C1966434E00F35CAF /* tessdata */,
+				17F14FA71966434000F35CAF /* tesseract-ios */,
+				17F14FAD1966434000F35CAF /* tesseract-ios-lib */,
 				AAEE459019662032007660E7 /* BillFold */,
 				AAEE459E19662032007660E7 /* BillFoldTests */,
 				AAEE458F19662032007660E7 /* Products */,
@@ -79,6 +455,7 @@
 			children = (
 				AAEE459319662032007660E7 /* AppDelegate.swift */,
 				AAA0020C19662AF2000D2D24 /* DinerViewController.swift */,
+				17F15051196644E000F35CAF /* STesseract.swift */,
 				AAA0021019662B61000D2D24 /* AddDinerViewController.swift */,
 				AAEE45AB1966207B007660E7 /* BFBoard.storyboard */,
 				AAEE459519662032007660E7 /* Images.xcassets */,
@@ -191,6 +568,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F150481966434000F35CAF /* .gitignore in Resources */,
+				17F150461966434000F35CAF /* LICENSE in Resources */,
+				17F1504D1966434E00F35CAF /* tessdata in Resources */,
 				AAEE459619662032007660E7 /* Images.xcassets in Resources */,
 				AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */,
 			);
@@ -210,8 +590,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F1504B1966434000F35CAF /* README.md in Sources */,
+				17F15052196644E000F35CAF /* STesseract.swift in Sources */,
 				AAEE459419662032007660E7 /* AppDelegate.swift in Sources */,
 				AAA0020D19662AF2000D2D24 /* DinerViewController.swift in Sources */,
+				17F150471966434000F35CAF /* README.md in Sources */,
+				17F150451966434000F35CAF /* Tesseract.mm in Sources */,
 				AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,10 +699,16 @@
 		AAEE45A619662032007660E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				INFOPLIST_FILE = BillFold/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BillFold/tesseract-ios-lib/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -326,10 +716,16 @@
 		AAEE45A719662032007660E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				INFOPLIST_FILE = BillFold/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BillFold/tesseract-ios-lib/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
