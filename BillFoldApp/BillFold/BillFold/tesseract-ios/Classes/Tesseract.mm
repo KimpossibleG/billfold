@@ -12,6 +12,7 @@
 #import "baseapi.h"
 #import "environ.h"
 #import "pix.h"
+#import <UIKit/UIKit.h>
 
 NSString * const OcrEngineModeTesseractOnly = @"OcrEngineModeTesseractOnly";
 NSString * const OcrEngineModeCubeOnly = @"OcrEngineModeCubeOnly";

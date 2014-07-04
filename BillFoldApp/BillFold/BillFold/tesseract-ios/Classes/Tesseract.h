@@ -8,6 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 extern NSString * const OcrEngineModeTesseractOnly;
 extern NSString * const OcrEngineModeCubeOnly;

@@ -12,7 +12,7 @@ class DinerViewController: UITableViewController {
     
     
     //I ADDED THIS I THINK IT SHOULD BE DECLARED HERE??????
-    var tesseract:STesseract = STesseract();
+    //    var tesseract:STesseract = STesseract();
     
     var dinersList:NSMutableArray = NSMutableArray()
 
@@ -35,14 +35,20 @@ class DinerViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        var tesseract: STesseract = STesseract()
+        //tesseract.setVariableValue("0123456789", forKey:"tessedit_char_whitelist")
+        //var image = imageNamed("image_sample.jpg")
+        tesseract.setImage(UIImage(named:"image_sample.jpg"))
+        tesseract.recognize()
+        println("/(tesseract.recognize())")
+        tesseract.clear()
+        //Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
+        //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
+        //[tesseract setImage:[UIImage imageNamed:@"image_sample.jpg"]];
+        //[tesseract recognize];
         
-        Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
-        [tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
-        [tesseract setImage:[UIImage imageNamed:@"image_sample.jpg"]];
-        [tesseract recognize];
-        
-        NSLog(@"%@", [tesseract recognizedText]);
-        [tesseract clear];
+       // NSLog(@"%@", [tesseract recognizedText]);
+        //[tesseract clear];
         
         
         
