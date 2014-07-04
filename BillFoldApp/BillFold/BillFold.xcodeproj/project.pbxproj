@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAA0020D19662AF2000D2D24 /* DinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0020C19662AF2000D2D24 /* DinerViewController.swift */; };
+		AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0021019662B61000D2D24 /* AddDinerViewController.swift */; };
+		AAEE459419662032007660E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE459319662032007660E7 /* AppDelegate.swift */; };
+		AAEE459619662032007660E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEE459519662032007660E7 /* Images.xcassets */; };
+		AAEE45A219662032007660E7 /* BillFoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE45A119662032007660E7 /* BillFoldTests.swift */; };
+		AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEE45AB1966207B007660E7 /* BFBoard.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAEE459C19662032007660E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAEE458619662032007660E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAEE458D19662032007660E7;
+			remoteInfo = BillFold;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAA0020C19662AF2000D2D24 /* DinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerViewController.swift; sourceTree = "<group>"; };
+		AAA0021019662B61000D2D24 /* AddDinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDinerViewController.swift; sourceTree = "<group>"; };
+		AAEE458E19662032007660E7 /* BillFold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillFold.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAEE459219662032007660E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAEE459319662032007660E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAEE459519662032007660E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AAEE459B19662032007660E7 /* BillFoldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillFoldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAEE45A019662032007660E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAEE45A119662032007660E7 /* BillFoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillFoldTests.swift; sourceTree = "<group>"; };
+		AAEE45AB1966207B007660E7 /* BFBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BFBoard.storyboard; path = ../BFBoard.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAEE458B19662032007660E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAEE459819662032007660E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAEE458519662032007660E7 = {
+			isa = PBXGroup;
+			children = (
+				AAEE459019662032007660E7 /* BillFold */,
+				AAEE459E19662032007660E7 /* BillFoldTests */,
+				AAEE458F19662032007660E7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAEE458F19662032007660E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAEE458E19662032007660E7 /* BillFold.app */,
+				AAEE459B19662032007660E7 /* BillFoldTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAEE459019662032007660E7 /* BillFold */ = {
+			isa = PBXGroup;
+			children = (
+				AAEE459319662032007660E7 /* AppDelegate.swift */,
+				AAA0020C19662AF2000D2D24 /* DinerViewController.swift */,
+				AAA0021019662B61000D2D24 /* AddDinerViewController.swift */,
+				AAEE45AB1966207B007660E7 /* BFBoard.storyboard */,
+				AAEE459519662032007660E7 /* Images.xcassets */,
+				AAEE459119662032007660E7 /* Supporting Files */,
+			);
+			path = BillFold;
+			sourceTree = "<group>";
+		};
+		AAEE459119662032007660E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAEE459219662032007660E7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAEE459E19662032007660E7 /* BillFoldTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAEE45A119662032007660E7 /* BillFoldTests.swift */,
+				AAEE459F19662032007660E7 /* Supporting Files */,
+			);
+			path = BillFoldTests;
+			sourceTree = "<group>";
+		};
+		AAEE459F19662032007660E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAEE45A019662032007660E7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAEE458D19662032007660E7 /* BillFold */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAEE45A519662032007660E7 /* Build configuration list for PBXNativeTarget "BillFold" */;
+			buildPhases = (
+				AAEE458A19662032007660E7 /* Sources */,
+				AAEE458B19662032007660E7 /* Frameworks */,
+				AAEE458C19662032007660E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BillFold;
+			productName = BillFold;
+			productReference = AAEE458E19662032007660E7 /* BillFold.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAEE459A19662032007660E7 /* BillFoldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAEE45A819662032007660E7 /* Build configuration list for PBXNativeTarget "BillFoldTests" */;
+			buildPhases = (
+				AAEE459719662032007660E7 /* Sources */,
+				AAEE459819662032007660E7 /* Frameworks */,
+				AAEE459919662032007660E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAEE459D19662032007660E7 /* PBXTargetDependency */,
+			);
+			name = BillFoldTests;
+			productName = BillFoldTests;
+			productReference = AAEE459B19662032007660E7 /* BillFoldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAEE458619662032007660E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Michael Pourhadi";
+				TargetAttributes = {
+					AAEE458D19662032007660E7 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					AAEE459A19662032007660E7 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = AAEE458D19662032007660E7;
+					};
+				};
+			};
+			buildConfigurationList = AAEE458919662032007660E7 /* Build configuration list for PBXProject "BillFold" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AAEE458519662032007660E7;
+			productRefGroup = AAEE458F19662032007660E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAEE458D19662032007660E7 /* BillFold */,
+				AAEE459A19662032007660E7 /* BillFoldTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAEE458C19662032007660E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEE459619662032007660E7 /* Images.xcassets in Resources */,
+				AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAEE459919662032007660E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAEE458A19662032007660E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEE459419662032007660E7 /* AppDelegate.swift in Sources */,
+				AAA0020D19662AF2000D2D24 /* DinerViewController.swift in Sources */,
+				AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAEE459719662032007660E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEE45A219662032007660E7 /* BillFoldTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAEE459D19662032007660E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAEE458D19662032007660E7 /* BillFold */;
+			targetProxy = AAEE459C19662032007660E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AAEE45A319662032007660E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAEE45A419662032007660E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAEE45A619662032007660E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = BillFold/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AAEE45A719662032007660E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = BillFold/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AAEE45A919662032007660E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BillFold.app/BillFold";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BillFoldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		AAEE45AA19662032007660E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BillFold.app/BillFold";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BillFoldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAEE458919662032007660E7 /* Build configuration list for PBXProject "BillFold" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAEE45A319662032007660E7 /* Debug */,
+				AAEE45A419662032007660E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAEE45A519662032007660E7 /* Build configuration list for PBXNativeTarget "BillFold" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAEE45A619662032007660E7 /* Debug */,
+				AAEE45A719662032007660E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAEE45A819662032007660E7 /* Build configuration list for PBXNativeTarget "BillFoldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAEE45A919662032007660E7 /* Debug */,
+				AAEE45AA19662032007660E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAEE458619662032007660E7 /* Project object */;
+}
