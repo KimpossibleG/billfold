@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17D475A01966FBDB00FA36AB /* BillFold-Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BillFold-Bridge-Header.h"; path = "BillFold/BillFold-Bridge-Header.h"; sourceTree = "<group>"; };
 		17F14FA91966434000F35CAF /* Tesseract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tesseract.h; sourceTree = "<group>"; };
 		17F14FAA1966434000F35CAF /* Tesseract.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tesseract.mm; sourceTree = "<group>"; };
 		17F14FAB1966434000F35CAF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -187,7 +188,6 @@
 		17F150431966434000F35CAF /* libtesseract_all.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtesseract_all.a; sourceTree = "<group>"; };
 		17F150441966434000F35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		17F1504C1966434E00F35CAF /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = BillFold/tessdata; sourceTree = "<group>"; };
-		17F15050196643BF00F35CAF /* BillFold-Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BillFold-Bridge-Header.h"; sourceTree = "<group>"; };
 		17F15051196644E000F35CAF /* STesseract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STesseract.swift; sourceTree = "<group>"; };
 		AAA0020C19662AF2000D2D24 /* DinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerViewController.swift; sourceTree = "<group>"; };
 		AAA0021019662B61000D2D24 /* AddDinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDinerViewController.swift; sourceTree = "<group>"; };
@@ -431,7 +431,7 @@
 		AAEE458519662032007660E7 = {
 			isa = PBXGroup;
 			children = (
-				17F15050196643BF00F35CAF /* BillFold-Bridge-Header.h */,
+				17D475A01966FBDB00FA36AB /* BillFold-Bridge-Header.h */,
 				17F1504C1966434E00F35CAF /* tessdata */,
 				17F14FA71966434000F35CAF /* tesseract-ios */,
 				17F14FAD1966434000F35CAF /* tesseract-ios-lib */,
@@ -710,6 +710,8 @@
 					"$(PROJECT_DIR)/BillFold/tesseract-ios-lib/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BillFold/BillFold-Bridge-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=armv7]" = "BillFold/BillFold-Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -727,6 +729,8 @@
 					"$(PROJECT_DIR)/BillFold/tesseract-ios-lib/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BillFold/BillFold-Bridge-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=armv7]" = "BillFold/BillFold-Bridge-Header.h";
 			};
 			name = Release;
 		};
