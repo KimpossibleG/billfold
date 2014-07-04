@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Test-Billfold.xcodeproj">
+      location = "container:Billfold-Test/Test-Billfold/Test-Billfold.xcodeproj">
    </FileRef>
 </Workspace>
