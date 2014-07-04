@@ -8,6 +8,8 @@ billfold
 - [Our Schedule](https://github.com/KimpossibleG/billfold/blob/master/schedule)
 
 
+## Our Regex So Far
+/(^.+)((\d+|\$)(\.|\s)\d\d($|\s))/
 
 ## Pickles-Approved Git Process
 
