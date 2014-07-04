@@ -11,6 +11,7 @@ import UIKit
 class DinerViewController: UITableViewController {
     
     var dinersList:NSMutableArray = NSMutableArray()
+
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -32,13 +33,26 @@ class DinerViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool){
+        
+        var dinersAndFoodAndPrices = [["mikee": ["quinoa": 15, "tofu": 12]], ["rick": ["hamburger": 20]]]
+        
+        for diner in dinersAndFoodAndPrices {
+            for (dinerName, foodItems) in diner {
+                println(dinerName)
+                for (foodItem, price) in foodItems {
+                    println(foodItem)
+                    println(price)
+                }
+            }
+        }
+        
         var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        println(NSUserDefaults.standardUserDefaults().objectForKey("dinerList"))
         var dinerListFromDefaults:NSMutableArray? = userDefaults.objectForKey("dinerList") as? NSMutableArray
         
         if dinerListFromDefaults {
             dinersList = dinerListFromDefaults!
         }
-        
         self.tableView.reloadData()
     }
     

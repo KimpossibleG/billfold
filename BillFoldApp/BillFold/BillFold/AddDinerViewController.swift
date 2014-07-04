@@ -40,6 +40,11 @@ class AddDinerViewController: UIViewController {
         var dataSet:NSMutableDictionary = NSMutableDictionary()
         dataSet.setObject(addDinerField.text, forKey: "dinerName")
         
+        println("this is what dataset is: \(dataSet)")
+//
+//        println("this is what dinerlist is:")
+//        println(dinerList)
+        
         if dinerList {
             var newMutableList:NSMutableArray = NSMutableArray()
             
