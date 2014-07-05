@@ -25,6 +25,8 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     // Outlets
     @IBOutlet var photoButton : UIBarButtonItem
+    @IBOutlet var Instructions: UILabel
+    @IBOutlet var Continue: UILabel
 
     @IBOutlet var image: UIImageView?
     
@@ -50,6 +52,8 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
         self.image!.image = image as UIImage
         self.dismissModalViewControllerAnimated(true)
+        Continue.hidden = false
+        Instructions.hidden = true
     }
     
     

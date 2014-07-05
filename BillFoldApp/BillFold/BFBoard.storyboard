@@ -143,6 +143,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click camera button on upper left to take picture of receipt" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-mR-knA">
+                                <rect key="frame" x="0.0" y="63" width="320" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If it looks like a good picture... click done" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jG-uu-Ohj">
+                                <rect key="frame" x="-1" y="81" width="314" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dre-un-3bJ">
                                 <rect key="frame" x="-1" y="118" width="322" height="430"/>
                             </imageView>
@@ -162,6 +174,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="Continue" destination="0jG-uu-Ohj" id="neG-L7-cHZ"/>
+                        <outlet property="Instructions" destination="jCn-mR-knA" id="oBj-H7-Vu0"/>
                         <outlet property="image" destination="dre-un-3bJ" id="Xed-eX-g2m"/>
                         <outlet property="photoButton" destination="SGf-PZ-xKo" id="B2r-Rl-bX1"/>
                     </connections>
