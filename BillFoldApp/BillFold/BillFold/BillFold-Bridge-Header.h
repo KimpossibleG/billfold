@@ -6,5 +6,6 @@
 //  Copyright (c) 2014 Michael Pourhadi. All rights reserved.
 //
 
-#import "tesseract.h"
+#import "TesseractController.h"
+
 //#import "/tesseract-ios/tesseract.h"

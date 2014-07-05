@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b9z-1J-XSH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b9z-1J-XSH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
@@ -38,18 +38,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2NF-oL-eU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="287"/>
+            <point key="canvasLocation" x="1423" y="65"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Food Table View Controller-->
         <scene sceneID="jl7-4E-DwR">
             <objects>
-                <tableViewController id="N25-qe-wWo" sceneMemberID="viewController">
+                <tableViewController id="N25-qe-wWo" customClass="FoodTableViewController" customModule="BillFold" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YEN-fJ-yyS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="Lzv-s6-hYh">
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="food" id="Lzv-s6-hYh">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lzv-s6-hYh" id="4Vy-U6-HD0">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -67,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdU-cn-vUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="681"/>
+            <point key="canvasLocation" x="1967" y="401"/>
         </scene>
         <!--Add Diner View Controller-->
         <scene sceneID="8w0-bh-6Pi">
@@ -99,6 +99,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addDinerTap:" destination="UgA-Hs-gRg" eventType="touchUpInside" id="4fh-8S-zxt"/>
+                                    <segue destination="ojk-Wl-DRV" kind="push" id="jVb-Af-FK3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -111,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADe-MF-4ig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="32"/>
+            <point key="canvasLocation" x="1967" y="-264"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MlX-Sa-ri3">
@@ -129,7 +130,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzt-T3-lvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="386"/>
+            <point key="canvasLocation" x="416" y="65"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="tig-iE-BAa">
@@ -168,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKE-Yj-sF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="-72"/>
+            <point key="canvasLocation" x="903" y="65"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -176,4 +177,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="jVb-Af-FK3"/>
+    </inferredMetricsTieBreakers>
 </document>

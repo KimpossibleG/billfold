@@ -1,65 +1,44 @@
 //
-//  MasterTableViewController.swift
-//  TodoApp
+//  FoodTableViewController.swift
+//  BillFold
 //
-//  Created by Michael Pourhadi on 7/3/14.
+//  Created by Michael Pourhadi on 7/4/14.
 //  Copyright (c) 2014 Michael Pourhadi. All rights reserved.
 //
 
 import UIKit
 
-class DinerViewController: UITableViewController {
+class FoodTableViewController: UITableViewController {
     
-    
-    //I ADDED THIS I THINK IT SHOULD BE DECLARED HERE??????
-    //    var tesseract:STesseract = STesseract();
-    
-    var dinersList:NSMutableArray = NSMutableArray()
-
-    
-    init(coder aDecoder: NSCoder!) {
-        super.init(coder: aDecoder)
-    }
+    var foodList:NSMutableArray = NSMutableArray()
     
     init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
     }
     
+    init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        TesseractController.recognizeImage("photo 6.JPG")
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(animated: Bool){
         
-        //        var dinersAndFoodAndPrices = [["mikee": ["quinoa": 15.99, "tofu": 12.39]], ["rick": ["hamburger": 20.29]]]
-        //
-        //        var totalPerPerson = 0.00
-        //        var name = ""
-        //
-        //        for diner in dinersAndFoodAndPrices {
-        //            for (dinerName, foodItems) in diner {
-        //                name = dinerName
-        //                totalPerPerson = 0.00
-        //                for (foodItem, price) in foodItems {
-        //                    totalPerPerson = totalPerPerson + price
-        //                }
-        //            }
-        //            println("total price for \(name): \(totalPerPerson)")
-        //        }
+        var foods:NSMutableArray = ["Hotdog 25" , "Fruit 1.05" , "Juices 1.00" , "Jams 15.00" , "Eggs 10.00"]
         
+        foodList = foods
         
-        var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        var dinerListFromDefaults:NSMutableArray? = userDefaults.objectForKey("dinerList") as? NSMutableArray
-        
-        if dinerListFromDefaults {
-            dinersList = dinerListFromDefaults!
-        }
         self.tableView.reloadData()
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -69,21 +48,25 @@ class DinerViewController: UITableViewController {
     // #pragma mark - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
-        
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
         return 1
     }
     
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
-        return dinersList.count
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return foodList.count
     }
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        let cell = tableView!.dequeueReusableCellWithIdentifier("diner", forIndexPath: indexPath) as UITableViewCell
+        let foodCell = tableView!.dequeueReusableCellWithIdentifier("food", forIndexPath: indexPath) as UITableViewCell
         
-        var specificDiner:NSDictionary = dinersList.objectAtIndex(indexPath!.row) as NSDictionary
-        cell.text = specificDiner.objectForKey("dinerName") as String
+        var specificFood = foodList.objectAtIndex(indexPath!.row) as String
+        foodCell.text = specificFood
         
-        return cell
+
+        return foodCell
     }
     
     /*
