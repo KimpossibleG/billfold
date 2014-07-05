@@ -1,7 +1,4 @@
 //
-//  MasterTableViewController.swift
-//  TodoApp
-//
 //  Created by Michael Pourhadi on 7/3/14.
 //  Copyright (c) 2014 Michael Pourhadi. All rights reserved.
 //
@@ -15,7 +12,12 @@ class DinerViewController: UITableViewController {
     //    var tesseract:STesseract = STesseract();
     
     var dinersList:NSMutableArray = NSMutableArray()
-
+    var diner = ""
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        let destinationTableViewController = segue.destinationViewController as AddDinerViewController
+        destinationTableViewController.tempDinerList = dinersList
+    }
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -23,6 +25,7 @@ class DinerViewController: UITableViewController {
     
     init(style: UITableViewStyle) {
         super.init(style: style)
+
         // Custom initialization
     }
     
@@ -32,31 +35,30 @@ class DinerViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool){
+//                var dinersAndFoodAndPrices = [["mikee": ["quinoa": 15.99, "tofu": 12.39]], ["rick": ["hamburger": 20.29]]]
+//        
+//                var totalPerPerson = 0.00
+//                var name = ""
+//        
+//                for diner in dinersAndFoodAndPrices {
+//                    for (dinerName, foodItems) in diner {
+//                        name = dinerName
+//                        totalPerPerson = 0.00
+//                        for (foodItem, price) in foodItems {
+//                            totalPerPerson = totalPerPerson + price
+//                        }
+//                    }
+//                    println("total price for \(name): \(totalPerPerson)")
+//                }
         
-        //        var dinersAndFoodAndPrices = [["mikee": ["quinoa": 15.99, "tofu": 12.39]], ["rick": ["hamburger": 20.29]]]
-        //
-        //        var totalPerPerson = 0.00
-        //        var name = ""
-        //
-        //        for diner in dinersAndFoodAndPrices {
-        //            for (dinerName, foodItems) in diner {
-        //                name = dinerName
-        //                totalPerPerson = 0.00
-        //                for (foodItem, price) in foodItems {
-        //                    totalPerPerson = totalPerPerson + price
-        //                }
-        //            }
-        //            println("total price for \(name): \(totalPerPerson)")
-        //        }
+//        var dinerListFromList:NSMutableArray? = ("dinerList") as? NSMutableArray
         
+//        println("Diner list: \(dinerListFromDefaults)")
         
-        var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        var dinerListFromDefaults:NSMutableArray? = userDefaults.objectForKey("dinerList") as? NSMutableArray
+//        if dinerListFromDefaults {
+//            dinersList = dinerListFromDefaults!
+//        }
         
-        if dinerListFromDefaults {
-            dinersList = dinerListFromDefaults!
-        }
-        self.tableView.reloadData()
     }
     
     
@@ -69,7 +71,6 @@ class DinerViewController: UITableViewController {
     // #pragma mark - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
-        
         return 1
     }
     
@@ -78,10 +79,14 @@ class DinerViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        let cell = tableView!.dequeueReusableCellWithIdentifier("diner", forIndexPath: indexPath) as UITableViewCell
+        var cell = tableView!.dequeueReusableCellWithIdentifier("diner", forIndexPath: indexPath) as UITableViewCell
         
-        var specificDiner:NSDictionary = dinersList.objectAtIndex(indexPath!.row) as NSDictionary
-        cell.text = specificDiner.objectForKey("dinerName") as String
+        var specificDiner = ""
+        
+        if dinersList.count > 0 {
+            specificDiner = dinersList.objectAtIndex(indexPath!.row) as String
+        }
+        cell.text = specificDiner
         
         return cell
     }
