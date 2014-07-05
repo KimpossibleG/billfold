@@ -27,6 +27,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet var photoButton : UIBarButtonItem
     @IBOutlet var Instructions: UILabel
     @IBOutlet var Continue: UILabel
+    @IBOutlet var Welcome: UILabel
 
     @IBOutlet var image: UIImageView?
     
@@ -37,6 +38,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         capture.delegate = self
         
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            
             capture.sourceType = .Camera
         }
         else {
@@ -47,13 +49,13 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     
-    
     // Delegate Methods
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
         self.image!.image = image as UIImage
         self.dismissModalViewControllerAnimated(true)
         Continue.hidden = false
         Instructions.hidden = true
+        Welcome.hidden = true
     }
     
     
