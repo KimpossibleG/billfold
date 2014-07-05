@@ -40,11 +40,6 @@ class AddDinerViewController: UIViewController {
         var dataSet:NSMutableDictionary = NSMutableDictionary()
         dataSet.setObject(addDinerField.text, forKey: "dinerName")
         
-        println("this is what dataset is: \(dataSet)")
-//
-//        println("this is what dinerlist is:")
-//        println(dinerList)
-        
         if dinerList {
             var newMutableList:NSMutableArray = NSMutableArray()
             
@@ -62,7 +57,6 @@ class AddDinerViewController: UIViewController {
             userDefaults.setObject(dinerList, forKey: "dinerList")
         }
         userDefaults.synchronize()
-        self.navigationController.popToRootViewControllerAnimated(true)
     }
     /*
     // #pragma mark - Navigation
