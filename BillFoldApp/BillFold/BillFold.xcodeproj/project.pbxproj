@@ -17,6 +17,7 @@
 		17F1504D1966434E00F35CAF /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 17F1504C1966434E00F35CAF /* tessdata */; };
 		AA5083D01967767C0005F4D7 /* TessseractController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5083CF1967767C0005F4D7 /* TessseractController.m */; };
 		AA5083D2196777A70005F4D7 /* photo 6.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AA5083D1196777A70005F4D7 /* photo 6.JPG */; };
+		AA5083D419678D600005F4D7 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5083D319678D600005F4D7 /* FoodTableViewController.swift */; };
 		AAA0020D19662AF2000D2D24 /* DinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0020C19662AF2000D2D24 /* DinerViewController.swift */; };
 		AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0021019662B61000D2D24 /* AddDinerViewController.swift */; };
 		AAEE459419662032007660E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE459319662032007660E7 /* AppDelegate.swift */; };
@@ -193,6 +194,7 @@
 		AA5083CE196776570005F4D7 /* TesseractController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesseractController.h; sourceTree = "<group>"; };
 		AA5083CF1967767C0005F4D7 /* TessseractController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TessseractController.m; sourceTree = "<group>"; };
 		AA5083D1196777A70005F4D7 /* photo 6.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo 6.JPG"; sourceTree = "<group>"; };
+		AA5083D319678D600005F4D7 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		AAA0020C19662AF2000D2D24 /* DinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerViewController.swift; sourceTree = "<group>"; };
 		AAA0021019662B61000D2D24 /* AddDinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDinerViewController.swift; sourceTree = "<group>"; };
 		AAEE458E19662032007660E7 /* BillFold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillFold.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -461,6 +463,7 @@
 				CDB6F7D31967625000BC54FC /* PhotoViewController.swift */,
 				AA5083D1196777A70005F4D7 /* photo 6.JPG */,
 				AAEE459319662032007660E7 /* AppDelegate.swift */,
+				AA5083D319678D600005F4D7 /* FoodTableViewController.swift */,
 				AA5083CF1967767C0005F4D7 /* TessseractController.m */,
 				AA5083CE196776570005F4D7 /* TesseractController.h */,
 				AAA0020C19662AF2000D2D24 /* DinerViewController.swift */,
@@ -600,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17F1504B1966434000F35CAF /* README.md in Sources */,
+				AA5083D419678D600005F4D7 /* FoodTableViewController.swift in Sources */,
 				AA5083D01967767C0005F4D7 /* TessseractController.m in Sources */,
 				AAEE459419662032007660E7 /* AppDelegate.swift in Sources */,
 				AAA0020D19662AF2000D2D24 /* DinerViewController.swift in Sources */,
