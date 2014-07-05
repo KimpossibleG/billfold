@@ -1,0 +1,3 @@
+## Story Notes:
+
+1. In order to do this in Swift, we had to learn Swift... which meant we also had to learn Objective C, because nothing exists in Swift yet! Our whole tesseract library is in Obj C... and the regex had to be in Obj C... ugggggh
