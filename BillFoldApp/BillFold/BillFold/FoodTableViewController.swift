@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GPUImage
 
 class FoodTableViewController: UITableViewController {
     
@@ -29,6 +30,10 @@ class FoodTableViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        var inputImage: UIImage = UIImage(named: "photo 6")
+        var filter: GPUImageAdaptiveThresholdFilter = GPUImageAdaptiveThresholdFilter()
+        filter.imageByFilteringImage(inputImage)
     }
     
     override func viewDidAppear(animated: Bool){

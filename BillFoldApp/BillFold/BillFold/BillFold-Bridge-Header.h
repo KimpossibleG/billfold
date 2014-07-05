@@ -7,5 +7,3 @@
 //
 
 #import "TesseractController.h"
-
-//#import "/tesseract-ios/tesseract.h"

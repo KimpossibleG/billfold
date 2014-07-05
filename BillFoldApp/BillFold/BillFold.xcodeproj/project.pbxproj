@@ -25,6 +25,8 @@
 		AAEE45A219662032007660E7 /* BillFoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE45A119662032007660E7 /* BillFoldTests.swift */; };
 		AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEE45AB1966207B007660E7 /* BFBoard.storyboard */; };
 		CDB6F7D41967625000BC54FC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6F7D31967625000BC54FC /* PhotoViewController.swift */; };
+		CE52A24E196867F9004D57BE /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52A24B196867A8004D57BE /* GPUImage.framework */; };
+		CE52A25219686B3C004D57BE /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE52A24B196867A8004D57BE /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,48 @@
 			remoteGlobalIDString = AAEE458D19662032007660E7;
 			remoteInfo = BillFold;
 		};
+		CE52A246196867A8004D57BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE52A23F196867A8004D57BE /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		CE52A248196867A8004D57BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE52A23F196867A8004D57BE /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
+			remoteInfo = GPUImageTests;
+		};
+		CE52A24A196867A8004D57BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE52A23F196867A8004D57BE /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE209E51943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
+		CE52A24C196867E8004D57BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE52A23F196867A8004D57BE /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCE209E41943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE52A25119686AF4004D57BE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE52A25219686B3C004D57BE /* GPUImage.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		17D475A01966FBDB00FA36AB /* BillFold-Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BillFold-Bridge-Header.h"; path = "BillFold/BillFold-Bridge-Header.h"; sourceTree = "<group>"; };
@@ -206,6 +249,7 @@
 		AAEE45A119662032007660E7 /* BillFoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillFoldTests.swift; sourceTree = "<group>"; };
 		AAEE45AB1966207B007660E7 /* BFBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BFBoard.storyboard; path = ../BFBoard.storyboard; sourceTree = "<group>"; };
 		CDB6F7D31967625000BC54FC /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		CE52A23F196867A8004D57BE /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE52A24E196867F9004D57BE /* GPUImage.framework in Frameworks */,
 				17F1504A1966434000F35CAF /* libtesseract_all.a in Frameworks */,
 				17F150491966434000F35CAF /* liblept.a in Frameworks */,
 			);
@@ -438,6 +483,7 @@
 		AAEE458519662032007660E7 = {
 			isa = PBXGroup;
 			children = (
+				CE52A23F196867A8004D57BE /* GPUImage.xcodeproj */,
 				17D475A01966FBDB00FA36AB /* BillFold-Bridge-Header.h */,
 				17F1504C1966434E00F35CAF /* tessdata */,
 				17F14FA71966434000F35CAF /* tesseract-ios */,
@@ -500,6 +546,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CE52A240196867A8004D57BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE52A247196867A8004D57BE /* libGPUImage.a */,
+				CE52A249196867A8004D57BE /* GPUImageTests.octest */,
+				CE52A24B196867A8004D57BE /* GPUImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -510,10 +566,12 @@
 				AAEE458A19662032007660E7 /* Sources */,
 				AAEE458B19662032007660E7 /* Frameworks */,
 				AAEE458C19662032007660E7 /* Resources */,
+				CE52A25119686AF4004D57BE /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE52A24D196867E8004D57BE /* PBXTargetDependency */,
 			);
 			name = BillFold;
 			productName = BillFold;
@@ -566,6 +624,12 @@
 			mainGroup = AAEE458519662032007660E7;
 			productRefGroup = AAEE458F19662032007660E7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CE52A240196867A8004D57BE /* Products */;
+					ProjectRef = CE52A23F196867A8004D57BE /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AAEE458D19662032007660E7 /* BillFold */,
@@ -573,6 +637,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CE52A247196867A8004D57BE /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = CE52A246196867A8004D57BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE52A249196867A8004D57BE /* GPUImageTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests.octest;
+			remoteRef = CE52A248196867A8004D57BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE52A24B196867A8004D57BE /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = CE52A24A196867A8004D57BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AAEE458C19662032007660E7 /* Resources */ = {
@@ -629,6 +717,11 @@
 			isa = PBXTargetDependency;
 			target = AAEE458D19662032007660E7 /* BillFold */;
 			targetProxy = AAEE459C19662032007660E7 /* PBXContainerItemProxy */;
+		};
+		CE52A24D196867E8004D57BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImageFramework;
+			targetProxy = CE52A24C196867E8004D57BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -723,9 +816,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BillFold/tesseract-ios-lib/lib",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BillFold/BillFold-Bridge-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=armv7]" = "BillFold/BillFold-Bridge-Header.h";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
 		};
@@ -742,9 +837,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BillFold/tesseract-ios-lib/lib",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BillFold/BillFold-Bridge-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=armv7]" = "BillFold/BillFold-Bridge-Header.h";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;
 		};
