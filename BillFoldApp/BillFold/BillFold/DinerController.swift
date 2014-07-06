@@ -8,11 +8,22 @@
 
 import Foundation
 
+//string.bridgeToObjectiveC().doubleValue
+
 let sharedDinerController = DinerController()
+
+struct diner{
+    var name = ""
+    var foodItem = [:]
+}
 
 class DinerController {
     
-    var dinerList:NSMutableArray = NSMutableArray()
+    var dinerList = diner[]()
+    
+    func addDiner (name: String, foodItem: Dictionary <String, String>){
+        dinerList.append(diner(name: name, foodItem: foodItem))
+    }
 
 }
 

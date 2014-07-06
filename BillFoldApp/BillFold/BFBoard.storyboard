@@ -31,7 +31,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="YnA-WA-Gfl" kind="push" id="c1a-Yx-5o4"/>
+                                    <segue destination="YnA-WA-Gfl" kind="push" id="hII-0I-Ae6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
