@@ -21,7 +21,12 @@ class DinerViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         println(TesseractController.regexDo(TesseractController.recognizeImage("photo 6.JPG")))
+        var foodAndPrices:AnyObject = TesseractController.regexDo(TesseractController.recognizeImage("photo 6.JPG"))
+        
+        println(foodAndPrices["Tax"].bridgeToObjectiveC().doubleValue)
+        
     }
     
     override func viewDidAppear(animated: Bool){
