@@ -25,14 +25,14 @@ static Tesseract *_tesseract = nil;
 
 + (id)regexDo:(NSString*)foodString{
     // This is where we'll feed in our string from tesseract:
-    NSString *string = @"Hotdog $14.99 Monkey $5.43";
+    NSString *string = @"Hotdog $14.99\nSoup 5.32";
     
     // This allows us to use the error property:
     NSError *error = NULL;
     
     //This gives our pattern to match
     NSRegularExpression *regex = [NSRegularExpression
-                        regularExpressionWithPattern:@"(^.+)((\\d+|\\$)(.|\\s)\\d\\d($|\\s))"
+                        regularExpressionWithPattern:@"(.+)(\\$|\\s)(\\d*\\d*\\d*\\d*[.]\\d\\d)"
                                              options:NSRegularExpressionAnchorsMatchLines
                                                error:&error];
     
@@ -44,12 +44,20 @@ static Tesseract *_tesseract = nil;
     
     for (NSTextCheckingResult *match in matches)
     {
-        NSRange matchRange = match.range;
-        NSRange firstHalfRange = [match rangeAtIndex:1];
-        NSRange secondHalfRange = [match rangeAtIndex:2];
-        NSValue *objVal = [NSValue valueWithRange:secondHalfRange];
-        NSValue *keyVal = [NSValue valueWithRange:firstHalfRange];
-        [foodAndPrices setObject:objVal forKey:keyVal];
+//        NSRange matchRange = match.range;
+        NSRange firstRange = [match rangeAtIndex:1];
+//        NSRange secondRange = [match rangeAtIndex:2];
+        NSRange thirdRange = [match rangeAtIndex:3];
+        NSString *objString = [string substringWithRange:thirdRange];
+        NSString *keyString = [string substringWithRange:firstRange];
+        
+//        (NSString *)substringWithRange:(NSRange)range;
+        
+//        NSValue *objVal = [NSValue valueWithRange:secondHalfRange];
+//        NSValue *keyVal = [NSValue valueWithRange:firstHalfRange];
+//        [foodAndPrices setObject:objVal forKey:keyVal];
+        
+        [foodAndPrices setObject:objString forKey:keyString];
 
     }
     return foodAndPrices;
