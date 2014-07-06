@@ -16,8 +16,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem width="254" style="plain" systemItem="fixedSpace" id="b7m-0b-y7M"/>
-                                <barButtonItem title="Done" id="Vnn-Sv-4hs">
+                                <barButtonItem width="203" style="plain" systemItem="fixedSpace" id="b7m-0b-y7M"/>
+                                <barButtonItem title="Split It Up!" id="Vnn-Sv-4hs">
                                     <connections>
                                         <segue destination="wpO-nV-ziD" kind="push" id="UFO-SN-5fv"/>
                                     </connections>
@@ -193,7 +193,7 @@
                                 <rect key="frame" x="1" y="67" width="319" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.11342939645509331" blue="0.22691819854125062" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="-2" height="-1"/>

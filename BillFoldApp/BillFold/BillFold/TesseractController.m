@@ -24,7 +24,7 @@ static Tesseract *_tesseract = nil;
     
 }
 
-+ (id)regexDo:(NSString*)foodString{
++ (NSMutableDictionary*)regexDo:(NSString*)foodString{
     // This is where we'll feed in our string from tesseract:
     NSString *string = foodString;
     

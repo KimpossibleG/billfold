@@ -20,8 +20,10 @@ class DinerViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()    
+
         sharedFoodController.foodAndPrices = TesseractController.regexDo(TesseractController.recognizeImage("photo 6.JPG")) as NSDictionary
+
     }
     
     override func viewDidAppear(animated: Bool){
