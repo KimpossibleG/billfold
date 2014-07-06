@@ -24,6 +24,8 @@
 		AAEE459619662032007660E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEE459519662032007660E7 /* Images.xcassets */; };
 		AAEE45A219662032007660E7 /* BillFoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE45A119662032007660E7 /* BillFoldTests.swift */; };
 		AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEE45AB1966207B007660E7 /* BFBoard.storyboard */; };
+		CD9AB5791968BE7B00170078 /* IMG_2089.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CD9AB5781968BE7B00170078 /* IMG_2089.JPG */; };
+		CD9AF5881968B9670071F35A /* IMG_2088.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CD9AF5871968B9670071F35A /* IMG_2088.JPG */; };
 		CDB6F7D41967625000BC54FC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6F7D31967625000BC54FC /* PhotoViewController.swift */; };
 		CE52A24E196867F9004D57BE /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE52A24B196867A8004D57BE /* GPUImage.framework */; };
 		CE52A25219686B3C004D57BE /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE52A24B196867A8004D57BE /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -248,6 +250,8 @@
 		AAEE45A019662032007660E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAEE45A119662032007660E7 /* BillFoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillFoldTests.swift; sourceTree = "<group>"; };
 		AAEE45AB1966207B007660E7 /* BFBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BFBoard.storyboard; path = ../BFBoard.storyboard; sourceTree = "<group>"; };
+		CD9AB5781968BE7B00170078 /* IMG_2089.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2089.JPG; sourceTree = "<group>"; };
+		CD9AF5871968B9670071F35A /* IMG_2088.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2088.JPG; sourceTree = "<group>"; };
 		CDB6F7D31967625000BC54FC /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		CE52A23F196867A8004D57BE /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -506,6 +510,8 @@
 		AAEE459019662032007660E7 /* BillFold */ = {
 			isa = PBXGroup;
 			children = (
+				CD9AB5781968BE7B00170078 /* IMG_2089.JPG */,
+				CD9AF5871968B9670071F35A /* IMG_2088.JPG */,
 				CDB6F7D31967625000BC54FC /* PhotoViewController.swift */,
 				AA5083D1196777A70005F4D7 /* photo 6.JPG */,
 				AAEE459319662032007660E7 /* AppDelegate.swift */,
@@ -667,7 +673,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9AF5881968B9670071F35A /* IMG_2088.JPG in Resources */,
 				AA5083D2196777A70005F4D7 /* photo 6.JPG in Resources */,
+				CD9AB5791968BE7B00170078 /* IMG_2089.JPG in Resources */,
 				17F150481966434000F35CAF /* .gitignore in Resources */,
 				17F150461966434000F35CAF /* LICENSE in Resources */,
 				17F1504D1966434E00F35CAF /* tessdata in Resources */,

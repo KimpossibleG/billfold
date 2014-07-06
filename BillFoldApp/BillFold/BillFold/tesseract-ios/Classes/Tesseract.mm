@@ -239,6 +239,9 @@ namespace tesseract {
     CGContextRelease(context);
     CGColorSpaceRelease(colorSpace);
     
+    NSLog(@"Width: %d", width);
+    NSLog(@"Height: %d", height);
+    
     _tesseract->SetImage((const unsigned char *) _pixels, width, height, sizeof(uint32_t), width * sizeof(uint32_t));
 }
 

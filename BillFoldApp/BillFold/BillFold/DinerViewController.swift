@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GPUImage
 
 class DinerViewController: UITableViewController {
     
@@ -15,6 +16,7 @@ class DinerViewController: UITableViewController {
     //    var tesseract:STesseract = STesseract();
     
     var dinersList:NSMutableArray = NSMutableArray()
+    var image:UIImage = UIImage()
 
     
     init(coder aDecoder: NSCoder!) {
@@ -28,7 +30,32 @@ class DinerViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TesseractController.recognizeImage("photo 6.JPG")
+        
+        var filter: GPUImageAverageLuminanceThresholdFilter = GPUImageAverageLuminanceThresholdFilter()
+        filter.thresholdMultiplier = 0.6
+        
+        if image.size.width != 0.0 {
+            
+            var fuck:UIImage = UIImage(named: "IMG_2089.JPG")
+//            var fuck:UIImage = UIImage(named: "photo 6.JPG")
+            var processedImage:UIImage = filter.imageByFilteringImage(fuck)
+            //println(processedImage)
+            
+            var orientedProcessedImage:UIImage = UIImage(CGImage: processedImage.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
+            
+            
+            let appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            
+            
+            let imgView:UIImageView = UIImageView(frame: appDel.window!.bounds)
+            imgView.image = orientedProcessedImage
+//            imgView.image = processedImage
+            appDel.window!.addSubview(imgView)
+            
+            
+            TesseractController.recognizeImage(orientedProcessedImage)
+            //TesseractController.recognizeImage(processedImage)
+        }
     }
     
     override func viewDidAppear(animated: Bool){
