@@ -20,6 +20,7 @@ class AddDinerViewController: UIViewController {
 //        let destinationTableViewController = segue.destinationViewController as DinerViewController
 //        destinationTableViewController.diner = dinerName
 //        destinationTableViewController.dinersList = tempDinerList
+    
 //    }
 //    
     init(coder aDecoder: NSCoder!) {
