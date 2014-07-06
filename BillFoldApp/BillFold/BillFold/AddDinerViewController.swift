@@ -32,6 +32,18 @@ class AddDinerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //IOS Touch functions
+    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+        self.view.endEditing(true)
+    }
+    
+    //UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool{
+        textField.resignFirstResponder();
+        return true
+    }
+    
     @IBAction func addDinerTap(sender: AnyObject) {
         var dinerName = addDinerField.text
         sharedDinerController.addDiner(dinerName, foodItem: [:])
