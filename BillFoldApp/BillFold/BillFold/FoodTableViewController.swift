@@ -59,15 +59,15 @@ class FoodTableViewController: UITableViewController {
         return foodList.count
     }
     
-    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        let foodCell = tableView!.dequeueReusableCellWithIdentifier("food", forIndexPath: indexPath) as UITableViewCell
-        
-        var specificFood = foodList.objectAtIndex(indexPath!.row) as String
-        foodCell.text = specificFood
-        
-
-        return foodCell
-    }
+        override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
+            let foodCell = tableView!.dequeueReusableCellWithIdentifier("foodItem", forIndexPath: indexPath) as UITableViewCell
+    
+            var specificFood = foodList.objectAtIndex(indexPath!.row) as String
+            foodCell.text = specificFood
+    
+    
+            return foodCell
+        }
     
     /*
     // Override to support conditional editing of the table view.

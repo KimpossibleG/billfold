@@ -12,6 +12,16 @@ class AddDinerViewController: UIViewController {
     
     @IBOutlet strong var addDinerField: UITextField = UITextField()
     
+//    var tempDinerList:NSMutableArray = NSMutableArray()
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//        var dinerName = addDinerField.text
+//        tempDinerList.addObject(dinerName)
+//        let destinationTableViewController = segue.destinationViewController as DinerViewController
+//        destinationTableViewController.diner = dinerName
+//        destinationTableViewController.dinersList = tempDinerList
+//    }
+//    
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
@@ -33,31 +43,35 @@ class AddDinerViewController: UIViewController {
     }
     
     @IBAction func addDinerTap(sender: AnyObject) {
-        var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        var dinerName = addDinerField.text
+        sharedDinerController.dinerList.addObject(dinerName)
+        navigationController.popViewControllerAnimated(true)
         
-        var dinerList:NSMutableArray? = userDefaults.objectForKey("dinerList") as? NSMutableArray
-        
-        var dataSet:NSMutableDictionary = NSMutableDictionary()
-        dataSet.setObject(addDinerField.text, forKey: "dinerName")
-        
-        if dinerList {
-            var newMutableList:NSMutableArray = NSMutableArray()
-            
-            for dict:AnyObject in dinerList!{
-                newMutableList.addObject(dict as NSDictionary)
-            }
-            
-            userDefaults.removeObjectForKey("dinerList")
-            newMutableList.addObject(dataSet)
-            userDefaults.setObject(newMutableList, forKey: "dinerList")
-            
-        } else {
-            dinerList = NSMutableArray()
-            dinerList!.addObject(dataSet)
-            userDefaults.setObject(dinerList, forKey: "dinerList")
-        }
-        userDefaults.synchronize()
-    }
+//        var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+//        
+//        var dinerList:NSMutableArray? = userDefaults.objectForKey("dinerList") as? NSMutableArray
+//        
+//        var dataSet:NSMutableDictionary = NSMutableDictionary()
+//        dataSet.setObject(addDinerField.text, forKey: "dinerName")
+//        
+//        if dinerList {
+//            var newMutableList:NSMutableArray = NSMutableArray()
+//            
+//            for dict:AnyObject in dinerList!{
+//                newMutableList.addObject(dict as NSDictionary)
+//            }
+//            
+//            userDefaults.removeObjectForKey("dinerList")
+//            newMutableList.addObject(dataSet)
+//            userDefaults.setObject(newMutableList, forKey: "dinerList")
+//            
+//        } else {
+//            dinerList = NSMutableArray()
+//            dinerList!.addObject(dataSet)
+//            userDefaults.setObject(dinerList, forKey: "dinerList")
+//        }
+//        userDefaults.synchronize()
+//    }
     /*
     // #pragma mark - Navigation
     
@@ -67,5 +81,5 @@ class AddDinerViewController: UIViewController {
     // Pass the selected object to the new view controller.
     }
     */
-    
+    }
 }

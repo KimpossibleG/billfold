@@ -1,7 +1,4 @@
 //
-//  MasterTableViewController.swift
-//  TodoApp
-//
 //  Created by Michael Pourhadi on 7/3/14.
 //  Copyright (c) 2014 Michael Pourhadi. All rights reserved.
 //
@@ -13,53 +10,25 @@ class DinerViewController: UITableViewController {
     
     //I ADDED THIS I THINK IT SHOULD BE DECLARED HERE??????
     //    var tesseract:STesseract = STesseract();
-    
-    var dinersList:NSMutableArray = NSMutableArray()
+    var diner = ""
 
-    
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
     
     init(style: UITableViewStyle) {
         super.init(style: style)
+
         // Custom initialization
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TesseractController.recognizeImage("photo 6.JPG")
     }
     
     override func viewDidAppear(animated: Bool){
-        
-        //        var dinersAndFoodAndPrices = [["mikee": ["quinoa": 15.99, "tofu": 12.39]], ["rick": ["hamburger": 20.29]]]
-        //
-        //        var totalPerPerson = 0.00
-        //        var name = ""
-        //
-        //        for diner in dinersAndFoodAndPrices {
-        //            for (dinerName, foodItems) in diner {
-        //                name = dinerName
-        //                totalPerPerson = 0.00
-        //                for (foodItem, price) in foodItems {
-        //                    totalPerPerson = totalPerPerson + price
-        //                }
-        //            }
-        //            println("total price for \(name): \(totalPerPerson)")
-        //        }
-        
-        
-        var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        var dinerListFromDefaults:NSMutableArray? = userDefaults.objectForKey("dinerList") as? NSMutableArray
-        
-        if dinerListFromDefaults {
-            dinersList = dinerListFromDefaults!
-        }
         self.tableView.reloadData()
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -69,21 +38,24 @@ class DinerViewController: UITableViewController {
     // #pragma mark - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
-        
         return 1
     }
     
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
-        return dinersList.count
+        return sharedDinerController.dinerList.count
     }
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        let cell = tableView!.dequeueReusableCellWithIdentifier("diner", forIndexPath: indexPath) as UITableViewCell
+        var dinerCell = tableView!.dequeueReusableCellWithIdentifier("diner", forIndexPath: indexPath) as UITableViewCell
         
-        var specificDiner:NSDictionary = dinersList.objectAtIndex(indexPath!.row) as NSDictionary
-        cell.text = specificDiner.objectForKey("dinerName") as String
+        var specificDiner = ""
         
-        return cell
+        if sharedDinerController.dinerList.count > 0 {
+            specificDiner = sharedDinerController.dinerList.objectAtIndex(indexPath!.row) as String
+        }
+        dinerCell.text = specificDiner
+        
+        return dinerCell
     }
     
     /*
