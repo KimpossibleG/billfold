@@ -11,7 +11,7 @@
 @implementation TesseractController
 
 static Tesseract *_tesseract = nil;
-+ (void)recognizeImage:(NSString*)imageName
++ (NSString*)recognizeImage:(NSString*)imageName
 {
     Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
     _tesseract = tesseract;
@@ -20,12 +20,13 @@ static Tesseract *_tesseract = nil;
     UIImage *image = [UIImage imageNamed:imageName];
     [tesseract setImage:image];
     NSLog(@"%@", [tesseract recognizedText]);
+    return [tesseract recognizedText];
     
 }
 
 + (id)regexDo:(NSString*)foodString{
     // This is where we'll feed in our string from tesseract:
-    NSString *string = @"Hotdog $14.99\nSoup 5.32";
+    NSString *string = foodString;
     
     // This allows us to use the error property:
     NSError *error = NULL;
@@ -44,19 +45,12 @@ static Tesseract *_tesseract = nil;
     
     for (NSTextCheckingResult *match in matches)
     {
-//        NSRange matchRange = match.range;
         NSRange firstRange = [match rangeAtIndex:1];
 //        NSRange secondRange = [match rangeAtIndex:2];
         NSRange thirdRange = [match rangeAtIndex:3];
         NSString *objString = [string substringWithRange:thirdRange];
         NSString *keyString = [string substringWithRange:firstRange];
-        
-//        (NSString *)substringWithRange:(NSRange)range;
-        
-//        NSValue *objVal = [NSValue valueWithRange:secondHalfRange];
-//        NSValue *keyVal = [NSValue valueWithRange:firstHalfRange];
-//        [foodAndPrices setObject:objVal forKey:keyVal];
-        
+                
         [foodAndPrices setObject:objString forKey:keyString];
 
     }
