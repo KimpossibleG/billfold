@@ -7,8 +7,8 @@ import UIKit
 
 class DinerViewController: UITableViewController {
     
-    var diner = ""
-
+    var currentDinerIndex:NSInteger = NSInteger()
+    
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
@@ -19,11 +19,21 @@ class DinerViewController: UITableViewController {
         // Custom initialization
     }
     
+    override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
+        currentDinerIndex = indexPath!.row
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if segue.destinationViewController is FoodTableViewController {
+            var foodTableControllerWithName = segue.destinationViewController as FoodTableViewController
+            foodTableControllerWithName.currentDinerIndex = currentDinerIndex
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()    
 
         sharedFoodController.foodAndPrices = TesseractController.regexDo(TesseractController.recognizeImage("photo 6.JPG")) as NSDictionary
-
     }
     
     override func viewDidAppear(animated: Bool){
@@ -45,15 +55,10 @@ class DinerViewController: UITableViewController {
         return sharedDinerController.dinerList.count
     }
     
-    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        var dinerCell = tableView!.dequeueReusableCellWithIdentifier("diner", forIndexPath: indexPath) as UITableViewCell
+    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
+        let dinerCell = tableView!.dequeueReusableCellWithIdentifier("diner", forIndexPath: indexPath) as UITableViewCell
         
-        var specificDiner = ""
-        
-        if sharedDinerController.dinerList.count > 0 {
-            specificDiner = sharedDinerController.dinerList.objectAtIndex(indexPath!.row) as String
-        }
-        dinerCell.text = specificDiner
+        dinerCell.text = sharedDinerController.dinerList[indexPath.row].name
         
         return dinerCell
     }

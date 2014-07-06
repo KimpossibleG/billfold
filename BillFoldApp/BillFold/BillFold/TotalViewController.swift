@@ -52,7 +52,6 @@ class TotalViewController: UITableViewController {
         
         let cell = tableView!.dequeueReusableCellWithIdentifier("dinerAndTotal", forIndexPath: indexPath) as UITableViewCell
 
-
         return cell
     }
     

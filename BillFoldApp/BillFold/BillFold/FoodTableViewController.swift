@@ -11,7 +11,8 @@ import UIKit
 class FoodTableViewController: UITableViewController {
     
     var foodList:NSMutableArray = NSMutableArray()
-    
+    var selectedList:NSMutableArray = NSMutableArray()
+    var currentDinerIndex:NSInteger = NSInteger()
     init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
@@ -21,9 +22,14 @@ class FoodTableViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
     
+    override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
+        selectedList.addObject(foodList.objectAtIndex(indexPath!.row))
+    }
+    
     override func viewDidLoad() {
+        var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
+        println(currentDiner.name)
         super.viewDidLoad()
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
