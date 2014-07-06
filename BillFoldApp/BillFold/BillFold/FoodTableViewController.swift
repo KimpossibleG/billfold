@@ -10,7 +10,7 @@ import UIKit
 
 class FoodTableViewController: UITableViewController {
     
-    var foodList:NSMutableArray = NSMutableArray()
+    //    var foodList:NSMutableArray = NSMutableArray()
     
     init(style: UITableViewStyle) {
         super.init(style: style)
@@ -33,11 +33,11 @@ class FoodTableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool){
         
-        var foods:NSMutableArray = ["Hotdog 25" , "Fruit 1.05" , "Juices 1.00" , "Jams 15.00" , "Eggs 10.00"]
+        //        var foods:NSMutableArray = ["Hotdog 25" , "Fruit 1.05" , "Juices 1.00" , "Jams 15.00" , "Eggs 10.00"]
+        //
+        //        foodList = foods
         
-        foodList = foods
-        
-        self.tableView.reloadData()
+        //        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,18 +56,18 @@ class FoodTableViewController: UITableViewController {
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return foodList.count
+        return 1
     }
     
-    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        let foodCell = tableView!.dequeueReusableCellWithIdentifier("food", forIndexPath: indexPath) as UITableViewCell
-        
-        var specificFood = foodList.objectAtIndex(indexPath!.row) as String
-        foodCell.text = specificFood
-        
-
-        return foodCell
-    }
+        override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
+            let foodCell = tableView!.dequeueReusableCellWithIdentifier("foodItem", forIndexPath: indexPath) as UITableViewCell
+    
+//            var specificFood = foodList.objectAtIndex(indexPath!.row) as String
+//            foodCell.text = specificFood
+//    
+    
+            return foodCell
+        }
     
     /*
     // Override to support conditional editing of the table view.

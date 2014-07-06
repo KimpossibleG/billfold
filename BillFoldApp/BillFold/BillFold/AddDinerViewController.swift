@@ -12,16 +12,16 @@ class AddDinerViewController: UIViewController {
     
     @IBOutlet strong var addDinerField: UITextField = UITextField()
     
-    var tempDinerList:NSMutableArray = NSMutableArray()
+//    var tempDinerList:NSMutableArray = NSMutableArray()
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        var dinerName = addDinerField.text
-        tempDinerList.addObject(dinerName)
-        let destinationTableViewController = segue.destinationViewController as DinerViewController
-        destinationTableViewController.diner = dinerName
-        destinationTableViewController.dinersList = tempDinerList
-    }
-    
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//        var dinerName = addDinerField.text
+//        tempDinerList.addObject(dinerName)
+//        let destinationTableViewController = segue.destinationViewController as DinerViewController
+//        destinationTableViewController.diner = dinerName
+//        destinationTableViewController.dinersList = tempDinerList
+//    }
+//    
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
@@ -43,6 +43,9 @@ class AddDinerViewController: UIViewController {
     }
     
     @IBAction func addDinerTap(sender: AnyObject) {
+        var dinerName = addDinerField.text
+        sharedDinerController.dinerList.addObject(dinerName)
+        navigationController.popViewControllerAnimated(true)
         
 //        var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
 //        

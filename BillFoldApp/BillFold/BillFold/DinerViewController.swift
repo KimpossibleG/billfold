@@ -10,15 +10,8 @@ class DinerViewController: UITableViewController {
     
     //I ADDED THIS I THINK IT SHOULD BE DECLARED HERE??????
     //    var tesseract:STesseract = STesseract();
-    
-    var dinersList:NSMutableArray = NSMutableArray()
     var diner = ""
-    
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        let destinationTableViewController = segue.destinationViewController as AddDinerViewController
-        destinationTableViewController.tempDinerList = dinersList
-    }
-    
+
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
@@ -35,6 +28,7 @@ class DinerViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool){
+        self.tableView.reloadData()
 //                var dinersAndFoodAndPrices = [["mikee": ["quinoa": 15.99, "tofu": 12.39]], ["rick": ["hamburger": 20.29]]]
 //        
 //                var totalPerPerson = 0.00
@@ -51,17 +45,7 @@ class DinerViewController: UITableViewController {
 //                    println("total price for \(name): \(totalPerPerson)")
 //                }
         
-//        var dinerListFromList:NSMutableArray? = ("dinerList") as? NSMutableArray
-        
-//        println("Diner list: \(dinerListFromDefaults)")
-        
-//        if dinerListFromDefaults {
-//            dinersList = dinerListFromDefaults!
-//        }
-        
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -75,7 +59,9 @@ class DinerViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
-        return dinersList.count
+        
+        println("string in row: \(sharedDinerController.dinerList)")
+        return sharedDinerController.dinerList.count
     }
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
@@ -83,8 +69,8 @@ class DinerViewController: UITableViewController {
         
         var specificDiner = ""
         
-        if dinersList.count > 0 {
-            specificDiner = dinersList.objectAtIndex(indexPath!.row) as String
+        if sharedDinerController.dinerList.count > 0 {
+            specificDiner = sharedDinerController.dinerList.objectAtIndex(indexPath!.row) as String
         }
         cell.text = specificDiner
         
