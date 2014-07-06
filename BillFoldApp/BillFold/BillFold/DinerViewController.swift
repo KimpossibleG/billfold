@@ -7,9 +7,6 @@ import UIKit
 
 class DinerViewController: UITableViewController {
     
-    
-    //I ADDED THIS I THINK IT SHOULD BE DECLARED HERE??????
-    //    var tesseract:STesseract = STesseract();
     var diner = ""
 
     init(coder aDecoder: NSCoder!) {
@@ -24,6 +21,7 @@ class DinerViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println(TesseractController.regexDo(TesseractController.recognizeImage("photo 6.JPG")))
     }
     
     override func viewDidAppear(animated: Bool){
