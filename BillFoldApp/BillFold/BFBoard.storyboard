@@ -16,8 +16,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem width="254" style="plain" systemItem="fixedSpace" id="b7m-0b-y7M"/>
-                                <barButtonItem title="Done" id="Vnn-Sv-4hs">
+                                <barButtonItem width="203" style="plain" systemItem="fixedSpace" id="b7m-0b-y7M"/>
+                                <barButtonItem title="Split It Up!" id="Vnn-Sv-4hs">
                                     <connections>
                                         <segue destination="wpO-nV-ziD" kind="push" id="UFO-SN-5fv"/>
                                     </connections>
