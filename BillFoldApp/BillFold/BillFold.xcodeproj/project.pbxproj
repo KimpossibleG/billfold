@@ -464,17 +464,17 @@
 		AAEE459019662032007660E7 /* BillFold */ = {
 			isa = PBXGroup;
 			children = (
-				CDB6F7D31967625000BC54FC /* PhotoViewController.swift */,
-				AA5083D1196777A70005F4D7 /* photo 6.JPG */,
+				AAA0021019662B61000D2D24 /* AddDinerViewController.swift */,
 				AAEE459319662032007660E7 /* AppDelegate.swift */,
-				AA5229FC1968D221000C2A7E /* foodController.swift */,
+				AAEE45AB1966207B007660E7 /* BFBoard.storyboard */,
+				AAA0020C19662AF2000D2D24 /* DinerViewController.swift */,
 				AA5229FA1968C37E000C2A7E /* DinerController.swift */,
+				AA5229FC1968D221000C2A7E /* foodController.swift */,
 				AA5229F81968B476000C2A7E /* FoodTableViewController.swift */,
+				AA5083D1196777A70005F4D7 /* photo 6.JPG */,
+				CDB6F7D31967625000BC54FC /* PhotoViewController.swift */,
 				AA5083CF1967767C0005F4D7 /* TessseractController.m */,
 				AA5083CE196776570005F4D7 /* TesseractController.h */,
-				AAA0020C19662AF2000D2D24 /* DinerViewController.swift */,
-				AAA0021019662B61000D2D24 /* AddDinerViewController.swift */,
-				AAEE45AB1966207B007660E7 /* BFBoard.storyboard */,
 				AAEE459519662032007660E7 /* Images.xcassets */,
 				AAEE459119662032007660E7 /* Supporting Files */,
 			);
