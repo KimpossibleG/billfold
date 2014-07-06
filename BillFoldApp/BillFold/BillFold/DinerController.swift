@@ -13,5 +13,6 @@ let sharedDinerController = DinerController()
 class DinerController {
     
     var dinerList:NSMutableArray = NSMutableArray()
+
 }
 

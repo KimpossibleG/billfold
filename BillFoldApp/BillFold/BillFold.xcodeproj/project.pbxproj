@@ -26,6 +26,7 @@
 		AAEE459619662032007660E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEE459519662032007660E7 /* Images.xcassets */; };
 		AAEE45A219662032007660E7 /* BillFoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE45A119662032007660E7 /* BillFoldTests.swift */; };
 		AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEE45AB1966207B007660E7 /* BFBoard.storyboard */; };
+		CD9AB5801969E34700170078 /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AB57F1969E34700170078 /* TotalViewController.swift */; };
 		CDB6F7D41967625000BC54FC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6F7D31967625000BC54FC /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -209,6 +210,7 @@
 		AAEE45A019662032007660E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAEE45A119662032007660E7 /* BillFoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillFoldTests.swift; sourceTree = "<group>"; };
 		AAEE45AB1966207B007660E7 /* BFBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BFBoard.storyboard; path = ../BFBoard.storyboard; sourceTree = "<group>"; };
+		CD9AB57F1969E34700170078 /* TotalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
 		CDB6F7D31967625000BC54FC /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -466,6 +468,7 @@
 			children = (
 				AAA0021019662B61000D2D24 /* AddDinerViewController.swift */,
 				AAEE459319662032007660E7 /* AppDelegate.swift */,
+				CD9AB57F1969E34700170078 /* TotalViewController.swift */,
 				AAEE45AB1966207B007660E7 /* BFBoard.storyboard */,
 				AAA0020C19662AF2000D2D24 /* DinerViewController.swift */,
 				AA5229FA1968C37E000C2A7E /* DinerController.swift */,
@@ -619,6 +622,7 @@
 				CDB6F7D41967625000BC54FC /* PhotoViewController.swift in Sources */,
 				17F150451966434000F35CAF /* Tesseract.mm in Sources */,
 				AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */,
+				CD9AB5801969E34700170078 /* TotalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
