@@ -59,22 +59,20 @@ class DinerViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
-        
-        println("string in row: \(sharedDinerController.dinerList)")
         return sharedDinerController.dinerList.count
     }
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        var cell = tableView!.dequeueReusableCellWithIdentifier("diner", forIndexPath: indexPath) as UITableViewCell
+        var dinerCell = tableView!.dequeueReusableCellWithIdentifier("diner", forIndexPath: indexPath) as UITableViewCell
         
         var specificDiner = ""
         
         if sharedDinerController.dinerList.count > 0 {
             specificDiner = sharedDinerController.dinerList.objectAtIndex(indexPath!.row) as String
         }
-        cell.text = specificDiner
+        dinerCell.text = specificDiner
         
-        return cell
+        return dinerCell
     }
     
     /*
