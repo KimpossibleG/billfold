@@ -22,8 +22,8 @@ class foodController {
         for index in 0..currentListOfDiners.count {
             totalForDiner = 0.0
             var diner = sharedDinerController.dinerList[index]
-            for foodItemPrice in diner.foodItems.allValues {
-                var price = foodItemPrice as NSString
+            for foodItemPrice in diner.foodItems {
+                var price = foodItemPrice.price as NSString
                 var double = price.doubleValue
                 totalForDiner = totalForDiner + double
                 sharedDinerController.dinerList[index].totalOwed = totalForDiner
