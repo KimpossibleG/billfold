@@ -23,8 +23,8 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
         var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
-        var selectedFoodPrice = sharedFoodController.foodAndPrices.allValues[indexPath.row] as String
-        var selectedFood = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
+        var selectedFoodPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
+        var selectedFood = sharedFoodController.foodAndPrices[indexPath.row].food as String
         if currentDiner.foodItems[selectedFood] === nil {
             currentDiner.foodItems[selectedFood] = selectedFoodPrice
         }
@@ -36,8 +36,8 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            var deleteValue = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
-            sharedFoodController.foodAndPrices.removeObjectForKey(deleteValue)
+            var deleteValue = sharedFoodController.foodAndPrices[indexPath.row] as String
+            sharedFoodController.foodAndPrices.removeObjectAtIndex(indexPath.row)
             self.tableView.reloadData()
         }
     }
