@@ -28,6 +28,12 @@ class FoodTableViewController: UITableViewController {
         currentDiner.foodItems[selectedFood] = selectedFoodPrice
     }
     
+    
+    override func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
+        // Return NO if you do not want the specified item to be editable.
+        return true
+    }
+    
     override func viewDidLoad() {
         var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
         super.viewDidLoad()
@@ -35,7 +41,6 @@ class FoodTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(animated: Bool){
