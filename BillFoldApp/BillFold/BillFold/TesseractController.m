@@ -19,7 +19,6 @@ static Tesseract *_tesseract = nil;
     
     UIImage *image = [UIImage imageNamed:imageName];
     [tesseract setImage:image];
-    NSLog(@"%@", [tesseract recognizedText]);
     return [tesseract recognizedText];
     
 }

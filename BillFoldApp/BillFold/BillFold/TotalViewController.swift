@@ -27,6 +27,11 @@ class TotalViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    override func viewDidAppear(animated: Bool){
+        sharedFoodController.calcTotals()
+        println(sharedDinerController.dinerList[0].totalOwed)
+        self.tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,21 +43,27 @@ class TotalViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return sharedDinerController.dinerList.count
     }
 
     
-    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
+    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
         
-        let cell = tableView!.dequeueReusableCellWithIdentifier("dinerAndTotal", forIndexPath: indexPath) as UITableViewCell
-
-        return cell
+        let totalCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "totalCell") as UITableViewCell
+        
+        var specificDiner = sharedDinerController.dinerList[indexPath.row].name as String
+        var specificDinerTotalOwed = String(sharedDinerController.dinerList[indexPath.row].totalOwed)
+        
+        totalCell.text = specificDinerTotalOwed
+        totalCell.detailTextLabel.text = specificDiner
+        
+        return totalCell
     }
     
 

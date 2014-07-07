@@ -15,15 +15,18 @@ let sharedDinerController = DinerController()
 struct diner{
     var name = ""
     var foodItems:NSMutableDictionary = NSMutableDictionary()
+    var totalOwed = Double()
 }
 
 class DinerController {
     
     var dinerList = diner[]()
     
-    func addDiner (name: String, foodItem: NSMutableDictionary){
-        dinerList.append(diner(name: name, foodItems: foodItem))
+    func addDiner (name: String, foodItem: NSMutableDictionary, totalOwed: Double){
+        dinerList.append(diner(name: name, foodItems: foodItem, totalOwed: totalOwed))
     }
+    
+    
 
 }
 
