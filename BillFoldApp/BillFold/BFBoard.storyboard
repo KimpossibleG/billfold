@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="b9z-1J-XSH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="b9z-1J-XSH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
@@ -16,8 +16,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem width="203" style="plain" systemItem="fixedSpace" id="b7m-0b-y7M"/>
-                                <barButtonItem title="Split It Up!" id="Vnn-Sv-4hs">
+                                <barButtonItem width="193" style="plain" systemItem="fixedSpace" id="b7m-0b-y7M"/>
+                                <barButtonItem title="Get my totals" id="Vnn-Sv-4hs">
                                     <connections>
                                         <segue destination="wpO-nV-ziD" kind="push" id="UFO-SN-5fv"/>
                                     </connections>
