@@ -76,7 +76,7 @@ class FoodTableViewController: UITableViewController {
         var specificPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
     
         foodCell.text = specificFood
-        foodCell.detailTextLabel.text = specificPrice
+        foodCell.detailTextLabel.text = "$\(specificPrice)"
         
         return foodCell
     }
