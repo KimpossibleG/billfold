@@ -12,7 +12,6 @@ let sharedRegexController = RegexController()
 
 class RegexController {
 
-//    var originalDictionary:NSMutableDictionary = NSMutableDictionary()
     var taxDictionary:NSMutableDictionary = NSMutableDictionary()
 
     var originalDictionary = [
@@ -46,4 +45,3 @@ class RegexController {
     }
 
 }
-// Pattern matcher: ~=
