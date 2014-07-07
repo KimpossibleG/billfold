@@ -48,7 +48,6 @@ class DinerViewController: UITableViewController {
         
         var foodCollection = TesseractController.regexDo(imageString)
         sharedFoodController.foodAndPrices = foodCollection
-//        sharedRegexController.moveSubtotals()
     }
     
     override func viewDidAppear(animated: Bool){
@@ -57,10 +56,8 @@ class DinerViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    // #pragma mark - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         return 1
