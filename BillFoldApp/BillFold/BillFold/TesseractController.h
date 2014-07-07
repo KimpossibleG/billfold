@@ -11,4 +11,7 @@
 @interface TesseractController : NSObject
 + (NSString*)recognizeImage:(NSString*)image;
 + (NSMutableDictionary*)regexDo:(NSString*)foodString;
+
+
+
 @end
