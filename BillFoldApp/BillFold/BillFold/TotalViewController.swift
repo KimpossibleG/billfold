@@ -33,12 +33,25 @@ class TotalViewController: UITableViewController {
         sharedFoodController.calcTotals()
         self.tableView.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    // delete item from specific user
+    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        var currentDiner = sharedDinerController.dinerList[indexPath.section]
+        var deletedItem = currentDiner.foodItems.allKeys[indexPath.row]
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            currentDiner.foodItems.removeObjectForKey(deletedItem)
+        }
+        println(self.tableView)
+        self.view.reloadInputViews()
+        
+    }
+    
     // #pragma mark - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
@@ -50,7 +63,7 @@ class TotalViewController: UITableViewController {
         var currentDiner = sharedDinerController.dinerList[section].name
         var totalOwed = sharedDinerController.dinerList[section].totalOwed
         
-        var nameAndTotal = "\(currentDiner) -- \(totalOwed)"
+        var nameAndTotal = "\(currentDiner) — \(totalOwed)"
         return nameAndTotal as String
     }
     
