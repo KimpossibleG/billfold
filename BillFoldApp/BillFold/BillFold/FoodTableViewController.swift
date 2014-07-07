@@ -10,9 +10,8 @@ import UIKit
 
 class FoodTableViewController: UITableViewController {
     
-    var foodList:NSMutableArray = NSMutableArray()
-    var selectedList:NSMutableArray = NSMutableArray()
     var currentDinerIndex:NSInteger = NSInteger()
+    
     init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
@@ -23,12 +22,17 @@ class FoodTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
-        selectedList.addObject(foodList.objectAtIndex(indexPath!.row))
+        var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
+        var selectedFood = sharedFoodController.foodAndPrices.allValues[indexPath.row] as String
+        var selectedFoodPrice = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
+        currentDiner.foodItems[selectedFood] = selectedFoodPrice
+        
+//        .addObject(sharedFoodController.foodAndPrices.allKeys[indexPath.row])
+        
     }
     
     override func viewDidLoad() {
         var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
-        println(currentDiner.name)
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -38,10 +42,6 @@ class FoodTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool){
-        
-        var foods:NSMutableArray = ["Hotdog 25" , "Fruit 1.05" , "Juices 1.00" , "Jams 15.00" , "Eggs 10.00"]
-        
-        foodList = foods
         
         self.tableView.reloadData()
     }
@@ -62,18 +62,21 @@ class FoodTableViewController: UITableViewController {
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return foodList.count
+        return sharedFoodController.foodAndPrices.count
     }
     
-        override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-            let foodCell = tableView!.dequeueReusableCellWithIdentifier("foodItem", forIndexPath: indexPath) as UITableViewCell
+    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
+            
+        let foodCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "foodItem") as UITableViewCell
+        
+        var specificFood = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
+        var specificPrice = sharedFoodController.foodAndPrices.allValues[indexPath.row] as String
     
-            var specificFood = foodList.objectAtIndex(indexPath!.row) as String
-            foodCell.text = specificFood
-    
-    
-            return foodCell
-        }
+        foodCell.text = specificFood
+        foodCell.detailTextLabel.text = specificPrice
+        
+        return foodCell
+    }
     
     /*
     // Override to support conditional editing of the table view.
