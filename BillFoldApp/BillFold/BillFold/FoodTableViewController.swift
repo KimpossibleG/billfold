@@ -23,8 +23,8 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
         var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
-        var selectedFoodPrice = sharedFoodController.foodAndPrices.allValues[indexPath.row] as String
-        var selectedFood = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
+        var selectedFoodPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
+        var selectedFood = sharedFoodController.foodAndPrices[indexPath.row].food as String
         if currentDiner.foodItems[selectedFood] === nil {
             currentDiner.foodItems[selectedFood] = selectedFoodPrice
         }
@@ -36,8 +36,7 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            var deleteValue = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
-            sharedFoodController.foodAndPrices.removeObjectForKey(deleteValue)
+            sharedFoodController.foodAndPrices.removeObjectAtIndex(indexPath.row)
             self.tableView.reloadData()
         }
     }
@@ -52,7 +51,6 @@ class FoodTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool){
-        
         self.tableView.reloadData()
     }
     
@@ -79,8 +77,8 @@ class FoodTableViewController: UITableViewController {
             
         let foodCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "foodItem") as UITableViewCell
         
-        var specificFood = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
-        var specificPrice = sharedFoodController.foodAndPrices.allValues[indexPath.row] as String
+        var specificFood = sharedFoodController.foodAndPrices[indexPath.row].food as String
+        var specificPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
     
         foodCell.text = specificFood
         foodCell.detailTextLabel.text = specificPrice

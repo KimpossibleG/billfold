@@ -37,7 +37,12 @@ class AddFoodViewController: UIViewController {
     @IBAction func addFoodItem(sender: AnyObject) {
         var itemName = foodItemName.text
         var itemPrice = foodItemPrice.text
-        sharedFoodController.foodAndPrices[itemName] = itemPrice
+        let newFood = parsedFood()
+        newFood.food = itemName
+        newFood.price = itemPrice
+        newFood.counter = 0
+
+        sharedFoodController.foodAndPrices.addObject(newFood)
         navigationController.popViewControllerAnimated(true)
     }
     /*
