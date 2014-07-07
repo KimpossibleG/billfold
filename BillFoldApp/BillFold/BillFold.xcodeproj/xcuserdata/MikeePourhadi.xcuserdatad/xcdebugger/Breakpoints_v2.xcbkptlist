@@ -2,4 +2,52 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BillFold/foodController.swift"
+            timestampString = "426391321.455464"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "calcTotals()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BillFold.foodController.calcTotals (BillFold.foodController)() -&gt; Swift.Double"
+                  moduleName = "BillFold"
+                  urlString = "file:///Users/MikeePourhadi/Desktop/stuff/BillFolding/billfoldwithregex/BillFoldApp/BillFold/BillFold/foodController.swift"
+                  timestampString = "426390930.076594"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1999">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BillFold.foodController.calcTotals (BillFold.foodController)() -&gt; Swift.Double"
+                  moduleName = "BillFold"
+                  urlString = "file:///Users/MikeePourhadi/Desktop/stuff/BillFolding/billfoldwithregex/BillFoldApp/BillFold/BillFold/foodController.swift"
+                  timestampString = "426390930.080726"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "2013">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

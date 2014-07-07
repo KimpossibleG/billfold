@@ -16,16 +16,20 @@ class foodController {
     
     func calcTotals() {
         var totalForDiner = Double()
-            
         var currentListOfDiners = sharedDinerController.dinerList
-            
-        for diner in currentListOfDiners {
+        
+        // for loop for this bullshit
+        for index in 0..currentListOfDiners.count {
+            totalForDiner = 0.0
+            var diner = sharedDinerController.dinerList[index]
             for foodItemPrice in diner.foodItems.allValues {
                 var price = foodItemPrice as NSString
-                var float = price.doubleValue
-                totalForDiner = totalForDiner + float
-                }
+                var double = price.doubleValue
+                totalForDiner = totalForDiner + double
+                diner.totalOwed = totalForDiner
             }
+        }
         
     }
+
 }
