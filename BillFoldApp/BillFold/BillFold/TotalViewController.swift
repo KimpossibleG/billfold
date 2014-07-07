@@ -9,6 +9,8 @@
 import UIKit
 
 class TotalViewController: UITableViewController {
+    
+    var index = 0
 
     init(style: UITableViewStyle) {
         super.init(style: style)
@@ -42,13 +44,20 @@ class TotalViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        return sharedDinerController.dinerList.count
     }
-
+    override func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String {
+        var currentDiner = sharedDinerController.dinerList[section].name
+        var totalOwed = sharedDinerController.dinerList[section].totalOwed
+        
+        var nameAndTotal = "\(currentDiner) -- \(totalOwed)"
+        return nameAndTotal as String
+    }
+    
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return sharedDinerController.dinerList.count
+        return sharedDinerController.dinerList[section].foodItems.count
     }
 
     
@@ -56,11 +65,13 @@ class TotalViewController: UITableViewController {
         
         let totalCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "totalCell") as UITableViewCell
         
-        var specificDiner = sharedDinerController.dinerList[indexPath.row].name as String
-        var specificDinerTotalOwed = String(sharedDinerController.dinerList[indexPath.row].totalOwed)
+        var specificDiner = sharedDinerController.dinerList[indexPath.section]
         
-        totalCell.text = specificDinerTotalOwed
-        totalCell.detailTextLabel.text = specificDiner
+        var specificFoodItem = specificDiner.foodItems.allKeys[indexPath.row] as String
+        var specificFoodPrice = specificDiner.foodItems.allValues[indexPath.row] as String
+        
+        totalCell.text = specificFoodItem
+        totalCell.detailTextLabel.text = specificFoodPrice
         
         return totalCell
     }
