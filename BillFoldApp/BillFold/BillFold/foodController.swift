@@ -26,10 +26,10 @@ class foodController {
                 var price = foodItemPrice as NSString
                 var double = price.doubleValue
                 totalForDiner = totalForDiner + double
-                diner.totalOwed = totalForDiner
+                sharedDinerController.dinerList[index].totalOwed = totalForDiner
             }
         }
-        
+    
     }
 
 }
