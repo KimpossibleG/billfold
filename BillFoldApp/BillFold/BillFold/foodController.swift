@@ -25,7 +25,8 @@ class foodController {
             for foodItemPrice in diner.foodItems {
                 var price = foodItemPrice.price as NSString
                 var double = price.doubleValue
-                totalForDiner = totalForDiner + double
+                var share = double/Double(foodItemPrice.counter)
+                totalForDiner = totalForDiner + share
                 sharedDinerController.dinerList[index].totalOwed = totalForDiner
             }
         }

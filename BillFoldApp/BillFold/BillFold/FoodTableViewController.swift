@@ -27,7 +27,8 @@ class FoodTableViewController: UITableViewController {
         currentDiner.foodItems.addObject(selectedFood)
         
         selectedFood.counter += 1
-        println(selectedFood.counter)
+        print(selectedFood.counter)
+        
     }
     
     override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
