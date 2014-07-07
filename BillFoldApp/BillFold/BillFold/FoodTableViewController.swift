@@ -52,7 +52,6 @@ class FoodTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool){
-        
         self.tableView.reloadData()
     }
     
@@ -79,8 +78,8 @@ class FoodTableViewController: UITableViewController {
             
         let foodCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "foodItem") as UITableViewCell
         
-        var specificFood = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
-        var specificPrice = sharedFoodController.foodAndPrices.allValues[indexPath.row] as String
+        var specificFood = sharedFoodController.foodAndPrices[indexPath.row].food as String
+        var specificPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
     
         foodCell.text = specificFood
         foodCell.detailTextLabel.text = specificPrice
