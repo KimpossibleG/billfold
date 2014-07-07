@@ -73,11 +73,67 @@
                             <outlet property="delegate" destination="YnA-WA-Gfl" id="y5I-ax-Hih"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="i84-eo-l5S"/>
+                    <navigationItem key="navigationItem" id="i84-eo-l5S">
+                        <barButtonItem key="rightBarButtonItem" title="Add Food Item" id="Xha-XH-bpk">
+                            <connections>
+                                <segue destination="KAY-PF-VC8" kind="push" id="JdD-HE-JOH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFO-Ce-3SP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1967" y="379"/>
+        </scene>
+        <!--Add Food View Controller-->
+        <scene sceneID="TnL-if-em5">
+            <objects>
+                <viewController id="KAY-PF-VC8" customClass="AddFoodViewController" customModule="BillFold" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1hO-ff-Vkf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Item:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NdR-wt-Wzh">
+                                <rect key="frame" x="35" y="66" width="250" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Item" minimumFontSize="17" clearButtonMode="always" id="Pif-dP-6vH">
+                                <rect key="frame" x="35" y="175" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" minimumFontSize="17" clearButtonMode="always" id="8rD-5g-LA0">
+                                <rect key="frame" x="35" y="219" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eOu-NN-78W">
+                                <rect key="frame" x="111" y="257" width="99" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Item">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addFoodItem:" destination="KAY-PF-VC8" eventType="touchUpInside" id="7pL-K7-yCX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OwI-Gu-zzX"/>
+                    <connections>
+                        <outlet property="foodItemName" destination="Pif-dP-6vH" id="LCT-SC-wbf"/>
+                        <outlet property="foodItemPrice" destination="8rD-5g-LA0" id="hoO-80-HWP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjb-EJ-5l6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2400" y="382"/>
         </scene>
         <!--Total View Controller-->
         <scene sceneID="eTa-PO-yDF">
