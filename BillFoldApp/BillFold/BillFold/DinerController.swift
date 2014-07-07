@@ -22,8 +22,8 @@ class DinerController {
     
     var dinerList = diner[]()
     
-    func addDiner (name: String, foodItem: NSMutableDictionary, totalOwed: Double){
-        dinerList.append(diner(name: name, foodItems: foodItem, totalOwed: totalOwed))
+    func addDiner (name: String, foodItems: NSMutableDictionary, totalOwed: Double){
+        dinerList.append(diner(name: name, foodItems: foodItems, totalOwed: totalOwed))
     }
     
     

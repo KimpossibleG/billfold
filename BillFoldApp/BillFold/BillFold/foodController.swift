@@ -12,7 +12,7 @@ let sharedFoodController = foodController()
 
 class foodController {
     
-    var foodAndPrices:NSDictionary = NSDictionary()
+    var foodAndPrices:NSMutableDictionary = NSMutableDictionary()
     
     func calcTotals() {
         var totalForDiner = Double()
