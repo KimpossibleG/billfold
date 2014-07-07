@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Michael Pourhadi. All rights reserved.
 //
 
-#import "FoodAndPrices.h"
+#import "parsedFood.h"
 
-@implementation FoodAndPrices
+@implementation parsedFood
 
 
 @end

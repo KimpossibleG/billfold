@@ -25,7 +25,9 @@ class FoodTableViewController: UITableViewController {
         var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
         var selectedFoodPrice = sharedFoodController.foodAndPrices.allValues[indexPath.row] as String
         var selectedFood = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
-        currentDiner.foodItems[selectedFood] = selectedFoodPrice
+        if currentDiner.foodItems[selectedFood] === nil {
+            currentDiner.foodItems[selectedFood] = selectedFoodPrice
+        }
     }
     
     override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
