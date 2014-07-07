@@ -58,7 +58,6 @@ Code Sample
     [tesseract setImage:[UIImage imageNamed:@"image_sample.jpg"]];
     [tesseract recognize];
     
-    NSLog(@"%@", [tesseract recognizedText]);
     [tesseract clear];
  
  

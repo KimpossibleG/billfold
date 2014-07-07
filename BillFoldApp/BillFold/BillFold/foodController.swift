@@ -15,21 +15,17 @@ class foodController {
     var foodAndPrices:NSDictionary = NSDictionary()
     
     func calcTotals() {
-        var totalPerPerson = 0.00
-        var name = ""
-//        
-//        for diner in dinersAndFoodAndPrices {
-//            for (dinerName, foodItems) in diner {
-//                name = dinerName
-//                totalPerPerson = 0.00
-//                for (foodItem, price) in foodItems {
-//                    totalPerPerson = totalPerPerson + price
-//                }
-//            }
-//            println("total price for \(name): \(totalPerPerson)")
-//        }
-        
+        var totalForDiner = Double()
+            
+        var currentListOfDiners = sharedDinerController.dinerList
+            
+        for diner in currentListOfDiners {
+            for foodItemPrice in diner.foodItems.allValues {
+                var price = foodItemPrice as NSString
+                var float = price.doubleValue
+                totalForDiner = totalForDiner + float
+                }
+            }
         
     }
-    
 }
