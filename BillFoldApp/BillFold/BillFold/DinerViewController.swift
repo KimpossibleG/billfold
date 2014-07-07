@@ -29,11 +29,22 @@ class DinerViewController: UITableViewController {
             foodTableControllerWithName.currentDinerIndex = currentDinerIndex
         }
     }
+    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            var deletePerson = indexPath.row
+            sharedDinerController.dinerList.removeAtIndex(deletePerson)
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()    
 
-        sharedFoodController.foodAndPrices = TesseractController.regexDo(TesseractController.recognizeImage("photo 6.JPG")) as NSDictionary
+        sharedFoodController.foodAndPrices = TesseractController.regexDo(TesseractController.recognizeImage("photo 6.JPG")) as NSMutableDictionary
     }
     
     override func viewDidAppear(animated: Bool){

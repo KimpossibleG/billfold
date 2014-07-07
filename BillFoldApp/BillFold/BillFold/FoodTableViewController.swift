@@ -28,6 +28,18 @@ class FoodTableViewController: UITableViewController {
         currentDiner.foodItems[selectedFood] = selectedFoodPrice
     }
     
+    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            var deleteValue = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
+            sharedFoodController.foodAndPrices.removeObjectForKey(deleteValue)
+            self.tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
         super.viewDidLoad()
