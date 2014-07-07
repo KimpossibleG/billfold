@@ -43,9 +43,8 @@ class TotalViewController: UITableViewController {
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         
         var currentDiner = sharedDinerController.dinerList[indexPath.section]
-        var deletedItem = currentDiner.foodItems.allKeys[indexPath.row]
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            currentDiner.foodItems.removeObjectForKey(deletedItem)
+            currentDiner.foodItems.removeObjectAtIndex(indexPath.row)
         }
         self.tableView.reloadData()
     }
@@ -78,8 +77,8 @@ class TotalViewController: UITableViewController {
         
         var specificDiner = sharedDinerController.dinerList[indexPath.section]
         
-        var specificFoodItem = specificDiner.foodItems.allKeys[indexPath.row] as String
-        var specificFoodPrice = specificDiner.foodItems.allValues[indexPath.row] as String
+        var specificFoodItem = specificDiner.foodItems[indexPath.row].food as String
+        var specificFoodPrice = specificDiner.foodItems[indexPath.row].price as String
         
         totalCell.text = specificFoodItem
         totalCell.detailTextLabel.text = specificFoodPrice
