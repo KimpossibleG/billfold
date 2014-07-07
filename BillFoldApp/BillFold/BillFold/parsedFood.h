@@ -12,6 +12,6 @@
 
 @property NSString *food;
 @property NSString *price;
-@property int *counter;
+@property int counter;
 
 @end

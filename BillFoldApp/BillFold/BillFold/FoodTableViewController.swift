@@ -36,7 +36,6 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            var deleteValue = sharedFoodController.foodAndPrices[indexPath.row] as String
             sharedFoodController.foodAndPrices.removeObjectAtIndex(indexPath.row)
             self.tableView.reloadData()
         }
