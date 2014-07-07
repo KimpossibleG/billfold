@@ -16,7 +16,7 @@
 		17F1504A1966434000F35CAF /* libtesseract_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F150431966434000F35CAF /* libtesseract_all.a */; };
 		17F1504B1966434000F35CAF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 17F150441966434000F35CAF /* README.md */; };
 		17F1504D1966434E00F35CAF /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 17F1504C1966434E00F35CAF /* tessdata */; };
-		17FFBA9A196B22DE00B9A867 /* FoodAndPrices.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FFBA99196B22DE00B9A867 /* FoodAndPrices.m */; };
+		17FFBA9A196B22DE00B9A867 /* parsedFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FFBA99196B22DE00B9A867 /* parsedFood.m */; };
 		AA5083D01967767C0005F4D7 /* TesseractController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5083CF1967767C0005F4D7 /* TesseractController.m */; };
 		AA5083D2196777A70005F4D7 /* photo 6.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AA5083D1196777A70005F4D7 /* photo 6.JPG */; };
 		AA5229F91968B476000C2A7E /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229F81968B476000C2A7E /* FoodTableViewController.swift */; };
@@ -198,8 +198,8 @@
 		17F150431966434000F35CAF /* libtesseract_all.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtesseract_all.a; sourceTree = "<group>"; };
 		17F150441966434000F35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		17F1504C1966434E00F35CAF /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = BillFold/tessdata; sourceTree = "<group>"; };
-		17FFBA98196B22DE00B9A867 /* FoodAndPrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodAndPrices.h; sourceTree = "<group>"; };
-		17FFBA99196B22DE00B9A867 /* FoodAndPrices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodAndPrices.m; sourceTree = "<group>"; };
+		17FFBA98196B22DE00B9A867 /* parsedFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parsedFood.h; sourceTree = "<group>"; };
+		17FFBA99196B22DE00B9A867 /* parsedFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parsedFood.m; sourceTree = "<group>"; };
 		AA5083CE196776570005F4D7 /* TesseractController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesseractController.h; sourceTree = "<group>"; };
 		AA5083CF1967767C0005F4D7 /* TesseractController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TesseractController.m; sourceTree = "<group>"; };
 		AA5083D1196777A70005F4D7 /* photo 6.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo 6.JPG"; sourceTree = "<group>"; };
@@ -489,8 +489,8 @@
 				AA5083CE196776570005F4D7 /* TesseractController.h */,
 				AAEE459519662032007660E7 /* Images.xcassets */,
 				AAEE459119662032007660E7 /* Supporting Files */,
-				17FFBA98196B22DE00B9A867 /* FoodAndPrices.h */,
-				17FFBA99196B22DE00B9A867 /* FoodAndPrices.m */,
+				17FFBA98196B22DE00B9A867 /* parsedFood.h */,
+				17FFBA99196B22DE00B9A867 /* parsedFood.m */,
 			);
 			path = BillFold;
 			sourceTree = "<group>";
@@ -634,7 +634,7 @@
 				CDB6F7D41967625000BC54FC /* PhotoViewController.swift in Sources */,
 				17F150451966434000F35CAF /* Tesseract.mm in Sources */,
 				AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */,
-				17FFBA9A196B22DE00B9A867 /* FoodAndPrices.m in Sources */,
+				17FFBA9A196B22DE00B9A867 /* parsedFood.m in Sources */,
 				CD9AB5801969E34700170078 /* TotalViewController.swift in Sources */,
 				174C43F0196AFADD00F32F4F /* RegexController.swift in Sources */,
 			);

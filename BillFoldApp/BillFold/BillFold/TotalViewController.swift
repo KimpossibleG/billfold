@@ -47,9 +47,7 @@ class TotalViewController: UITableViewController {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             currentDiner.foodItems.removeObjectForKey(deletedItem)
         }
-        println(self.tableView)
-        self.view.reloadInputViews()
-        
+        self.tableView.reloadData()
     }
     
     // #pragma mark - Table view data source

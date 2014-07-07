@@ -7,5 +7,6 @@
 //
 
 #import "TesseractController.h"
+#import "parsedFood.h"
 
 //#import "/tesseract-ios/tesseract.h"

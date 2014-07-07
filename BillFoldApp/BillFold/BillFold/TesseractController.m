@@ -8,7 +8,8 @@
 
 #import "TesseractController.h"
 #import "tesseract.h"
-#import "FoodAndPrices.h"
+#import "parsedFood.h"
+
 @implementation TesseractController
 
 static Tesseract *_tesseract = nil;
@@ -50,11 +51,11 @@ static Tesseract *_tesseract = nil;
         NSRange firstRange = [match rangeAtIndex:1];
 //        NSRange secondRange = [match rangeAtIndex:2];
         NSRange thirdRange = [match rangeAtIndex:3];
-        NSString *itemString = [string substringWithRange:thirdRange];
-        NSString *priceString = [string substringWithRange:firstRange];
+        NSString *priceString = [string substringWithRange:thirdRange];
+        NSString *itemString = [string substringWithRange:firstRange];
         
-        FoodAndPrices *tempFandP = [[FoodAndPrices alloc] init];
-        tempFandP.item = itemString;
+        parsedFood *tempFandP = [[parsedFood alloc] init];
+        tempFandP.food = itemString;
         tempFandP.price = priceString;
         tempFandP.counter = 0;
         

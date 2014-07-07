@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FoodAndPrices : NSObject
+@interface parsedFood : NSObject
 
-@property NSString *item;
+@property NSString *food;
 @property NSString *price;
 @property int *counter;
 
