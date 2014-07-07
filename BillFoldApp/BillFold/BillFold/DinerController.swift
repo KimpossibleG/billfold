@@ -8,8 +8,6 @@
 
 import Foundation
 
-//string.bridgeToObjectiveC().doubleValue
-
 let sharedDinerController = DinerController()
 
 struct diner{
