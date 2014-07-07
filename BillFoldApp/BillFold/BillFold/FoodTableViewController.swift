@@ -23,12 +23,9 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
         var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
-        var selectedFood = sharedFoodController.foodAndPrices.allValues[indexPath.row] as String
-        var selectedFoodPrice = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
+        var selectedFoodPrice = sharedFoodController.foodAndPrices.allValues[indexPath.row] as String
+        var selectedFood = sharedFoodController.foodAndPrices.allKeys[indexPath.row] as String
         currentDiner.foodItems[selectedFood] = selectedFoodPrice
-        
-//        .addObject(sharedFoodController.foodAndPrices.allKeys[indexPath.row])
-        
     }
     
     override func viewDidLoad() {
