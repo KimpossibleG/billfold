@@ -10,6 +10,14 @@ import UIKit
 
 class AddFoodViewController: UIViewController {
 
+    @IBOutlet var foodItemName: UITextField
+    
+    @IBOutlet var foodItemPrice:UITextField
+    
+    init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+    }
+    
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
@@ -26,7 +34,12 @@ class AddFoodViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func addFoodItem(sender: AnyObject) {
+        var itemName = foodItemName.text
+        var itemPrice = foodItemPrice.text
+        sharedFoodController.foodAndPrices[itemName] = itemPrice
+        navigationController.popViewControllerAnimated(true)
+    }
     /*
     // #pragma mark - Navigation
 

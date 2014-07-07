@@ -29,7 +29,6 @@ class TotalViewController: UITableViewController {
     }
     override func viewDidAppear(animated: Bool){
         sharedFoodController.calcTotals()
-        println(sharedDinerController.dinerList[0].totalOwed)
         self.tableView.reloadData()
     }
 
