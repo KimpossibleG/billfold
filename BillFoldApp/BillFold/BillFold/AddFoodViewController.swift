@@ -37,7 +37,7 @@ class AddFoodViewController: UIViewController {
     @IBAction func addFoodItem(sender: AnyObject) {
         var itemName = foodItemName.text
         var itemPrice = foodItemPrice.text
-        let newFood = parsedFood()
+        let newFood = ParsedFood()
         newFood.food = itemName
         newFood.price = itemPrice
         newFood.counter = 0
