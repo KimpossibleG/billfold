@@ -50,10 +50,8 @@ class TotalViewController: UITableViewController {
         }
         
         
-        self.tableView.reloadData()
-        let sectionHeader = tableView.headerViewForSection(indexPath.section)
-        
     }
+    
     
     // #pragma mark - Table view data source
 
