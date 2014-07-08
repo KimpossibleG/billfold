@@ -31,30 +31,26 @@ class Regex {
 class RegexController {
     
     var taxArray:NSMutableArray = NSMutableArray()
-    
-//    func seed() {
-//        let hotdog = parsedFood()
-//        hotdog.food = "hotdog"
-//        hotdog.price = "43.44"
-//        hotdog.counter = 0
-//        sharedFoodController.foodAndPrices.addObject(hotdog)
-//        
-//        let badFood = parsedFood()
-//        badFood.food = "Subtotal"
-//        badFood.price = "3.99"
-//        badFood.counter = 0
-//        sharedFoodController.foodAndPrices.addObject(badFood)
-//        
-//        println(sharedFoodController.foodAndPrices)
-//    }
+
     
     func deleteSubtotal(arrayOfFoodsPrices: NSMutableArray) {
         for (index, foodObject) in enumerate(arrayOfFoodsPrices) {
-            if Regex("ubtot").test(foodObject.food) {
+            if Regex("total").test(foodObject.food) {
                 var deletedFood = arrayOfFoodsPrices.removeObjectAtIndex(index);
                 
             }
         }
     }
+    
+    func summarizeTaxes(arrayOfFoodsPrices: NSMutableArray){
+        for (index, foodObject) in enumerate(arrayOfFoodsPrices) {
+            if Regex("tax").test(foodObject.food) {
+                var allTaxes = arrayOfFoodsPrices.removeObjectAtIndex(index)
+                taxArray.addObject(allTaxes)
+            }
+        }
+    
+    }
+    
 }
 
