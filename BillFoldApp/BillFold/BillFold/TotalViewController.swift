@@ -44,11 +44,15 @@ class TotalViewController: UITableViewController {
         
         var currentDiner = sharedDinerController.dinerList[indexPath.section]
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            
+            let item = sharedDinerController.dinerList[indexPath.section].foodItems[indexPath.row] as ParsedFood
+            item.counter -= 1
             currentDiner.foodItems.removeObjectAtIndex(indexPath.row)
         }
-//        println(sharedDinerController.dinerList[indexPath.section].foodItems[indexPath.row])
-//        self.tableView.reloadData()
+        
+        
+        self.tableView.reloadData()
+        let sectionHeader = tableView.headerViewForSection(indexPath.section)
+        
     }
     
     // #pragma mark - Table view data source
