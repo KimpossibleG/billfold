@@ -31,6 +31,9 @@
 		17F1504B1966434000F35CAF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 17F150441966434000F35CAF /* README.md */; };
 		17F1504D1966434E00F35CAF /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 17F1504C1966434E00F35CAF /* tessdata */; };
 		17FFBA9A196B22DE00B9A867 /* parsedFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FFBA99196B22DE00B9A867 /* parsedFood.m */; };
+		17FFBAAB196C3A1200B9A867 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FFBAA8196C39C000B9A867 /* GPUImage.framework */; };
+		17FFBAAD196C3A3000B9A867 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17FFBAA8196C39C000B9A867 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		17FFBAAF196C41E000B9A867 /* receipt_kg.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 17FFBAAE196C41E000B9A867 /* receipt_kg.JPG */; };
 		AA5083D01967767C0005F4D7 /* TesseractController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5083CF1967767C0005F4D7 /* TesseractController.m */; };
 		AA5229F91968B476000C2A7E /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229F81968B476000C2A7E /* FoodTableViewController.swift */; };
 		AA5229FB1968C37E000C2A7E /* DinerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229FA1968C37E000C2A7E /* DinerController.swift */; };
@@ -47,30 +50,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		09876B76196B85E600FB9BDA /* PBXContainerItemProxy */ = {
+		17FFBAA3196C39C000B9A867 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */;
+			containerPortal = 17FFBA9C196C39C000B9A867 /* GPUImage.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
 			remoteInfo = GPUImage;
 		};
-		09876B78196B85E600FB9BDA /* PBXContainerItemProxy */ = {
+		17FFBAA5196C39C000B9A867 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */;
+			containerPortal = 17FFBA9C196C39C000B9A867 /* GPUImage.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
 			remoteInfo = GPUImageTests;
 		};
-		09876B7A196B85E600FB9BDA /* PBXContainerItemProxy */ = {
+		17FFBAA7196C39C000B9A867 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */;
+			containerPortal = 17FFBA9C196C39C000B9A867 /* GPUImage.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BCE209E51943F20C002FEED8;
 			remoteInfo = GPUImageFramework;
 		};
-		09876B7D196B866900FB9BDA /* PBXContainerItemProxy */ = {
+		17FFBAA9196C3A0400B9A867 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */;
+			containerPortal = 17FFBA9C196C39C000B9A867 /* GPUImage.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = BCE209E41943F20C002FEED8;
 			remoteInfo = GPUImageFramework;
@@ -91,7 +94,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				09876B80196B869A00FB9BDA /* GPUImage.framework in CopyFiles */,
+				17FFBAAD196C3A3000B9A867 /* GPUImage.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +270,8 @@
 		17F1504C1966434E00F35CAF /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = BillFold/tessdata; sourceTree = "<group>"; };
 		17FFBA98196B22DE00B9A867 /* parsedFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parsedFood.h; sourceTree = "<group>"; };
 		17FFBA99196B22DE00B9A867 /* parsedFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parsedFood.m; sourceTree = "<group>"; };
+		17FFBA9C196C39C000B9A867 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
+		17FFBAAE196C41E000B9A867 /* receipt_kg.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = receipt_kg.JPG; path = ../../../../../../Desktop/receipt_kg.JPG; sourceTree = "<group>"; };
 		AA5083CE196776570005F4D7 /* TesseractController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesseractController.h; sourceTree = "<group>"; };
 		AA5083CF1967767C0005F4D7 /* TesseractController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TesseractController.m; sourceTree = "<group>"; };
 		AA5229F81968B476000C2A7E /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
@@ -309,16 +314,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09876B70196B85E600FB9BDA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				09876B77196B85E600FB9BDA /* libGPUImage.a */,
-				09876B79196B85E600FB9BDA /* GPUImageTests.octest */,
-				09876B7B196B85E600FB9BDA /* GPUImage.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		17F14FA71966434000F35CAF /* tesseract-ios */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +521,16 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		17FFBA9D196C39C000B9A867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17FFBAA4196C39C000B9A867 /* libGPUImage.a */,
+				17FFBAA6196C39C000B9A867 /* GPUImageTests.octest */,
+				17FFBAA8196C39C000B9A867 /* GPUImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AAEE458519662032007660E7 = {
 			isa = PBXGroup;
 			children = (
@@ -625,7 +630,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				09876B7E196B866900FB9BDA /* PBXTargetDependency */,
+				17FFBAAA196C3A0400B9A867 /* PBXTargetDependency */,
 			);
 			name = BillFold;
 			productName = BillFold;
@@ -680,8 +685,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 09876B70196B85E600FB9BDA /* Products */;
-					ProjectRef = 09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */;
+					ProductGroup = 17FFBA9D196C39C000B9A867 /* Products */;
+					ProjectRef = 17FFBA9C196C39C000B9A867 /* GPUImage.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -693,25 +698,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		09876B77196B85E600FB9BDA /* libGPUImage.a */ = {
+		17FFBAA4196C39C000B9A867 /* libGPUImage.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libGPUImage.a;
-			remoteRef = 09876B76196B85E600FB9BDA /* PBXContainerItemProxy */;
+			remoteRef = 17FFBAA3196C39C000B9A867 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		09876B79196B85E600FB9BDA /* GPUImageTests.octest */ = {
+		17FFBAA6196C39C000B9A867 /* GPUImageTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = GPUImageTests.octest;
-			remoteRef = 09876B78196B85E600FB9BDA /* PBXContainerItemProxy */;
+			remoteRef = 17FFBAA5196C39C000B9A867 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		09876B7B196B85E600FB9BDA /* GPUImage.framework */ = {
+		17FFBAA8196C39C000B9A867 /* GPUImage.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = GPUImage.framework;
-			remoteRef = 09876B7A196B85E600FB9BDA /* PBXContainerItemProxy */;
+			remoteRef = 17FFBAA7196C39C000B9A867 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -737,6 +742,7 @@
 				099447E0196C4CF3003C1501 /* photo10.jpg in Resources */,
 				AAEE459619662032007660E7 /* Images.xcassets in Resources */,
 				AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */,
+				17FFBAAF196C41E000B9A867 /* receipt_kg.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,10 +789,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		09876B7E196B866900FB9BDA /* PBXTargetDependency */ = {
+		17FFBAAA196C3A0400B9A867 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GPUImageFramework;
-			targetProxy = 09876B7D196B866900FB9BDA /* PBXContainerItemProxy */;
+			targetProxy = 17FFBAA9196C3A0400B9A867 /* PBXContainerItemProxy */;
 		};
 		AAEE459D19662032007660E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

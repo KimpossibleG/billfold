@@ -49,21 +49,19 @@ class DinerViewController: UITableViewController {
         //var rotatedPhoto:UIImage = UIImage(CGImage: pic.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
         //println(TesseractController.recognizeImage(pic))
         //println(TesseractController.recognizeImage(rotatedPhoto))
-        
+
         //displayImage(pic)
-        
+
        // testFilters()
 
-        var image:UIImage = UIImage(named: "photo1.JPG")
+        var image:UIImage = UIImage(named: "photo.JPG")
         var imageString:NSString = TesseractController.recognizeImage(image) as NSString
         var foodCollection = TesseractController.regexDo(imageString)
-
+        println(foodCollection)
         sharedFoodController.foodAndPrices = foodCollection
 
-        //sharedRegexController.seed()
         sharedRegexController.deleteSubtotal(foodCollection)
-      //  println(foodCollection)
-
+        sharedRegexController.summarizeTaxes(foodCollection)
     }
 
     override func viewDidAppear(animated: Bool){
@@ -73,7 +71,6 @@ class DinerViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         return 1
