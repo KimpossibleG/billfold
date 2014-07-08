@@ -22,13 +22,12 @@ class FoodTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
-        var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
-        var selectedFood = sharedFoodController.foodAndPrices[indexPath.row] as ParsedFood
-        currentDiner.foodItems.addObject(selectedFood)
+        let currentDiner = sharedDinerController.dinerList[currentDinerIndex]
+        let selectedFood = sharedFoodController.foodAndPrices[indexPath.row] as ParsedFood
         
+        currentDiner.foodItems += selectedFood
+    
         selectedFood.counter += 1
-        print(selectedFood.counter)
-        
     }
     
     override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
