@@ -11,7 +11,8 @@ import UIKit
 class AddDinerViewController: UIViewController {
     
     @IBOutlet strong var addDinerField: UITextField = UITextField()
-    
+    @IBOutlet var addDinerButton: UIButton
+
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
@@ -22,6 +23,8 @@ class AddDinerViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        addDinerButton.tintColor = black
+        addDinerField.tintColor = black
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.

@@ -8,6 +8,9 @@
 
 import UIKit
 
+let black = UIColor.blackColor()
+let lightColor: UIColor = UIColor(red: 1, green: 0.800, blue: 0.2, alpha: 1)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             

@@ -14,6 +14,8 @@ class AddFoodViewController: UIViewController {
     
     @IBOutlet var foodItemPrice:UITextField
     
+    @IBOutlet var addFoodButton: UIButton
+    
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
@@ -25,7 +27,10 @@ class AddFoodViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        foodItemName.tintColor = black
+        foodItemPrice.tintColor = black
+        addFoodButton.tintColor = black
+        
         // Do any additional setup after loading the view.
     }
 

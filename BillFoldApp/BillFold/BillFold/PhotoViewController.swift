@@ -10,11 +10,24 @@ import UIKit
 
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-
+    let lightColor: UIColor = UIColor(red: 1, green: 0.600, blue: 0, alpha: 1)
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+    var overLayLoader = UIView()
+    
+    func showLoader() {
+        overLayLoader.frame = UIScreen.mainScreen().bounds
+        overLayLoader.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        activityIndicator.startAnimating()
+        activityIndicator.center = overLayLoader.center
+        overLayLoader.addSubview(activityIndicator)
+        navigationController.view.addSubview(overLayLoader)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         photoButton.title = "Photo"
-       
+        navigationController.navigationBar.barTintColor = lightColor
+        navigationController.navigationBar
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,6 +61,17 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        showLoader()
+        var image:UIImage = UIImage(named: "photo.JPG")
+        var imageString:NSString = TesseractController.recognizeImage(image) as NSString
+        var foodCollection = TesseractController.regexDo(imageString)
+        //        println(foodCollection)
+        sharedFoodController.foodAndPrices = foodCollection
+        
+        sharedRegexController.deleteSubtotal(foodCollection)
+        sharedRegexController.summarizeTaxes(foodCollection)
+    }
     
     // Delegate Methods
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {

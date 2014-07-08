@@ -13,6 +13,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GzI-cc-4BU">
+                            <rect key="frame" x="0.0" y="64" width="320" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8Ld-Xw-RVk">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -48,6 +55,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="toolbarView" destination="8Ld-Xw-RVk" id="U0F-Vu-25x"/>
+                        <outlet property="totalUpdater" destination="GzI-cc-4BU" id="lYN-kL-kO2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2NF-oL-eU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +139,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="OwI-Gu-zzX"/>
                     <connections>
+                        <outlet property="addFoodButton" destination="eOu-NN-78W" id="ctC-er-ZrL"/>
                         <outlet property="foodItemName" destination="Pif-dP-6vH" id="LCT-SC-wbf"/>
                         <outlet property="foodItemPrice" destination="8rD-5g-LA0" id="hoO-80-HWP"/>
                     </connections>
@@ -199,6 +211,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fsO-5s-I69"/>
                     <connections>
+                        <outlet property="addDinerButton" destination="Jcx-p7-LxX" id="zW4-JH-r5h"/>
                         <outlet property="addDinerField" destination="Ero-9A-1dq" id="duq-8N-irt"/>
                     </connections>
                 </viewController>
@@ -292,5 +305,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <color key="tintColor" red="1" green="0.43601877" blue="0.1001496167" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
