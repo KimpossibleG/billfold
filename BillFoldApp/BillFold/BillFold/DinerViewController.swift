@@ -57,7 +57,7 @@ class DinerViewController: UITableViewController {
         var image:UIImage = UIImage(named: "photo.JPG")
         var imageString:NSString = TesseractController.recognizeImage(image) as NSString
         var foodCollection = TesseractController.regexDo(imageString)
-        println(foodCollection)
+//        println(foodCollection)
         sharedFoodController.foodAndPrices = foodCollection
 
         sharedRegexController.deleteSubtotal(foodCollection)
@@ -164,16 +164,16 @@ func testFilters() {
     var pic:UIImage = UIImage(named: "photo.JPG")
 
     for var i = 0.0; i < 1.0; i += 0.1 {
-        println("Luminance Threshold Filter | threshold=\(i)\n")
+//        println("Luminance Threshold Filter | threshold=\(i)\n")
         luminanceThresholdFilter.threshold = Float(i)
         var filteredPic:UIImage = processImage(luminanceThresholdFilter, pic)
-        println(TesseractController.recognizeImage(filteredPic))
+//        println(TesseractController.recognizeImage(filteredPic))
     }
 
     for var i = 0.0; i < 2.0; i += 0.1 {
-        println("Average Luminance Threshold Filter | \(i)\n")
+//        println("Average Luminance Threshold Filter | \(i)\n")
         averageLuminanceThresholdFilter.thresholdMultiplier = Float(i)
-        println(TesseractController.recognizeImage(processImage(averageLuminanceThresholdFilter, pic)))
+//        println(TesseractController.recognizeImage(processImage(averageLuminanceThresholdFilter, pic)))
     }
 }
 

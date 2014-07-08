@@ -47,7 +47,7 @@ class TotalViewController: UITableViewController {
             item.counter -= 1
             currentDiner.foodItems.removeAtIndex(indexPath.row)
         }
-        
+        self.tableView.reloadData()
     }
     
     
