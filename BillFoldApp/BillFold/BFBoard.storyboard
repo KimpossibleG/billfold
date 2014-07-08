@@ -12,6 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8Ld-Xw-RVk">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -19,7 +20,7 @@
                                 <barButtonItem width="193" style="plain" systemItem="fixedSpace" id="b7m-0b-y7M"/>
                                 <barButtonItem title="Get my totals" id="Vnn-Sv-4hs">
                                     <connections>
-                                        <segue destination="wpO-nV-ziD" kind="push" id="UFO-SN-5fv"/>
+                                        <segue destination="wpO-nV-ziD" kind="push" id="grr-iW-rv7"/>
                                     </connections>
                                 </barButtonItem>
                             </items>

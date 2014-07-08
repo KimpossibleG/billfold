@@ -44,9 +44,11 @@ class TotalViewController: UITableViewController {
         
         var currentDiner = sharedDinerController.dinerList[indexPath.section]
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            
             currentDiner.foodItems.removeObjectAtIndex(indexPath.row)
         }
-        self.tableView.reloadData()
+//        println(sharedDinerController.dinerList[indexPath.section].foodItems[indexPath.row])
+//        self.tableView.reloadData()
     }
     
     // #pragma mark - Table view data source
@@ -60,7 +62,7 @@ class TotalViewController: UITableViewController {
         var currentDiner = sharedDinerController.dinerList[section].name
         var totalOwed = sharedDinerController.dinerList[section].totalOwed
         
-        var nameAndTotal = "\(currentDiner) — \(totalOwed)"
+        var nameAndTotal = "\(currentDiner) — Owed: $\(totalOwed)"
         return nameAndTotal as String
     }
     
@@ -80,8 +82,9 @@ class TotalViewController: UITableViewController {
         var specificFoodItem = specificDiner.foodItems[indexPath.row].food as String
         var specificFoodPrice = specificDiner.foodItems[indexPath.row].price as String
         
+        totalCell.textLabel.text = "Total = \(specificDiner.totalOwed)"
         totalCell.text = specificFoodItem
-        totalCell.detailTextLabel.text = specificFoodPrice
+        totalCell.detailTextLabel.text = "Cost: $\(specificFoodPrice)"
         
         return totalCell
     }

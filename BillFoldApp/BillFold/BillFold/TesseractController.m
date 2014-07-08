@@ -54,7 +54,7 @@ static Tesseract *_tesseract = nil;
         NSString *priceString = [string substringWithRange:thirdRange];
         NSString *itemString = [string substringWithRange:firstRange];
         
-        parsedFood *tempFandP = [[parsedFood alloc] init];
+        ParsedFood *tempFandP = [[ParsedFood alloc] init];
         tempFandP.food = itemString;
         tempFandP.price = priceString;
         tempFandP.counter = 0;

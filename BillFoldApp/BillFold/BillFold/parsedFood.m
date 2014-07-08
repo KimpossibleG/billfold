@@ -8,7 +8,7 @@
 
 #import "parsedFood.h"
 
-@implementation parsedFood
+@implementation ParsedFood
 
 
 @end

@@ -23,8 +23,12 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
         var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
-        var selectedFood = sharedFoodController.foodAndPrices[indexPath.row]
+        var selectedFood = sharedFoodController.foodAndPrices[indexPath.row] as ParsedFood
         currentDiner.foodItems.addObject(selectedFood)
+        
+        selectedFood.counter += 1
+        print(selectedFood.counter)
+        
     }
     
     override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
@@ -56,8 +60,6 @@ class FoodTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // #pragma mark - Table view data source
-    
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
@@ -78,7 +80,7 @@ class FoodTableViewController: UITableViewController {
         var specificPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
     
         foodCell.text = specificFood
-        foodCell.detailTextLabel.text = specificPrice
+        foodCell.detailTextLabel.text = "$\(specificPrice)"
         
         return foodCell
     }

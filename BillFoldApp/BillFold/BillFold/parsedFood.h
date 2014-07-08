@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface parsedFood : NSObject
+@interface ParsedFood : NSObject
 
 @property NSString *food;
 @property NSString *price;
-@property int counter;
+@property (atomic) int counter ;
 
 @end

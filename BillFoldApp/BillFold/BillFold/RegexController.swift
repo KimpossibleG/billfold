@@ -27,6 +27,7 @@ class Regex {
     }
 }
 
+
 class RegexController {
     
     var taxArray:NSMutableArray = NSMutableArray()
@@ -56,5 +57,4 @@ class RegexController {
         }
     }
 }
-
 
