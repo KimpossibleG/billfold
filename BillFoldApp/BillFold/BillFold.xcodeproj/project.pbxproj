@@ -19,7 +19,6 @@
 		17FFBA9A196B22DE00B9A867 /* parsedFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FFBA99196B22DE00B9A867 /* parsedFood.m */; };
 		17FFBAAB196C3A1200B9A867 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FFBAA8196C39C000B9A867 /* GPUImage.framework */; };
 		17FFBAAD196C3A3000B9A867 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17FFBAA8196C39C000B9A867 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		17FFBAAF196C41E000B9A867 /* receipt_kg.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 17FFBAAE196C41E000B9A867 /* receipt_kg.JPG */; };
 		AA5083D01967767C0005F4D7 /* TesseractController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5083CF1967767C0005F4D7 /* TesseractController.m */; };
 		AA5083D2196777A70005F4D7 /* photo 6.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AA5083D1196777A70005F4D7 /* photo 6.JPG */; };
 		AA5229F91968B476000C2A7E /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229F81968B476000C2A7E /* FoodTableViewController.swift */; };
@@ -696,7 +695,6 @@
 				17F1504D1966434E00F35CAF /* tessdata in Resources */,
 				AAEE459619662032007660E7 /* Images.xcassets in Resources */,
 				AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */,
-				17FFBAAF196C41E000B9A867 /* receipt_kg.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
