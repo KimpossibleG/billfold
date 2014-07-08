@@ -43,10 +43,11 @@ class RegexController {
     }
     
     func summarizeTaxes(arrayOfFoodsPrices: NSMutableArray){
-        for (index, foodObject) in enumerate(arrayOfFoodsPrices) {
+        for (indexNum, foodObject) in enumerate(arrayOfFoodsPrices) {
             if Regex("tax").test(foodObject.food) {
-                var allTaxes = arrayOfFoodsPrices.removeObjectAtIndex(index)
-                taxArray.addObject(allTaxes)
+                var theTax:NSMutableArray = NSMutableArray()
+                theTax.addObject(foodObject)
+                arrayOfFoodsPrices.removeObjectAtIndex(indexNum)
             }
         }
     
