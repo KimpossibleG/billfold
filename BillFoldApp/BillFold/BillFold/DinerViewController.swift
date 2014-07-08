@@ -45,14 +45,16 @@ class DinerViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //if image.size.width != 0.0 {
-            //var pic:UIImage = UIImage(named: "photo2.JPG")
-            //var rotatedPhoto:UIImage = UIImage(CGImage: pic.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
-            //TesseractController.recognizeImage(rotatedPhoto)
-//            testFilters()
-        //}
+        //var pic:UIImage = UIImage(named: "photo.JPG")
+        //var rotatedPhoto:UIImage = UIImage(CGImage: pic.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
+        //println(TesseractController.recognizeImage(pic))
+        //println(TesseractController.recognizeImage(rotatedPhoto))
 
-        var image:UIImage = UIImage(named: "receipt_kg.JPG")
+        //displayImage(pic)
+
+       // testFilters()
+
+        var image:UIImage = UIImage(named: "photo.JPG")
         var imageString:NSString = TesseractController.recognizeImage(image) as NSString
         var foodCollection = TesseractController.regexDo(imageString)
         println(foodCollection)
@@ -60,7 +62,6 @@ class DinerViewController: UITableViewController {
 
         sharedRegexController.deleteSubtotal(foodCollection)
         sharedRegexController.summarizeTaxes(foodCollection)
-
     }
 
     override func viewDidAppear(animated: Bool){
@@ -70,7 +71,6 @@ class DinerViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         return 1
@@ -137,7 +137,11 @@ class DinerViewController: UITableViewController {
 
 func processImage(filter:AnyObject, photo:UIImage) -> UIImage {
     //this orients the picture relative to the picture's "up"
-    //var rotatedPhoto:UIImage = UIImage(CGImage: photo.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
+   // var brightnessFilter:GPUImageBrightnessFilter = GPUImageBrightnessFilter()
+  //  brightnessFilter.brightness = 0.1
+   // var brightPhoto:UIImage = brightnessFilter.imageByFilteringImage(photo)
+//    var rotatedPhoto:UIImage = UIImage(CGImage: photo.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
+  //  return filter.imageByFilteringImage(rotatedPhoto)
     return filter.imageByFilteringImage(photo)
 }
 
@@ -157,24 +161,19 @@ func testFilters() {
     var adaptiveThresholdFilter: GPUImageAdaptiveThresholdFilter = GPUImageAdaptiveThresholdFilter()
 
 
-    var pic:UIImage = UIImage(named: "photo 6.JPG")
+    var pic:UIImage = UIImage(named: "photo.JPG")
 
     for var i = 0.0; i < 1.0; i += 0.1 {
         println("Luminance Threshold Filter | threshold=\(i)\n")
         luminanceThresholdFilter.threshold = Float(i)
-        println(TesseractController.recognizeImage(processImage(luminanceThresholdFilter, pic)))
+        var filteredPic:UIImage = processImage(luminanceThresholdFilter, pic)
+        println(TesseractController.recognizeImage(filteredPic))
     }
 
     for var i = 0.0; i < 2.0; i += 0.1 {
         println("Average Luminance Threshold Filter | \(i)\n")
         averageLuminanceThresholdFilter.thresholdMultiplier = Float(i)
         println(TesseractController.recognizeImage(processImage(averageLuminanceThresholdFilter, pic)))
-    }
-
-    for var i = 1; i < 8; ++i {
-        println("Adaptive Luminance Threshold Filter | \(i)\n")
-        adaptiveThresholdFilter.blurRadiusInPixels = Float(i)
-        println(TesseractController.recognizeImage(processImage(adaptiveThresholdFilter, pic)))
     }
 }
 
