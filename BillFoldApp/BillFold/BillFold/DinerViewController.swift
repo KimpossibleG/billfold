@@ -11,10 +11,6 @@ import GPUImage
 
 class DinerViewController: UITableViewController {
     
-    
-    //I ADDED THIS I THINK IT SHOULD BE DECLARED HERE??????
-    //    var tesseract:STesseract = STesseract();
-    
     var dinersList:NSMutableArray = NSMutableArray()
     var image:UIImage = UIImage()
 
@@ -31,30 +27,21 @@ class DinerViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var filter: GPUImageAverageLuminanceThresholdFilter = GPUImageAverageLuminanceThresholdFilter()
-        filter.thresholdMultiplier = 0.6
+        
+
         
         if image.size.width != 0.0 {
             
-            var fuck:UIImage = UIImage(named: "IMG_2089.JPG")
-//            var fuck:UIImage = UIImage(named: "photo 6.JPG")
-            var processedImage:UIImage = filter.imageByFilteringImage(fuck)
-            //println(processedImage)
+//            var pic:UIImage = UIImage(named: "photo1.JPG")
+           // var pic:UIImage = UIImage(named: "photo2.JPG")
+            var pic:UIImage = UIImage(named: "photo2.JPG")
+//            var pic:UIImage = UIImage(named: "photo4.JPG")
+//            var pic:UIImage = UIImage(named: "photo5.JPG")
+//            var pic:UIImage = UIImage(named: "photo6.JPG")
+            var rotatedPhoto:UIImage = UIImage(CGImage: pic.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
             
-            var orientedProcessedImage:UIImage = UIImage(CGImage: processedImage.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
-            
-            
-            let appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-            
-            
-            let imgView:UIImageView = UIImageView(frame: appDel.window!.bounds)
-            imgView.image = orientedProcessedImage
-//            imgView.image = processedImage
-            appDel.window!.addSubview(imgView)
-            
-            
-            TesseractController.recognizeImage(orientedProcessedImage)
-            //TesseractController.recognizeImage(processedImage)
+            TesseractController.recognizeImage(rotatedPhoto)
+            testFilters()
         }
     }
     
@@ -97,7 +84,7 @@ class DinerViewController: UITableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         
-        return 1
+        return dinersList.count
     }
     
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
@@ -159,3 +146,74 @@ class DinerViewController: UITableViewController {
     */
     
 }
+
+func processImage(filter:AnyObject, photo:UIImage) -> UIImage {
+    //this orients the picture relative to the picture's "up"
+    var rotatedPhoto:UIImage = UIImage(CGImage: photo.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
+
+    return filter.imageByFilteringImage(rotatedPhoto)
+}
+
+func testFilters() {
+    // sharpness: The sharpness adjustment to apply (-4.0 - 4.0, with 0.0 as the default)
+    var sharpenFilter: GPUImageSharpenFilter = GPUImageSharpenFilter()
+    sharpenFilter.sharpness = -1.0
+    
+    // threshold: The luminance threshold, from 0.0 to 1.0, with a default of 0.5
+    var luminanceThresholdFilter: GPUImageLuminanceThresholdFilter = GPUImageLuminanceThresholdFilter()
+    //luminanceThresholdFilter.threshold = 0.5
+
+    // thresholdMultiplier: This is a factor that the average luminance will be multiplied by in order to arrive at the final threshold to use. By default, this is 1.0.
+    var averageLuminanceThresholdFilter: GPUImageAverageLuminanceThresholdFilter = GPUImageAverageLuminanceThresholdFilter()
+    
+    // blurRadiusInPixels: A multiplier for the background averaging blur radius in pixels, with a default of 4.
+    var adaptiveThresholdFilter: GPUImageAdaptiveThresholdFilter = GPUImageAdaptiveThresholdFilter()
+    
+    
+    var pic:UIImage = UIImage(named: "photo2.JPG")
+    
+//    for var i = 0.0; i < 1.0; i += 0.1 {
+//        println("Luminance Threshold Filter | threshold=\(i)\n")
+//        luminanceThresholdFilter.threshold = Float(i)
+//        TesseractController.recognizeImage(processImage(luminanceThresholdFilter, pic))
+//        //displayImage(pic)
+//    }
+//    
+    for var i = 0.0; i < 2.0; i += 0.1 {
+        println("Average Luminance Threshold Filter | \(i)\n")
+        averageLuminanceThresholdFilter.thresholdMultiplier = Float(i)
+        TesseractController.recognizeImage(processImage(averageLuminanceThresholdFilter, pic))
+    }
+    
+//    for var i = 1; i < 8; ++i {
+//        println("Adaptive Luminance Threshold Filter | \(i)\n")
+//        adaptiveThresholdFilter.blurRadiusInPixels = Float(i)
+//        TesseractController.recognizeImage(processImage(adaptiveThresholdFilter, pic))
+//    }
+}
+
+func displayImage(photo:UIImage) {
+    let appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let imgView:UIImageView = UIImageView(frame: appDel.window!.bounds)
+    imgView.image = photo
+    appDel.window!.addSubview(imgView)
+}
+
+
+////        sharpness: The sharpness adjustment to apply (-4.0 - 4.0, with 0.0 as the default)
+//var sharpenFilter: GPUImageSharpenFilter = GPUImageSharpenFilter()
+//sharpenFilter.sharpness = -1.0
+//
+////        GPUImageLuminanceThresholdFilter: Pixels with a luminance above the threshold will appear white, and those below will be black
+////        threshold: The luminance threshold, from 0.0 to 1.0, with a default of 0.5
+//var luminanceThresholdFilter: GPUImageLuminanceThresholdFilter = GPUImageLuminanceThresholdFilter()
+//luminanceThresholdFilter.threshold = 0.5
+////        GPUImageAverageLuminanceThresholdFilter: This applies a thresholding operation where the threshold is continually adjusted based on the average luminance of the scene.
+////        thresholdMultiplier: This is a factor that the average luminance will be multiplied by in order to arrive at the final threshold to use. By default, this is 1.0.
+//var averageLuminanceThresholdFilter: GPUImageAverageLuminanceThresholdFilter = GPUImageAverageLuminanceThresholdFilter()
+//averageLuminanceThresholdFilter.thresholdMultiplier = 0.9
+//
+////        GPUImageAdaptiveThresholdFilter: Determines the local luminance around a pixel, then turns the pixel black if it is below that local luminance and white if above. This can be useful for picking out text under varying lighting conditions.
+////        blurRadiusInPixels: A multiplier for the background averaging blur radius in pixels, with a default of 4.
+//var adaptiveThresholdFilter: GPUImageAdaptiveThresholdFilter = GPUImageAdaptiveThresholdFilter()
+

@@ -18,7 +18,7 @@ static Tesseract *_tesseract = nil;
     [tesseract setVariableValue:@"$0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,:()" forKey:@"tessedit_char_whitelist"];
     [tesseract setImage:imageName];
     NSLog(@"%@", [tesseract recognizedText]);
-    
+    [tesseract clear];
 }
 
 @end
