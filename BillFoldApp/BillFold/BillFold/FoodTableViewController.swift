@@ -80,7 +80,7 @@ class FoodTableViewController: UITableViewController {
         let counterView = UIView()
         counterView.frame = CGRect(x: 270, y: 10, width: 25, height: 25)
         counterLabel.frame = CGRect(x: 0, y: 0, width: 10, height: 10)
-        counterLabel.backgroundColor = UIColor.grayColor()
+        counterView.backgroundColor = UIColor.grayColor()
         counterView.addSubview(counterLabel)
         counterLabel.center = counterView.center
         foodCell.addSubview(counterView)
