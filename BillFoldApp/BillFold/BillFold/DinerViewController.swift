@@ -49,8 +49,9 @@ class DinerViewController: UITableViewController {
         
         sharedFoodController.foodAndPrices = foodCollection
         
-        sharedRegexController.seed()
-        sharedRegexController.moveSubtotal()
+//        sharedRegexController.seed()
+        sharedRegexController.deleteSubtotal(foodCollection)
+        println(foodCollection)
     }
     
     override func viewDidAppear(animated: Bool){

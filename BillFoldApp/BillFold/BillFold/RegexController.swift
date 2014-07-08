@@ -31,26 +31,26 @@ class RegexController {
     
     var taxArray:NSMutableArray = NSMutableArray()
     
-    func seed() {
-        let hotdog = parsedFood()
-        hotdog.food = "hotdog"
-        hotdog.price = "43.44"
-        hotdog.counter = 0
-        sharedFoodController.foodAndPrices.addObject(hotdog)
-        
-        let badFood = parsedFood()
-        badFood.food = "Subtotal"
-        badFood.price = "3.99"
-        badFood.counter = 0
-        sharedFoodController.foodAndPrices.addObject(badFood)
-        
-        println(sharedFoodController.foodAndPrices)
-    }
+//    func seed() {
+//        let hotdog = parsedFood()
+//        hotdog.food = "hotdog"
+//        hotdog.price = "43.44"
+//        hotdog.counter = 0
+//        sharedFoodController.foodAndPrices.addObject(hotdog)
+//        
+//        let badFood = parsedFood()
+//        badFood.food = "Subtotal"
+//        badFood.price = "3.99"
+//        badFood.counter = 0
+//        sharedFoodController.foodAndPrices.addObject(badFood)
+//        
+//        println(sharedFoodController.foodAndPrices)
+//    }
     
-    func moveSubtotal(thing: parsedFood) {
-        for foodObject in thing {
-            if Regex("sub").test(thing.food) {
-                println("\(thing.food) matches pattern")
+    func deleteSubtotal(arrayOfFoodsPrices: NSMutableArray) {
+        for (index, foodObject) in enumerate(arrayOfFoodsPrices) {
+            if Regex("ubtot").test(foodObject.food) {
+                var deletedFood = arrayOfFoodsPrices.removeObjectAtIndex(index);
                 
             }
         }
