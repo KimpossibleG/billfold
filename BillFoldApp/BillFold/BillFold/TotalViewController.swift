@@ -80,11 +80,14 @@ class TotalViewController: UITableViewController {
         var specificDiner = sharedDinerController.dinerList[indexPath.section]
         
         var specificFoodItem = specificDiner.foodItems[indexPath.row].food as String
-        var specificFoodPrice = specificDiner.foodItems[indexPath.row].price as String
-        
+        var specificFoodPrice = specificDiner.foodItems[indexPath.row].price as NSString
+        var price = specificFoodPrice.doubleValue
+        var foodCount = specificDiner.foodItems[indexPath.row].counter
+        var yourSplit = price/Double(foodCount)
+        var total = floor(yourSplit * 100)/100
         totalCell.textLabel.text = "Total = \(specificDiner.totalOwed)"
         totalCell.text = specificFoodItem
-        totalCell.detailTextLabel.text = "Cost: $\(specificFoodPrice)"
+        totalCell.detailTextLabel.text = "Cost: $\(total)"
         
         return totalCell
     }
