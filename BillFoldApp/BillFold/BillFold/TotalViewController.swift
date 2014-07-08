@@ -30,7 +30,6 @@ class TotalViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     override func viewDidAppear(animated: Bool){
-        sharedFoodController.calcTotals()
         self.tableView.reloadData()
     }
     
@@ -46,9 +45,8 @@ class TotalViewController: UITableViewController {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             let item = sharedDinerController.dinerList[indexPath.section].foodItems[indexPath.row] as ParsedFood
             item.counter -= 1
-            currentDiner.foodItems.removeObjectAtIndex(indexPath.row)
+            currentDiner.foodItems.removeAtIndex(indexPath.row)
         }
-        
         
     }
     
@@ -71,6 +69,7 @@ class TotalViewController: UITableViewController {
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
+        let diner = sharedDinerController.dinerList[section]
         return sharedDinerController.dinerList[section].foodItems.count
     }
 
@@ -87,6 +86,7 @@ class TotalViewController: UITableViewController {
         var foodCount = specificDiner.foodItems[indexPath.row].counter
         var yourSplit = price/Double(foodCount)
         var total = floor(yourSplit * 100)/100
+        
         totalCell.textLabel.text = "Total = \(specificDiner.totalOwed)"
         totalCell.text = specificFoodItem
         totalCell.detailTextLabel.text = "Cost: $\(total)"
@@ -94,50 +94,5 @@ class TotalViewController: UITableViewController {
         return totalCell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath?) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView?, moveRowAtIndexPath fromIndexPath: NSIndexPath?, toIndexPath: NSIndexPath?) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView?, canMoveRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
