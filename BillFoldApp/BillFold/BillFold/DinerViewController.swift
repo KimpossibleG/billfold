@@ -49,18 +49,17 @@ class DinerViewController: UITableViewController {
             //var pic:UIImage = UIImage(named: "photo2.JPG")
             //var rotatedPhoto:UIImage = UIImage(CGImage: pic.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
             //TesseractController.recognizeImage(rotatedPhoto)
-            testFilters()
+//            testFilters()
         //}
 
-        var image:UIImage = UIImage(named: "photo 6.JPG")
+        var image:UIImage = UIImage(named: "receipt_kg.JPG")
         var imageString:NSString = TesseractController.recognizeImage(image) as NSString
         var foodCollection = TesseractController.regexDo(imageString)
-
+        println(foodCollection)
         sharedFoodController.foodAndPrices = foodCollection
 
-//        sharedRegexController.seed()
         sharedRegexController.deleteSubtotal(foodCollection)
-        println(foodCollection)
+        sharedRegexController.summarizeTaxes(foodCollection)
 
     }
 
