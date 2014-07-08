@@ -220,7 +220,8 @@ namespace tesseract {
 	if (width <= 0 || height <= 0) {
 		return;
     }
-	
+    NSLog(@"width: %d", width);
+    NSLog(@"height: %d", height);
     _pixels = (uint32_t *) malloc(width * height * sizeof(uint32_t));
     
     // Clear the pixels so any transparency is preserved
