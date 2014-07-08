@@ -13,16 +13,16 @@
 @implementation TesseractController
 
 static Tesseract *_tesseract = nil;
-+ (NSString*)recognizeImage:(NSString*)imageName
++ (NSString*)recognizeImage:(UIImage*)image
 {
     Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
     _tesseract = tesseract;
     [tesseract setVariableValue:@"$0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,:-()" forKey:@"tessedit_char_whitelist"];
-    
-    UIImage *image = [UIImage imageNamed:imageName];
+
     [tesseract setImage:image];
-    return [tesseract recognizedText];
-    
+    NSString *parsedText = [tesseract recognizedText];
+    [tesseract clear];
+    return parsedText;
 }
 
 + (NSMutableArray*)regexDo:(NSString*)foodString{
