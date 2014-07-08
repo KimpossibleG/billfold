@@ -7,41 +7,51 @@
 //
 
 import Foundation
+import UIKit
 
 let sharedRegexController = RegexController()
 
-class RegexController {
-
-    var taxDictionary:NSMutableDictionary = NSMutableDictionary()
-
-    var originalDictionary = [
-        "M.C iXXXXXXXXXXXX1260": "5.19",
-        "Subtotai ": ".70",
-        "Tax": "0.49",
-        "SUB TOTAL ":  "2.34",
-        "Sales Tx": "23.34",
-        "Subtotal" : "34.34",
-        "Tax" : "2.25",
-        "SUBTOTAL":  "2.25",
-        "Tax 1" : "2.25",
-        "IL 2.25% TAX" :  "2.25",
-        "IL 9.25% TAX" :  "2.25",
-        "TAX1" :  "2.25",
-        "BAL FWD" :  "2.25",
-        "MDSE ST" :  "2.25",
-        "Sub. Total:" :  "2.25",
-        "Food (X) Tax" :  "2.25",
-        "Sub Total" :  "2.25",
-        "hot dog" :  "4.00",
-        "Jell-O" :  "3.30"
-    ]
-
-    func moveSubtotals() {
-        for (food:String, price:String) in originalDictionary {
-            if food == "Subtotal"{
-                println("The value of Subtotal is \(price)")}
-        }
-        println(originalDictionary)
+class Regex {
+    let internalExpression: NSRegularExpression
+    let pattern: String
+    
+    init(_ pattern: String) {
+        self.pattern = pattern
+        var error: NSError?
+        self.internalExpression = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: &error)
     }
-
+    
+    func test(input: String) -> Bool {
+        let matches = self.internalExpression.matchesInString(input, options: nil, range:NSMakeRange(0, countElements(input)))
+        return matches.count > 0
+    }
 }
+
+
+class RegexController {
+    
+    var taxArray:NSMutableArray = NSMutableArray()
+
+    
+    func deleteSubtotal(arrayOfFoodsPrices: NSMutableArray) {
+        for (index, foodObject) in enumerate(arrayOfFoodsPrices) {
+            if Regex("total").test(foodObject.food) {
+                var deletedFood = arrayOfFoodsPrices.removeObjectAtIndex(index);
+                
+            }
+        }
+    }
+    
+    func summarizeTaxes(arrayOfFoodsPrices: NSMutableArray){
+        for (indexNum, foodObject) in enumerate(arrayOfFoodsPrices) {
+            if Regex("tax").test(foodObject.food) {
+                var theTax:NSMutableArray = NSMutableArray()
+                theTax.addObject(foodObject)
+                arrayOfFoodsPrices.removeObjectAtIndex(indexNum)
+            }
+        }
+    
+    }
+    
+}
+
