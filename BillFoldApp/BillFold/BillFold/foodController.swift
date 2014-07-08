@@ -14,5 +14,12 @@ class foodController {
     
     var foodAndPrices:NSMutableArray = NSMutableArray()
     
-
+    func calcTotalBill() -> Double {
+        var total = 0.0
+        for foodItem : AnyObject in foodAndPrices {
+            var price = foodItem.price as NSString
+            total = total + price.doubleValue
+        }
+        return total
+    }
 }

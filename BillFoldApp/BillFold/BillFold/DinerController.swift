@@ -26,7 +26,6 @@ class Diner{
             let priceString = item.price as NSString
             let price = priceString.doubleValue
             let share = price/Double(item.counter)
-            
             sum = sum + share
         }
         

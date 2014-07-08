@@ -30,7 +30,6 @@
 		17F1504B1966434000F35CAF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 17F150441966434000F35CAF /* README.md */; };
 		17F1504D1966434E00F35CAF /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 17F1504C1966434E00F35CAF /* tessdata */; };
 		17FFBA9A196B22DE00B9A867 /* parsedFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FFBA99196B22DE00B9A867 /* parsedFood.m */; };
-		17FFBAAD196C3A3000B9A867 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17FFBAA8196C39C000B9A867 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		AA5083D01967767C0005F4D7 /* TesseractController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5083CF1967767C0005F4D7 /* TesseractController.m */; };
 		AA5229F91968B476000C2A7E /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229F81968B476000C2A7E /* FoodTableViewController.swift */; };
 		AA5229FB1968C37E000C2A7E /* DinerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229FA1968C37E000C2A7E /* DinerController.swift */; };
@@ -112,7 +111,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				17FFBAAD196C3A3000B9A867 /* GPUImage.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
