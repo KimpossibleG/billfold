@@ -473,24 +473,24 @@
 		AAEE459019662032007660E7 /* BillFold */ = {
 			isa = PBXGroup;
 			children = (
-				AAA0021019662B61000D2D24 /* AddDinerViewController.swift */,
 				AAEE459319662032007660E7 /* AppDelegate.swift */,
-				CD9AB57F1969E34700170078 /* TotalViewController.swift */,
 				AAEE45AB1966207B007660E7 /* BFBoard.storyboard */,
-				AAA0020C19662AF2000D2D24 /* DinerViewController.swift */,
-				174C43EF196AFADD00F32F4F /* RegexController.swift */,
+				AAA0021019662B61000D2D24 /* AddDinerViewController.swift */,
+				AACEAE7E196AE1DE007070CC /* AddFoodViewController.swift */,
 				AA5229FA1968C37E000C2A7E /* DinerController.swift */,
+				AAA0020C19662AF2000D2D24 /* DinerViewController.swift */,
 				AA5229FC1968D221000C2A7E /* foodController.swift */,
 				AA5229F81968B476000C2A7E /* FoodTableViewController.swift */,
-				AACEAE7E196AE1DE007070CC /* AddFoodViewController.swift */,
-				AA5083D1196777A70005F4D7 /* photo 6.JPG */,
-				CDB6F7D31967625000BC54FC /* PhotoViewController.swift */,
-				AA5083CF1967767C0005F4D7 /* TesseractController.m */,
-				AA5083CE196776570005F4D7 /* TesseractController.h */,
-				AAEE459519662032007660E7 /* Images.xcassets */,
-				AAEE459119662032007660E7 /* Supporting Files */,
 				17FFBA98196B22DE00B9A867 /* parsedFood.h */,
 				17FFBA99196B22DE00B9A867 /* parsedFood.m */,
+				CDB6F7D31967625000BC54FC /* PhotoViewController.swift */,
+				174C43EF196AFADD00F32F4F /* RegexController.swift */,
+				AA5083CE196776570005F4D7 /* TesseractController.h */,
+				AA5083CF1967767C0005F4D7 /* TesseractController.m */,
+				CD9AB57F1969E34700170078 /* TotalViewController.swift */,
+				AA5083D1196777A70005F4D7 /* photo 6.JPG */,
+				AAEE459519662032007660E7 /* Images.xcassets */,
+				AAEE459119662032007660E7 /* Supporting Files */,
 			);
 			path = BillFold;
 			sourceTree = "<group>";
