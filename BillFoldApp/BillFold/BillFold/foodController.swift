@@ -27,7 +27,7 @@ class foodController {
                 var double = price.doubleValue
                 var share = double/Double(foodItemPrice.counter)
                 totalForDiner = totalForDiner + share
-                sharedDinerController.dinerList[index].totalOwed = totalForDiner
+                sharedDinerController.dinerList[index].totalOwed = floor(totalForDiner*100)/100
             }
         }
     

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TesseractController : NSObject
-+ (NSString*)recognizeImage:(NSString*)image;
++ (NSString*)recognizeImage:(UIImage*)image;
 + (NSMutableArray*)regexDo:(NSString*)foodString;
 
 @end
