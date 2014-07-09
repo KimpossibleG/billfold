@@ -8,11 +8,11 @@ import UIKit
 
 class DinerViewController: UITableViewController {
 
-    var currentDinerIndex:NSInteger = NSInteger()
+    
     @IBOutlet var toolbarView: UIToolbar
     @IBOutlet var totalUpdater: UILabel
+    var currentDinerIndex:NSInteger = NSInteger()
     var total = Double()
-    
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -48,6 +48,14 @@ class DinerViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var image:UIImage = UIImage(named: "photo6.JPG")
+        var imageString:NSString = TesseractController.recognizeImage(image) as NSString
+        
+        var foodCollection = TesseractController.regexDo(imageString)
+        sharedFoodController.foodAndPrices = foodCollection
+        sharedRegexController.deleteSubtotal(foodCollection)
+        sharedRegexController.summarizeTaxes(foodCollection)
 
         toolbarView.barTintColor = lightColor
         toolbarView.translucent = true

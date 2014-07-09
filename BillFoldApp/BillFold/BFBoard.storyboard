@@ -49,7 +49,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="6bn-RU-ZA3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QmV-6N-vNA">
+                        <barButtonItem key="rightBarButtonItem" title="Add A Diner" id="QmV-6N-vNA">
                             <connections>
                                 <segue destination="UgA-Hs-gRg" kind="push" id="d2e-JS-qi3"/>
                             </connections>

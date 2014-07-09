@@ -43,7 +43,7 @@ class TotalViewController: UITableViewController {
         
         var currentDiner = sharedDinerController.dinerList[indexPath.section]
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            let item = sharedDinerController.dinerList[indexPath.section].foodItems[indexPath.row] as ParsedFood
+            var item = sharedDinerController.dinerList[indexPath.section].foodItems[indexPath.row] as ParsedFood
             item.counter -= 1
             currentDiner.foodItems.removeAtIndex(indexPath.row)
         }

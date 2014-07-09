@@ -25,12 +25,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     func loadImage() {
-        var image:UIImage = self.image!.image
-        var imageString:NSString = TesseractController.recognizeImage(image) as NSString
-        var foodCollection = TesseractController.regexDo(imageString)
-        sharedFoodController.foodAndPrices = foodCollection
-        sharedRegexController.deleteSubtotal(foodCollection)
-        sharedRegexController.summarizeTaxes(foodCollection)
+        
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
@@ -42,7 +37,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     override func performSegueWithIdentifier(identifier: String!, sender: AnyObject!) {
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
