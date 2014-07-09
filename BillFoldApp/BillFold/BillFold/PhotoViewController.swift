@@ -61,18 +61,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        showLoader()
-        var image:UIImage = UIImage(named: "photo.JPG")
-        var imageString:NSString = TesseractController.recognizeImage(image) as NSString
-        var foodCollection = TesseractController.regexDo(imageString)
-        //        println(foodCollection)
-        sharedFoodController.foodAndPrices = foodCollection
-        
-        sharedRegexController.deleteSubtotal(foodCollection)
-        sharedRegexController.summarizeTaxes(foodCollection)
-    }
-    
     // Delegate Methods
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
         self.image!.image = image as UIImage

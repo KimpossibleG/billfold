@@ -31,14 +31,23 @@ class Regex {
 class RegexController {
     
     var taxArray:NSMutableArray = NSMutableArray()
-
+    var foodsToDelete:NSMutableArray = NSMutableArray()
     
-    func deleteSubtotal(arrayOfFoodsPrices: NSMutableArray) {
+    
+    func deleteNonFood(arrayOfFoodsPrices: NSMutableArray) {
         for (index, foodObject) in enumerate(arrayOfFoodsPrices) {
-            if Regex("total").test(foodObject.food) {
-                var deletedFood = arrayOfFoodsPrices.removeObjectAtIndex(index);
-                
+            if Regex("t[o0]ta[li1]").test(foodObject.food) {
+                var deletedFood = arrayOfFoodsPrices.removeObject(foodObject);
             }
+//            if Regex("visa").test(foodObject.food) {
+//                var deletedFood = arrayOfFoodsPrices.removeObject(foodObject);
+//            }
+//            if Regex("amex").test(foodObject.food) {
+//                var deletedFood = arrayOfFoodsPrices.removeObjectAtIndex(index);
+//            }
+//            if Regex("####").test(foodObject.food) {
+//                var deletedFood = arrayOfFoodsPrices.removeObjectAtIndex(index);
+//            }
         }
     }
     
@@ -50,7 +59,7 @@ class RegexController {
                 arrayOfFoodsPrices.removeObjectAtIndex(indexNum)
             }
         }
-    
+        
     }
     
 }

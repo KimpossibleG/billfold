@@ -41,9 +41,9 @@ class TotalViewController: UITableViewController {
     // delete item from specific user
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         
-        var currentDiner = sharedDinerController.dinerList[indexPath.section]
+        var currentDiner = sharedDinerStorage.dinerList[indexPath.section]
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            let item = sharedDinerController.dinerList[indexPath.section].foodItems[indexPath.row] as ParsedFood
+            let item = sharedDinerStorage.dinerList[indexPath.section].foodItems[indexPath.row] as ParsedFood
             item.counter -= 1
             currentDiner.foodItems.removeAtIndex(indexPath.row)
         }
@@ -56,11 +56,11 @@ class TotalViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return sharedDinerController.dinerList.count
+        return sharedDinerStorage.dinerList.count
     }
     override func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String {
-        var currentDiner = sharedDinerController.dinerList[section].name
-        var totalOwed = sharedDinerController.dinerList[section].totalOwed
+        var currentDiner = sharedDinerStorage.dinerList[section].name
+        var totalOwed = sharedDinerStorage.dinerList[section].totalOwed
         
         var nameAndTotal = "\(currentDiner) — Owed: $\(totalOwed)"
         return nameAndTotal as String
@@ -69,8 +69,8 @@ class TotalViewController: UITableViewController {
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        let diner = sharedDinerController.dinerList[section]
-        return sharedDinerController.dinerList[section].foodItems.count
+        let diner = sharedDinerStorage.dinerList[section]
+        return sharedDinerStorage.dinerList[section].foodItems.count
     }
 
     
@@ -78,7 +78,7 @@ class TotalViewController: UITableViewController {
         
         let totalCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "totalCell") as UITableViewCell
         
-        var specificDiner = sharedDinerController.dinerList[indexPath.section]
+        var specificDiner = sharedDinerStorage.dinerList[indexPath.section]
         
         var specificFoodItem = specificDiner.foodItems[indexPath.row].food as String
         var specificFoodPrice = specificDiner.foodItems[indexPath.row].price as NSString

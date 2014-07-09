@@ -49,7 +49,7 @@ class AddDinerViewController: UIViewController {
     
     @IBAction func addDinerTap(sender: AnyObject) {
         var dinerName = addDinerField.text
-        sharedDinerController.addDiner(dinerName)
+        sharedDinerStorage.addDiner(dinerName)
         navigationController.popViewControllerAnimated(true)
     }
 }
