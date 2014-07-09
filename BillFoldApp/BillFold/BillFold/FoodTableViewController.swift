@@ -77,19 +77,20 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
             
-        var foodCell = tableView?.dequeueReusableCellWithIdentifier("BNRItemCell") as? BNRItemCell
+        var foodCell = tableView?.dequeueReusableCellWithIdentifier("BNRItemCell",forIndexPath: indexPath) as BNRItemCell
         
-        if !foodCell {
-            foodCell = BNRItemCell()
-            
-        }
+//        if !foodCell {
+//            foodCell = BNRItemCell()
+//            
+//        }
         
         var specificFood = sharedFoodController.foodAndPrices[indexPath.row].food as String
         var specificPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
-        println(foodCell!)
-        
-        foodCell!.nameLabel.text = specificFood
-        foodCell!.priceLabel.text = specificPrice
+        println(foodCell)
+        var specificCounter = String(sharedFoodController.foodAndPrices[indexPath.row].counter)
+        foodCell.nameLabel.text = specificFood
+        foodCell.priceLabel.text = specificPrice
+        foodCell.counterLabel.text = specificCounter
 
         
         return foodCell
