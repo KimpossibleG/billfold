@@ -8,18 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09876B7F196B867F00FB9BDA /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		099447CB196C24DC003C1501 /* photo8.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 099447C9196C24DC003C1501 /* photo8.JPG */; };
-		099447CC196C24DC003C1501 /* photo9.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 099447CA196C24DC003C1501 /* photo9.JPG */; };
-		099447D6196C34C3003C1501 /* photo1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 099447D0196C34C3003C1501 /* photo1.JPG */; };
-		099447D7196C34C3003C1501 /* photo2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 099447D1196C34C3003C1501 /* photo2.JPG */; };
-		099447D8196C34C3003C1501 /* photo3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 099447D2196C34C3003C1501 /* photo3.JPG */; };
-		099447D9196C34C3003C1501 /* photo4.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 099447D3196C34C3003C1501 /* photo4.JPG */; };
-		099447DA196C34C3003C1501 /* photo5.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 099447D4196C34C3003C1501 /* photo5.JPG */; };
-		099447DB196C34C3003C1501 /* photo6.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 099447D5196C34C3003C1501 /* photo6.JPG */; };
 		099447DD196C3B15003C1501 /* photo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 099447DC196C3B15003C1501 /* photo.JPG */; };
-		099447E0196C4CF3003C1501 /* photo10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 099447DE196C4CF3003C1501 /* photo10.jpg */; };
-		099447E1196C4CF3003C1501 /* photo11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 099447DF196C4CF3003C1501 /* photo11.jpg */; };
-		099447E3196C5131003C1501 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099447E2196C5131003C1501 /* CoreImage.framework */; };
 		174C43F0196AFADD00F32F4F /* RegexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174C43EF196AFADD00F32F4F /* RegexController.swift */; };
 		17F150451966434000F35CAF /* Tesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17F14FAA1966434000F35CAF /* Tesseract.mm */; };
 		17F150461966434000F35CAF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 17F14FAB1966434000F35CAF /* LICENSE */; };
@@ -48,27 +37,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		09A71454196C8A0E009EB912 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
-			remoteInfo = GPUImage;
-		};
-		09A71456196C8A0E009EB912 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
-			remoteInfo = GPUImageTests;
-		};
-		09A71458196C8A0E009EB912 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCE209E51943F20C002FEED8;
-			remoteInfo = GPUImageFramework;
-		};
 		17FFBAA3196C39C000B9A867 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17FFBA9C196C39C000B9A867 /* GPUImage.xcodeproj */;
@@ -119,19 +87,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = ../../../GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
-		099447C9196C24DC003C1501 /* photo8.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo8.JPG; path = BillFold/photo8.JPG; sourceTree = "<group>"; };
-		099447CA196C24DC003C1501 /* photo9.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo9.JPG; path = BillFold/photo9.JPG; sourceTree = "<group>"; };
-		099447D0196C34C3003C1501 /* photo1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo1.JPG; path = BillFold/photo1.JPG; sourceTree = "<group>"; };
-		099447D1196C34C3003C1501 /* photo2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo2.JPG; path = BillFold/photo2.JPG; sourceTree = "<group>"; };
-		099447D2196C34C3003C1501 /* photo3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo3.JPG; path = BillFold/photo3.JPG; sourceTree = "<group>"; };
-		099447D3196C34C3003C1501 /* photo4.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo4.JPG; path = BillFold/photo4.JPG; sourceTree = "<group>"; };
-		099447D4196C34C3003C1501 /* photo5.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo5.JPG; path = BillFold/photo5.JPG; sourceTree = "<group>"; };
-		099447D5196C34C3003C1501 /* photo6.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo6.JPG; path = BillFold/photo6.JPG; sourceTree = "<group>"; };
 		099447DC196C3B15003C1501 /* photo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo.JPG; path = BillFold/photo.JPG; sourceTree = "<group>"; };
-		099447DE196C4CF3003C1501 /* photo10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo10.jpg; path = BillFold/photo10.jpg; sourceTree = "<group>"; };
-		099447DF196C4CF3003C1501 /* photo11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo11.jpg; path = BillFold/photo11.jpg; sourceTree = "<group>"; };
-		099447E2196C5131003C1501 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		174C43EF196AFADD00F32F4F /* RegexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexController.swift; sourceTree = "<group>"; };
 		17D475A01966FBDB00FA36AB /* BillFold-Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BillFold-Bridge-Header.h"; path = "BillFold/BillFold-Bridge-Header.h"; sourceTree = "<group>"; };
 		17F14FA91966434000F35CAF /* Tesseract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tesseract.h; sourceTree = "<group>"; };
@@ -316,7 +272,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				099447E3196C5131003C1501 /* CoreImage.framework in Frameworks */,
 				09876B7F196B867F00FB9BDA /* (null) in Frameworks */,
 				17F1504A1966434000F35CAF /* libtesseract_all.a in Frameworks */,
 				17F150491966434000F35CAF /* liblept.a in Frameworks */,
@@ -333,16 +288,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09A7144E196C8A0E009EB912 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				09A71455196C8A0E009EB912 /* libGPUImage.a */,
-				09A71457196C8A0E009EB912 /* GPUImageTests.octest */,
-				09A71459196C8A0E009EB912 /* GPUImage.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		17F14FA71966434000F35CAF /* tesseract-ios */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,19 +508,7 @@
 		AAEE458519662032007660E7 = {
 			isa = PBXGroup;
 			children = (
-				099447E2196C5131003C1501 /* CoreImage.framework */,
-				099447DE196C4CF3003C1501 /* photo10.jpg */,
-				099447DF196C4CF3003C1501 /* photo11.jpg */,
 				099447DC196C3B15003C1501 /* photo.JPG */,
-				099447D0196C34C3003C1501 /* photo1.JPG */,
-				099447D1196C34C3003C1501 /* photo2.JPG */,
-				099447D2196C34C3003C1501 /* photo3.JPG */,
-				099447D3196C34C3003C1501 /* photo4.JPG */,
-				099447D4196C34C3003C1501 /* photo5.JPG */,
-				099447D5196C34C3003C1501 /* photo6.JPG */,
-				099447C9196C24DC003C1501 /* photo8.JPG */,
-				099447CA196C24DC003C1501 /* photo9.JPG */,
-				09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */,
 				17D475A01966FBDB00FA36AB /* BillFold-Bridge-Header.h */,
 				17F1504C1966434E00F35CAF /* tessdata */,
 				17F14FA71966434000F35CAF /* tesseract-ios */,
@@ -716,10 +649,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 09A7144E196C8A0E009EB912 /* Products */;
-					ProjectRef = 09876B6F196B85E600FB9BDA /* GPUImage.xcodeproj */;
-				},
-				{
 					ProductGroup = 17FFBA9D196C39C000B9A867 /* Products */;
 					ProjectRef = 17FFBA9C196C39C000B9A867 /* GPUImage.xcodeproj */;
 				},
@@ -733,27 +662,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		09A71455196C8A0E009EB912 /* libGPUImage.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGPUImage.a;
-			remoteRef = 09A71454196C8A0E009EB912 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		09A71457196C8A0E009EB912 /* GPUImageTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GPUImageTests.octest;
-			remoteRef = 09A71456196C8A0E009EB912 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		09A71459196C8A0E009EB912 /* GPUImage.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GPUImage.framework;
-			remoteRef = 09A71458196C8A0E009EB912 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		17FFBAA4196C39C000B9A867 /* libGPUImage.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -782,20 +690,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				099447DA196C34C3003C1501 /* photo5.JPG in Resources */,
 				17F150481966434000F35CAF /* .gitignore in Resources */,
-				099447CB196C24DC003C1501 /* photo8.JPG in Resources */,
-				099447D8196C34C3003C1501 /* photo3.JPG in Resources */,
 				099447DD196C3B15003C1501 /* photo.JPG in Resources */,
 				17F150461966434000F35CAF /* LICENSE in Resources */,
-				099447E1196C4CF3003C1501 /* photo11.jpg in Resources */,
-				099447D6196C34C3003C1501 /* photo1.JPG in Resources */,
-				099447D7196C34C3003C1501 /* photo2.JPG in Resources */,
-				099447D9196C34C3003C1501 /* photo4.JPG in Resources */,
-				099447CC196C24DC003C1501 /* photo9.JPG in Resources */,
 				17F1504D1966434E00F35CAF /* tessdata in Resources */,
-				099447DB196C34C3003C1501 /* photo6.JPG in Resources */,
-				099447E0196C4CF3003C1501 /* photo10.jpg in Resources */,
 				AAEE459619662032007660E7 /* Images.xcassets in Resources */,
 				AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */,
 			);
