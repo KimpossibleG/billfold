@@ -35,6 +35,7 @@ class FoodTableViewController: UITableViewController {
         return true
     }
     
+    // USED IN PARSED FOOD CONTROLLER
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             var sharedFoodStore = sharedFoodController
@@ -93,7 +94,7 @@ class FoodTableViewController: UITableViewController {
         var specificPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
         
         foodCell!.text = specificFood
-        // foodCell.detailTextLabel.text = "$\(specificPrice)"
+//        foodCell!.detailTextLabel.text = "$\(specificPrice)"
         
         return foodCell
     }

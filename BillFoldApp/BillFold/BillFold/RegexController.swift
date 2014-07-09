@@ -32,8 +32,7 @@ class RegexController {
     
     var taxArray:NSMutableArray = NSMutableArray()
     var foodsToDelete:NSMutableArray = NSMutableArray()
-    
-    
+
     func deleteNonFood(arrayOfFoodsPrices: NSMutableArray) {
         for (index, foodObject) in enumerate(arrayOfFoodsPrices) {
             if Regex("t[o0]ta[li1]").test(foodObject.food) {
