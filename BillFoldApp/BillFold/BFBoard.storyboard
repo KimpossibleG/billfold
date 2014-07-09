@@ -272,15 +272,32 @@
                                 <rect key="frame" x="-1" y="132" width="322" height="430"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Q5g-30-1zv">
+                                <rect key="frame" x="92" y="406" width="137" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="T1X-hO-DKI" eventType="touchUpInside" id="klK-zT-QRx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Nl-3f-AOA">
+                                <rect key="frame" x="43" y="460" width="239" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose Photo From Library">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="T1X-hO-DKI" eventType="touchUpInside" id="LSK-jy-rMx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="7Zs-4J-P2T">
-                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="SGf-PZ-xKo">
-                            <connections>
-                                <action selector="takePhoto:" destination="T1X-hO-DKI" id="LgH-IP-Mgm"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="iBk-7m-Jbx">
                             <connections>
                                 <action selector="doneButtonPress:" destination="T1X-hO-DKI" id="bwa-xJ-mcW"/>
@@ -292,8 +309,9 @@
                         <outlet property="Continue" destination="0jG-uu-Ohj" id="neG-L7-cHZ"/>
                         <outlet property="Instructions" destination="jCn-mR-knA" id="oBj-H7-Vu0"/>
                         <outlet property="Welcome" destination="n4s-ZE-FI1" id="ykw-Q9-MHs"/>
+                        <outlet property="choosePhotoButton" destination="3Nl-3f-AOA" id="pBv-LW-rKx"/>
                         <outlet property="image" destination="dre-un-3bJ" id="Xed-eX-g2m"/>
-                        <outlet property="photoButton" destination="SGf-PZ-xKo" id="B2r-Rl-bX1"/>
+                        <outlet property="photoButton" destination="Q5g-30-1zv" id="q2K-9h-mdw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKE-Yj-sF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
