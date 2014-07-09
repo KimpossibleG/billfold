@@ -61,6 +61,7 @@ class DinerViewController: UITableViewController {
 //        sharedRegexController.deleteNonFood(foodCollection)
 //        sharedRegexController.summarizeTaxes(foodCollection)
         
+        self.navigationItem.hidesBackButton = true
         toolbarView.barTintColor = lightColor
         toolbarView.translucent = true
         

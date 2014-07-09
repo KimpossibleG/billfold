@@ -10,20 +10,24 @@ import UIKit
 
 class ParsedReceiptViewController: UITableViewController {
 
+    var itemsToKeep = ParsedFood[]()
     let doneButton = UIBarButtonItem()
     let addFoodButton = UIBarButtonItem()
     
     func doneButtonTap(sender: UIButton!) {
+        sharedFoodController.foodAndPrices = itemsToKeep
         navigationController.dismissModalViewControllerAnimated(true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.multipleTouchEnabled = true
+        self.tableView.editing = true
+        self.tableView.allowsMultipleSelectionDuringEditing = true
         addFoodButton.title = "Add Item To Receipt"
         addFoodButton.target = self
         addFoodButton.action = "addButtonTap:"
         self.navigationItem.rightBarButtonItem = doneButton
+        self.navigationItem.prompt = "You may add unlisted items later"
         self.navigationItem.title = "Select items to keep"
         doneButton.style = UIBarButtonItemStyle.Plain
         doneButton.title = "Done"
@@ -36,11 +40,16 @@ class ParsedReceiptViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         var selectedFood = sharedFoodController.foodAndPrices[indexPath.row] as ParsedFood
-        
+        var selectedIndices = Integer[]()
+        itemsToKeep += selectedFood
     }
     
+    override func tableView(tableView: UITableView!, didDeselectRowAtIndexPath indexPath: NSIndexPath!) {
+        itemsToKeep.removeAtIndex(indexPath.row)
+        println(itemsToKeep)
+    }
     // #pragma mark - Table view data source
     
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
@@ -66,10 +75,10 @@ class ParsedReceiptViewController: UITableViewController {
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
         
         let foodCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "foodItem") as UITableViewCell
-        
+//        foodCell.multipleSelectionBackgroundView
         let specificFoodItem = sharedFoodController.foodAndPrices[indexPath.row].food
         let price = sharedFoodController.foodAndPrices[indexPath.row].price
-
+        
         
         foodCell.text = specificFoodItem
         foodCell.detailTextLabel.text = "Cost: $\(price)"
