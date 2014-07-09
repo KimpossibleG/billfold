@@ -10,7 +10,6 @@
 #import "tesseract.h"
 #import "parsedFood.h"
 
-
 @implementation TesseractController
 
 static Tesseract *_tesseract = nil;
@@ -19,42 +18,11 @@ static Tesseract *_tesseract = nil;
     Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
     _tesseract = tesseract;
     [tesseract setVariableValue:@"$0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,:-()!#/" forKey:@"tessedit_char_whitelist"];
-
-    
-    UIImageOrientation originalOrientation = image.imageOrientation;
-    CGFloat originalScale = image.scale;
-    
-    CIImage* prepImage = [[CIImage alloc] initWithImage:image];
-    NSDictionary *options = @{kCIImageAutoAdjustRedEye : @false };
-    NSArray *adjustments = [prepImage autoAdjustmentFiltersWithOptions:options];
-    for (CIFilter *filter in adjustments) {
-        [filter setValue:prepImage forKey:kCIInputImageKey];
-         prepImage = filter.outputImage;
-    }
-
-    CIContext *context = [CIContext contextWithOptions:nil];
-    UIImage *newImage = [UIImage imageWithCGImage:[context createCGImage:prepImage fromRect:prepImage.extent] scale:originalScale orientation: originalOrientation];
-    [tesseract setImage:newImage];
+    [tesseract setImage:image];
     NSString *parsedText = [tesseract recognizedText];
     [tesseract clear];
     return parsedText;
 }
-
-+ (UIImage*)enhance:(UIImage*)image{
-    CIImage* prepImage = [[CIImage alloc] initWithCGImage:image.CGImage];
-    NSDictionary *options = @{kCIImageAutoAdjustRedEye : @false };
-    NSArray *adjustments = [prepImage autoAdjustmentFiltersWithOptions:options];
-    for (CIFilter *filter in adjustments) {
-        [filter setValue:prepImage forKey:kCIInputImageKey];
-        prepImage = filter.outputImage;
-    }
-    
-    image = [[UIImage alloc] initWithCIImage:prepImage];
-    NSLog(@"%f", image.size.height);
-    return image;
-}
-
-
 
 + (NSMutableArray*)regexDo:(NSString*)foodString{
     // This is where we'll feed in our string from tesseract:
