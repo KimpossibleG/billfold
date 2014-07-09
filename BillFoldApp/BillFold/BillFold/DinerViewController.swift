@@ -46,13 +46,15 @@ class DinerViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
         let parsedFoodView = ParsedReceiptViewController() as UITableViewController
         let navController = UINavigationController(rootViewController: parsedFoodView)
         self.presentViewController(navController, animated: true, completion: nil)
         
         self.navigationItem.hidesBackButton = true
+
         toolbarView.barTintColor = lightColor
         toolbarView.translucent = true
         
