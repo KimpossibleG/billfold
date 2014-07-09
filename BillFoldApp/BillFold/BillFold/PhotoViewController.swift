@@ -9,7 +9,6 @@
 import UIKit
 
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
     let lightColor: UIColor = UIColor(red: 1, green: 0.600, blue: 0, alpha: 1)
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
     var overLayLoader = UIView()
@@ -107,6 +106,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         Continue.hidden = false
         Instructions.hidden = true
         Welcome.hidden = true
+        var cameraOverlayView: UITableView!
     }
     
 }
