@@ -14,17 +14,38 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
     var overLayLoader = UIView()
     
-    func showLoader() {
+    func makeSpinner() {
         overLayLoader.frame = UIScreen.mainScreen().bounds
         overLayLoader.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         activityIndicator.startAnimating()
         activityIndicator.center = overLayLoader.center
         overLayLoader.addSubview(activityIndicator)
         navigationController.view.addSubview(overLayLoader)
+        overLayLoader.hidden = true
+    }
+    
+    func loadImage() {
+        
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+        if self.image!.image === nil {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    override func performSegueWithIdentifier(identifier: String!, sender: AnyObject!) {
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        loadImage()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        makeSpinner()
         photoButton.title = "Photo"
         navigationController.navigationBar.barTintColor = lightColor
         navigationController.navigationBar
@@ -34,7 +55,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     // Outlets
     @IBOutlet var photoButton : UIBarButtonItem
@@ -58,19 +78,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
             capture.sourceType = .PhotoLibrary
         }
         self.presentViewController(capture, animated: true, completion: nil)
-        
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        showLoader()
-        var image:UIImage = UIImage(named: "photo.JPG")
-        var imageString:NSString = TesseractController.recognizeImage(image) as NSString
-        var foodCollection = TesseractController.regexDo(imageString)
-        //        println(foodCollection)
-        sharedFoodController.foodAndPrices = foodCollection
-        
-        sharedRegexController.deleteSubtotal(foodCollection)
-        sharedRegexController.summarizeTaxes(foodCollection)
     }
     
     // Delegate Methods
@@ -81,8 +88,5 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         Instructions.hidden = true
         Welcome.hidden = true
     }
-    
-    
-    
     
 }
