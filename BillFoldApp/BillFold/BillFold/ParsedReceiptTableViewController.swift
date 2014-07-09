@@ -47,10 +47,10 @@ class ParsedReceiptViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, didDeselectRowAtIndexPath indexPath: NSIndexPath!) {
-        let selectedFood = sharedFoodController.foodAndPrices[indexPath.row] as ParsedFood
+        let selectedFood = sharedFoodController.foodAndPrices[indexPath.row]
    
-        for var i = 0; i < foodToKeep.count - 1; ++i {
-            if (selectedFood == foodToKeep[i]) {
+        for var i = 0; i <= foodToKeep.count - 1; i++ {
+            if (selectedFood === foodToKeep[i]) {
                 foodToKeep.removeAtIndex(i)
             }
         }
