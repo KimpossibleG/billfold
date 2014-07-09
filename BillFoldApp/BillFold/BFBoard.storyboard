@@ -283,7 +283,8 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="iBk-7m-Jbx">
                             <connections>
-                                <segue destination="ojk-Wl-DRV" kind="push" id="cGz-Xc-WV1"/>
+                                <action selector="doneButtonPress:" destination="T1X-hO-DKI" id="bwa-xJ-mcW"/>
+                                <segue destination="ojk-Wl-DRV" kind="push" id="nNL-xn-Dpf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
