@@ -12,11 +12,11 @@ let sharedFoodController = foodController()
 
 class foodController {
     
-    var foodAndPrices:NSMutableArray = NSMutableArray()
+    var foodAndPrices = ParsedFood[]()
     
     func calcTotalBill() -> Double {
         var total = 0.0
-        for foodItem : AnyObject in foodAndPrices {
+        for foodItem in foodAndPrices {
             var price = foodItem.price as NSString
             total = total + price.doubleValue
         }

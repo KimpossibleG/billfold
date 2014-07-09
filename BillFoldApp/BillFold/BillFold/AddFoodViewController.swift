@@ -47,7 +47,7 @@ class AddFoodViewController: UIViewController {
         newFood.price = itemPrice
         newFood.counter = 0
 
-        sharedFoodController.foodAndPrices.addObject(newFood)
+        sharedFoodController.foodAndPrices += newFood
         navigationController.popViewControllerAnimated(true)
     }
     /*

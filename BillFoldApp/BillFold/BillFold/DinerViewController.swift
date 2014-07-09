@@ -48,23 +48,15 @@ class DinerViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var image:UIImage = UIImage(named: "photo6.JPG")
-        var imageString:NSString = TesseractController.recognizeImage(image) as NSString
-        
-        var foodCollection = TesseractController.regexDo(imageString)
-        sharedFoodController.foodAndPrices = foodCollection
-        sharedRegexController.deleteNonFood(foodCollection)
-        sharedRegexController.summarizeTaxes(foodCollection)
 
         // var image:UIImage = UIImage(named: "photo.JPG")
         // var imageString:NSString = TesseractController.recognizeImage(image) as NSString
         // var foodCollection = TesseractController.regexDo(imageString)
         //        println(foodCollection)
-        sharedFoodController.foodAndPrices = foodCollection
+        //sharedFoodController.foodAndPrices = foodCollection
         
-        sharedRegexController.deleteNonFood(foodCollection)
-        sharedRegexController.summarizeTaxes(foodCollection)
+//        sharedRegexController.deleteNonFood(foodCollection)
+//        sharedRegexController.summarizeTaxes(foodCollection)
         
         toolbarView.barTintColor = lightColor
         toolbarView.translucent = true
