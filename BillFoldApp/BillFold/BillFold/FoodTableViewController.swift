@@ -35,6 +35,7 @@ class FoodTableViewController: UITableViewController {
         return true
     }
     
+    // USED IN PARSED FOOD CONTROLLER
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             var sharedFoodStore = sharedFoodController
@@ -50,8 +51,6 @@ class FoodTableViewController: UITableViewController {
         self.tableView!.registerNib(nib, forCellReuseIdentifier: "BNRItemCell")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     }
     
     override func viewDidAppear(animated: Bool){
@@ -86,12 +85,12 @@ class FoodTableViewController: UITableViewController {
         
         var specificFood = sharedFoodController.foodAndPrices[indexPath.row].food as String
         var specificPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
+
         println(foodCell)
         var specificCounter = String(sharedFoodController.foodAndPrices[indexPath.row].counter)
         foodCell.nameLabel.text = specificFood
         foodCell.priceLabel.text = specificPrice
         foodCell.counterLabel.text = specificCounter
-
         
         return foodCell
     }
