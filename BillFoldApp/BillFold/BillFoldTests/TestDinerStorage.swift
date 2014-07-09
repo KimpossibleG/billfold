@@ -22,17 +22,16 @@ class TestDinerStorage: XCTestCase {
         super.tearDown()
     }
 
-    let diner1 = Diner(name: "Kevin")
-    let diner2 = Diner(name: "Bubba")
-    var testDinerList =
+    var testDinerList = DinerStorage()
     
     func testAddDinerOne(){
-        dinerStorage.addDiner("Kim")
-        XCTAssert(, <#message: String#>, file: <#String#>, line: <#Int#>)
+        testDinerList.addDiner("Kim")
+        println(testDinerList)
+//        XCTAssert(testDinerList[0].name == "Kim", "\(testDinerList.name) did not equal Kim")
     }
 
 }
-//
+
 //class DinerStorage {
 //    
 //    var dinerList = Diner[]()
