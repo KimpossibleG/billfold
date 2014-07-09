@@ -54,12 +54,12 @@ class DinerViewController: UITableViewController {
         
         var foodCollection = TesseractController.regexDo(imageString)
         sharedFoodController.foodAndPrices = foodCollection
-        sharedRegexController.deleteSubtotal(foodCollection)
+        sharedRegexController.deleteNonFood(foodCollection)
         sharedRegexController.summarizeTaxes(foodCollection)
 
-        var image:UIImage = UIImage(named: "photo.JPG")
-        var imageString:NSString = TesseractController.recognizeImage(image) as NSString
-        var foodCollection = TesseractController.regexDo(imageString)
+        // var image:UIImage = UIImage(named: "photo.JPG")
+        // var imageString:NSString = TesseractController.recognizeImage(image) as NSString
+        // var foodCollection = TesseractController.regexDo(imageString)
         //        println(foodCollection)
         sharedFoodController.foodAndPrices = foodCollection
         
