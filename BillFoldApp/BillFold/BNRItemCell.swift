@@ -15,6 +15,12 @@ class BNRItemCell: UITableViewCell {
         // Initialization code
     }
 
+    
+    @IBOutlet var nameLabel: UILabel
+    @IBOutlet var priceLabel: UILabel
+    @IBOutlet var counterLabel: UILabel
+    
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

@@ -48,7 +48,7 @@ class DinerViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // var image:UIImage = UIImage(named: "photo.JPG")
         // var imageString:NSString = TesseractController.recognizeImage(image) as NSString
         // var foodCollection = TesseractController.regexDo(imageString)
