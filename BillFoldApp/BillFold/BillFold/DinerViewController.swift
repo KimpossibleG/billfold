@@ -48,7 +48,6 @@ class DinerViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         toolbarView.barTintColor = lightColor
         toolbarView.translucent = true
         

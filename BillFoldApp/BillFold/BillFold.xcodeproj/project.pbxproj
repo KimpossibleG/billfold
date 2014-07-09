@@ -34,6 +34,8 @@
 		AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEE45AB1966207B007660E7 /* BFBoard.storyboard */; };
 		CD9AB5801969E34700170078 /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AB57F1969E34700170078 /* TotalViewController.swift */; };
 		CDB6F7D41967625000BC54FC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6F7D31967625000BC54FC /* PhotoViewController.swift */; };
+		CE9BDC74196DC8A00038FC92 /* BNRItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BDC72196DC8A00038FC92 /* BNRItemCell.swift */; };
+		CE9BDC75196DC8A00038FC92 /* BNRItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BDC73196DC8A00038FC92 /* BNRItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +267,8 @@
 		AAEE45AB1966207B007660E7 /* BFBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BFBoard.storyboard; path = ../BFBoard.storyboard; sourceTree = "<group>"; };
 		CD9AB57F1969E34700170078 /* TotalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
 		CDB6F7D31967625000BC54FC /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		CE9BDC72196DC8A00038FC92 /* BNRItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNRItemCell.swift; sourceTree = "<group>"; };
+		CE9BDC73196DC8A00038FC92 /* BNRItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,6 +513,7 @@
 			isa = PBXGroup;
 			children = (
 				099447DC196C3B15003C1501 /* photo.JPG */,
+
 				17D475A01966FBDB00FA36AB /* BillFold-Bridge-Header.h */,
 				17F1504C1966434E00F35CAF /* tessdata */,
 				17F14FA71966434000F35CAF /* tesseract-ios */,
@@ -726,6 +731,7 @@
 				17F150451966434000F35CAF /* Tesseract.mm in Sources */,
 				AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */,
 				17FFBA9A196B22DE00B9A867 /* parsedFood.m in Sources */,
+				CE9BDC74196DC8A00038FC92 /* BNRItemCell.swift in Sources */,
 				CD9AB5801969E34700170078 /* TotalViewController.swift in Sources */,
 				174C43F0196AFADD00F32F4F /* RegexController.swift in Sources */,
 			);

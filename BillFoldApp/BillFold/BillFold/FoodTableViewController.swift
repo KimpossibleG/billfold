@@ -44,8 +44,10 @@ class FoodTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
-        var currentDiner = sharedDinerStorage.dinerList[currentDinerIndex]
         super.viewDidLoad()
+        var currentDiner = sharedDinerStorage.dinerList[currentDinerIndex]
+        let nib = UINib(nibName: "BNRItemCell", bundle: nil)
+        self.tableView!.registerNib(nib, forCellReuseIdentifier: "BNRItemCell")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -75,25 +77,21 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
             
-        var foodCell = tableView?.dequeueReusableCellWithIdentifier("foodItem") as? UITableViewCell
-        if !foodCell {
-            foodCell = UITableViewCell(style: .Subtitle, reuseIdentifier: "foodItem")
-        }
-//        let counterLabel = UILabel()
-//        counterLabel.text = String(sharedFoodController.foodAndPrices[indexPath.row].counter)
-//        let counterView = UIView()
-//        counterView.frame = CGRect(x: 270, y: 10, width: 25, height: 25)
-//        counterLabel.frame = CGRect(x: 0, y: 0, width: 10, height: 10)
-//        counterView.backgroundColor = UIColor.grayColor()
-//        counterView.addSubview(counterLabel)
-//        counterLabel.center = counterView.center
-//        foodCell.addSubview(counterView)
+        var foodCell = tableView?.dequeueReusableCellWithIdentifier("BNRItemCell",forIndexPath: indexPath) as BNRItemCell
+        
+//        if !foodCell {
+//            foodCell = BNRItemCell()
+//            
+//        }
         
         var specificFood = sharedFoodController.foodAndPrices[indexPath.row].food as String
         var specificPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
-        
-        foodCell!.text = specificFood
-        // foodCell.detailTextLabel.text = "$\(specificPrice)"
+        println(foodCell)
+        var specificCounter = String(sharedFoodController.foodAndPrices[indexPath.row].counter)
+        foodCell.nameLabel.text = specificFood
+        foodCell.priceLabel.text = specificPrice
+        foodCell.counterLabel.text = specificCounter
+
         
         return foodCell
     }
