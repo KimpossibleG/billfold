@@ -311,8 +311,8 @@
 		AAEE45AB1966207B007660E7 /* BFBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BFBoard.storyboard; path = ../BFBoard.storyboard; sourceTree = "<group>"; };
 		CD9AB57F1969E34700170078 /* TotalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
 		CDB6F7D31967625000BC54FC /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		CE9BDC72196DC8A00038FC92 /* BNRItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BNRItemCell.swift; path = ../BNRItemCell.swift; sourceTree = "<group>"; };
-		CE9BDC73196DC8A00038FC92 /* BNRItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BNRItemCell.xib; path = ../BNRItemCell.xib; sourceTree = "<group>"; };
+		CE9BDC72196DC8A00038FC92 /* BNRItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNRItemCell.swift; sourceTree = "<group>"; };
+		CE9BDC73196DC8A00038FC92 /* BNRItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -571,6 +571,8 @@
 				099447DE196C4CF3003C1501 /* photo10.jpg */,
 				099447DF196C4CF3003C1501 /* photo11.jpg */,
 				099447DC196C3B15003C1501 /* photo.JPG */,
+				CE9BDC72196DC8A00038FC92 /* BNRItemCell.swift */,
+				CE9BDC73196DC8A00038FC92 /* BNRItemCell.xib */,
 				099447D0196C34C3003C1501 /* photo1.JPG */,
 				099447D1196C34C3003C1501 /* photo2.JPG */,
 				099447D2196C34C3003C1501 /* photo3.JPG */,
@@ -602,8 +604,6 @@
 		AAEE459019662032007660E7 /* BillFold */ = {
 			isa = PBXGroup;
 			children = (
-				CE9BDC72196DC8A00038FC92 /* BNRItemCell.swift */,
-				CE9BDC73196DC8A00038FC92 /* BNRItemCell.xib */,
 				AAEE459319662032007660E7 /* AppDelegate.swift */,
 				AAEE45AB1966207B007660E7 /* BFBoard.storyboard */,
 				AAA0021019662B61000D2D24 /* AddDinerViewController.swift */,

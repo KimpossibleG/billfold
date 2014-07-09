@@ -20,7 +20,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWI-7M-Ywh">
-                        <rect key="frame" x="269" y="8" width="31" height="29"/>
+                        <rect key="frame" x="269" y="7" width="31" height="29"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -40,7 +40,7 @@
                 <outlet property="nameLabel" destination="MSZ-5G-etg" id="zYF-7J-qXm"/>
                 <outlet property="priceLabel" destination="iqa-im-Io0" id="0O1-FY-00T"/>
             </connections>
-            <point key="canvasLocation" x="354" y="271"/>
+            <point key="canvasLocation" x="179" y="237"/>
         </tableViewCell>
     </objects>
 </document>
