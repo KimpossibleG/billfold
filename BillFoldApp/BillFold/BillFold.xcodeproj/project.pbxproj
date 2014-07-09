@@ -30,7 +30,7 @@
 		17F1504B1966434000F35CAF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 17F150441966434000F35CAF /* README.md */; };
 		17F1504D1966434E00F35CAF /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 17F1504C1966434E00F35CAF /* tessdata */; };
 		17FA96B9196D77D1008FF270 /* TestDiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA96B8196D77D1008FF270 /* TestDiner.swift */; };
-		17FA96BE196D8451008FF270 /* TestDinerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA96BD196D8450008FF270 /* TestDinerController.swift */; };
+		17FA96BE196D8451008FF270 /* TestDinerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA96BD196D8450008FF270 /* TestDinerStorage.swift */; };
 		17FFBA9A196B22DE00B9A867 /* parsedFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FFBA99196B22DE00B9A867 /* parsedFood.m */; };
 		AA5083D01967767C0005F4D7 /* TesseractController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5083CF1967767C0005F4D7 /* TesseractController.m */; };
 		AA5229F91968B476000C2A7E /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229F81968B476000C2A7E /* FoodTableViewController.swift */; };
@@ -287,7 +287,7 @@
 		17F150441966434000F35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		17F1504C1966434E00F35CAF /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = BillFold/tessdata; sourceTree = "<group>"; };
 		17FA96B8196D77D1008FF270 /* TestDiner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDiner.swift; sourceTree = "<group>"; };
-		17FA96BD196D8450008FF270 /* TestDinerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDinerController.swift; sourceTree = "<group>"; };
+		17FA96BD196D8450008FF270 /* TestDinerStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDinerStorage.swift; sourceTree = "<group>"; };
 		17FFBA98196B22DE00B9A867 /* parsedFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parsedFood.h; sourceTree = "<group>"; };
 		17FFBA99196B22DE00B9A867 /* parsedFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parsedFood.m; sourceTree = "<group>"; };
 		17FFBA9C196C39C000B9A867 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
@@ -630,7 +630,7 @@
 		AAEE459E19662032007660E7 /* BillFoldTests */ = {
 			isa = PBXGroup;
 			children = (
-				17FA96BD196D8450008FF270 /* TestDinerController.swift */,
+				17FA96BD196D8450008FF270 /* TestDinerStorage.swift */,
 				17FA96B8196D77D1008FF270 /* TestDiner.swift */,
 				AAEE45A119662032007660E7 /* BillFoldTests.swift */,
 				AAEE459F19662032007660E7 /* Supporting Files */,
@@ -839,7 +839,7 @@
 			files = (
 				17FA96B9196D77D1008FF270 /* TestDiner.swift in Sources */,
 				AAEE45A219662032007660E7 /* BillFoldTests.swift in Sources */,
-				17FA96BE196D8451008FF270 /* TestDinerController.swift in Sources */,
+				17FA96BE196D8451008FF270 /* TestDinerStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

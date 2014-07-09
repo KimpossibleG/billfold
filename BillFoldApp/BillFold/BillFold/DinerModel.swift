@@ -34,8 +34,6 @@ class Diner{
     }
 }
 
-// Why is this a controller? I would name this DinerStore or something along those lines to
-// indicate that it is a cache of data instead of an object managing views
 
 class DinerStorage {
     
