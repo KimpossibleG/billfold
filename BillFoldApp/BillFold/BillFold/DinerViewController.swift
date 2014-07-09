@@ -20,7 +20,6 @@ class DinerViewController: UITableViewController {
 
     init(style: UITableViewStyle) {
         super.init(style: style)
-
         // Custom initialization
     }
 

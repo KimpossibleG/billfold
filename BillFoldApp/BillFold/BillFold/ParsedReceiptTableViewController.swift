@@ -11,14 +11,20 @@ import UIKit
 class ParsedReceiptViewController: UITableViewController {
 
     let doneButton = UIBarButtonItem()
-
+    let addFoodButton = UIBarButtonItem()
+    
     func doneButtonTap(sender: UIButton!) {
         navigationController.dismissModalViewControllerAnimated(true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.multipleTouchEnabled = true
+        addFoodButton.title = "Add Item To Receipt"
+        addFoodButton.target = self
+        addFoodButton.action = "addButtonTap:"
         self.navigationItem.rightBarButtonItem = doneButton
+        self.navigationItem.title = "Select items to keep"
         doneButton.style = UIBarButtonItemStyle.Plain
         doneButton.title = "Done"
         doneButton.target = self
@@ -42,6 +48,7 @@ class ParsedReceiptViewController: UITableViewController {
             var sharedFoodStore = sharedFoodController
             sharedFoodStore.foodAndPrices.removeAtIndex(indexPath.row)
         }
+        self.tableView.reloadData()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
@@ -62,6 +69,7 @@ class ParsedReceiptViewController: UITableViewController {
         
         let specificFoodItem = sharedFoodController.foodAndPrices[indexPath.row].food
         let price = sharedFoodController.foodAndPrices[indexPath.row].price
+
         
         foodCell.text = specificFoodItem
         foodCell.detailTextLabel.text = "Cost: $\(price)"

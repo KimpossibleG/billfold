@@ -86,11 +86,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="i84-eo-l5S">
-                        <barButtonItem key="rightBarButtonItem" title="Add Food Item" id="Xha-XH-bpk">
-                            <connections>
-                                <segue destination="KAY-PF-VC8" kind="push" id="JdD-HE-JOH"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add Food Item" id="Xha-XH-bpk"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFO-Ce-3SP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -146,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kjb-EJ-5l6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2400" y="379"/>
+            <point key="canvasLocation" x="1475" y="1019"/>
         </scene>
         <!--Total View Controller-->
         <scene sceneID="eTa-PO-yDF">
@@ -173,7 +169,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Anv-Ca-fN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3031" y="1007"/>
+            <point key="canvasLocation" x="1967" y="1019"/>
         </scene>
         <!--Add Diner View Controller-->
         <scene sceneID="8w0-bh-6Pi">
