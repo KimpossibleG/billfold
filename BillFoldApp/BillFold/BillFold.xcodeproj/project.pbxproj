@@ -28,6 +28,9 @@
 		AAA0020D19662AF2000D2D24 /* DinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0020C19662AF2000D2D24 /* DinerViewController.swift */; };
 		AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0021019662B61000D2D24 /* AddDinerViewController.swift */; };
 		AAA62A75196DA8A500718253 /* ParsedReceiptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA62A74196DA8A500718253 /* ParsedReceiptTableViewController.swift */; };
+		AAC6DCE0196E021A00440663 /* BNRItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6DCDE196E021A00440663 /* BNRItemCell.swift */; };
+		AAC6DCE1196E021A00440663 /* BNRItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC6DCDF196E021A00440663 /* BNRItemCell.xib */; };
+		AAC6DCE2196E025B00440663 /* BNRItemCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = AAC6DCDF196E021A00440663 /* BNRItemCell.xib */; };
 		AACEAE7F196AE1DE007070CC /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEAE7E196AE1DE007070CC /* AddFoodViewController.swift */; };
 		AAEE459419662032007660E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE459319662032007660E7 /* AppDelegate.swift */; };
 		AAEE459619662032007660E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEE459519662032007660E7 /* Images.xcassets */; };
@@ -35,8 +38,6 @@
 		AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEE45AB1966207B007660E7 /* BFBoard.storyboard */; };
 		CD9AB5801969E34700170078 /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AB57F1969E34700170078 /* TotalViewController.swift */; };
 		CDB6F7D41967625000BC54FC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6F7D31967625000BC54FC /* PhotoViewController.swift */; };
-		CE9BDC74196DC8A00038FC92 /* BNRItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BDC72196DC8A00038FC92 /* BNRItemCell.swift */; };
-		CE9BDC75196DC8A00038FC92 /* BNRItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BDC73196DC8A00038FC92 /* BNRItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,6 +259,9 @@
 		AAA0020C19662AF2000D2D24 /* DinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerViewController.swift; sourceTree = "<group>"; };
 		AAA0021019662B61000D2D24 /* AddDinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDinerViewController.swift; sourceTree = "<group>"; };
 		AAA62A74196DA8A500718253 /* ParsedReceiptTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedReceiptTableViewController.swift; sourceTree = "<group>"; };
+		AAC6DCDE196E021A00440663 /* BNRItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNRItemCell.swift; sourceTree = "<group>"; };
+		AAC6DCDF196E021A00440663 /* BNRItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRItemCell.xib; sourceTree = "<group>"; };
+		AAC6DCE3196E028300440663 /* BNRItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNRItemCell.swift; sourceTree = "<group>"; };
 		AACEAE7E196AE1DE007070CC /* AddFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		AAEE458E19662032007660E7 /* BillFold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillFold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEE459219662032007660E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -269,8 +273,6 @@
 		AAEE45AB1966207B007660E7 /* BFBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BFBoard.storyboard; path = ../BFBoard.storyboard; sourceTree = "<group>"; };
 		CD9AB57F1969E34700170078 /* TotalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
 		CDB6F7D31967625000BC54FC /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		CE9BDC72196DC8A00038FC92 /* BNRItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNRItemCell.swift; sourceTree = "<group>"; };
-		CE9BDC73196DC8A00038FC92 /* BNRItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,8 +516,8 @@
 		AAEE458519662032007660E7 = {
 			isa = PBXGroup;
 			children = (
+				AAC6DCE3196E028300440663 /* BNRItemCell.swift */,
 				099447DC196C3B15003C1501 /* photo.JPG */,
-
 				17D475A01966FBDB00FA36AB /* BillFold-Bridge-Header.h */,
 				17F1504C1966434E00F35CAF /* tessdata */,
 				17F14FA71966434000F35CAF /* tesseract-ios */,
@@ -555,6 +557,8 @@
 				AA5083CF1967767C0005F4D7 /* TesseractController.m */,
 				CD9AB57F1969E34700170078 /* TotalViewController.swift */,
 				AAEE459519662032007660E7 /* Images.xcassets */,
+				AAC6DCDE196E021A00440663 /* BNRItemCell.swift */,
+				AAC6DCDF196E021A00440663 /* BNRItemCell.xib */,
 				AAEE459119662032007660E7 /* Supporting Files */,
 			);
 			path = BillFold;
@@ -702,6 +706,7 @@
 				099447DD196C3B15003C1501 /* photo.JPG in Resources */,
 				17F150461966434000F35CAF /* LICENSE in Resources */,
 				17F1504D1966434E00F35CAF /* tessdata in Resources */,
+				AAC6DCE1196E021A00440663 /* BNRItemCell.xib in Resources */,
 				AAEE459619662032007660E7 /* Images.xcassets in Resources */,
 				AAEE45AC1966207B007660E7 /* BFBoard.storyboard in Resources */,
 			);
@@ -721,6 +726,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC6DCE2196E025B00440663 /* BNRItemCell.xib in Sources */,
+				AAC6DCE0196E021A00440663 /* BNRItemCell.swift in Sources */,
 				AA5229FB1968C37E000C2A7E /* DinerModel.swift in Sources */,
 				AA5229FD1968D221000C2A7E /* foodController.swift in Sources */,
 				17F1504B1966434000F35CAF /* README.md in Sources */,
@@ -735,7 +742,6 @@
 				17F150451966434000F35CAF /* Tesseract.mm in Sources */,
 				AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */,
 				17FFBA9A196B22DE00B9A867 /* parsedFood.m in Sources */,
-				CE9BDC74196DC8A00038FC92 /* BNRItemCell.swift in Sources */,
 				CD9AB5801969E34700170078 /* TotalViewController.swift in Sources */,
 				174C43F0196AFADD00F32F4F /* RegexController.swift in Sources */,
 			);
