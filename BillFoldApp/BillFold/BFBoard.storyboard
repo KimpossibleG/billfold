@@ -49,7 +49,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="6bn-RU-ZA3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QmV-6N-vNA">
+                        <barButtonItem key="rightBarButtonItem" title="Add A Diner" id="QmV-6N-vNA">
                             <connections>
                                 <segue destination="UgA-Hs-gRg" kind="push" id="d2e-JS-qi3"/>
                             </connections>
@@ -283,7 +283,8 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="iBk-7m-Jbx">
                             <connections>
-                                <segue destination="ojk-Wl-DRV" kind="push" id="cGz-Xc-WV1"/>
+                                <action selector="doneButtonPress:" destination="T1X-hO-DKI" id="bwa-xJ-mcW"/>
+                                <segue destination="ojk-Wl-DRV" kind="push" id="nNL-xn-Dpf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
