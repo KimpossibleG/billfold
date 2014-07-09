@@ -10,12 +10,12 @@ import UIKit
 
 class ParsedReceiptViewController: UITableViewController {
 
-    var itemsToKeep = ParsedFood[]()
+    var foodToKeep = ParsedFood[]()
     let doneButton = UIBarButtonItem()
     let addFoodButton = UIBarButtonItem()
     
     func doneButtonTap(sender: UIButton!) {
-        sharedFoodController.foodAndPrices = itemsToKeep
+        sharedFoodController.foodAndPrices = foodToKeep
         navigationController.dismissModalViewControllerAnimated(true)
     }
     
@@ -41,15 +41,21 @@ class ParsedReceiptViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        var selectedFood = sharedFoodController.foodAndPrices[indexPath.row] as ParsedFood
-        var selectedIndices = Integer[]()
-        itemsToKeep += selectedFood
+        let selectedFood = sharedFoodController.foodAndPrices[indexPath.row] as ParsedFood
+        foodToKeep += selectedFood
+       // println("tapdown: \(foodToKeep.count)")
     }
     
     override func tableView(tableView: UITableView!, didDeselectRowAtIndexPath indexPath: NSIndexPath!) {
-        itemsToKeep.removeAtIndex(indexPath.row)
-        println(itemsToKeep)
+        let selectedFood = sharedFoodController.foodAndPrices[indexPath.row] as ParsedFood
+   
+        for var i = 0; i < foodToKeep.count - 1; ++i {
+            if (selectedFood == foodToKeep[i]) {
+                foodToKeep.removeAtIndex(i)
+            }
+        }
     }
+    
     // #pragma mark - Table view data source
     
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {

@@ -47,19 +47,10 @@ class DinerViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
         let parsedFoodView = ParsedReceiptViewController() as UITableViewController
         let navController = UINavigationController(rootViewController: parsedFoodView)
         self.presentViewController(navController, animated: true, completion: nil)
-        
-        // var image:UIImage = UIImage(named: "photo.JPG")
-        // var imageString:NSString = TesseractController.recognizeImage(image) as NSString
-        // var foodCollection = TesseractController.regexDo(imageString)
-        //        println(foodCollection)
-        //sharedFoodController.foodAndPrices = foodCollection
-        
-//        sharedRegexController.deleteNonFood(foodCollection)
-//        sharedRegexController.summarizeTaxes(foodCollection)
         
         self.navigationItem.hidesBackButton = true
         toolbarView.barTintColor = lightColor
@@ -67,15 +58,6 @@ class DinerViewController: UITableViewController {
         
         totalUpdater.textAlignment = NSTextAlignment.Center
         totalUpdater.text = "Loading Current Total"
-
-        //var pic:UIImage = UIImage(named: "photo.JPG")
-        //var rotatedPhoto:UIImage = UIImage(CGImage: pic.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
-        //println(TesseractController.recognizeImage(pic))
-        //println(TesseractController.recognizeImage(rotatedPhoto))
-
-        //displayImage(pic)
-
-       // testFilters()
     }
 
     override func viewDidAppear(animated: Bool){
@@ -103,100 +85,4 @@ class DinerViewController: UITableViewController {
 
         return dinerCell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
-    // Return NO if you do not want the specified item to be editable.
-    return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath?) {
-    if editingStyle == .Delete {
-    // Delete the row from the data source
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    } else if editingStyle == .Insert {
-    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView?, moveRowAtIndexPath fromIndexPath: NSIndexPath?, toIndexPath: NSIndexPath?) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView?, canMoveRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
-    // Return NO if you do not want the item to be re-orderable.
-    return true
-    }
-    */
-
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    }
-    */
-
 }
-
-//func processImage(filter:AnyObject, photo:UIImage) -> UIImage {
-//    //this orients the picture relative to the picture's "up"
-//   // var brightnessFilter:GPUImageBrightnessFilter = GPUImageBrightnessFilter()
-//  //  brightnessFilter.brightness = 0.1
-//   // var brightPhoto:UIImage = brightnessFilter.imageByFilteringImage(photo)
-////    var rotatedPhoto:UIImage = UIImage(CGImage: photo.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
-//  //  return filter.imageByFilteringImage(rotatedPhoto)
-//    return filter.imageByFilteringImage(photo)
-//}
-//
-//func testFilters() {
-//    // sharpness: The sharpness adjustment to apply (-4.0 - 4.0, with 0.0 as the default)
-//    var sharpenFilter: GPUImageSharpenFilter = GPUImageSharpenFilter()
-//    sharpenFilter.sharpness = -1.0
-//
-//    // threshold: The luminance threshold, from 0.0 to 1.0, with a default of 0.5
-//    var luminanceThresholdFilter: GPUImageLuminanceThresholdFilter = GPUImageLuminanceThresholdFilter()
-//    //luminanceThresholdFilter.threshold = 0.5
-//
-//    // thresholdMultiplier: This is a factor that the average luminance will be multiplied by in order to arrive at the final threshold to use. By default, this is 1.0.
-//    var averageLuminanceThresholdFilter: GPUImageAverageLuminanceThresholdFilter = GPUImageAverageLuminanceThresholdFilter()
-//
-//    // blurRadiusInPixels: A multiplier for the background averaging blur radius in pixels, with a default of 4.
-//    var adaptiveThresholdFilter: GPUImageAdaptiveThresholdFilter = GPUImageAdaptiveThresholdFilter()
-//
-//
-//    var pic:UIImage = UIImage(named: "photo.JPG")
-//
-//    for var i = 0.0; i < 1.0; i += 0.1 {
-////        println("Luminance Threshold Filter | threshold=\(i)\n")
-//        luminanceThresholdFilter.threshold = Float(i)
-//        var filteredPic:UIImage = processImage(luminanceThresholdFilter, pic)
-////        println(TesseractController.recognizeImage(filteredPic))
-//    }
-//
-//    for var i = 0.0; i < 2.0; i += 0.1 {
-////        println("Average Luminance Threshold Filter | \(i)\n")
-//        averageLuminanceThresholdFilter.thresholdMultiplier = Float(i)
-////        println(TesseractController.recognizeImage(processImage(averageLuminanceThresholdFilter, pic)))
-//    }
-//}
-//
-//func displayImage(photo:UIImage) {
-//    let appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-//    let imgView:UIImageView = UIImageView(frame: appDel.window!.bounds)
-//    imgView.image = photo
-//    appDel.window!.addSubview(imgView)
-//}
-
