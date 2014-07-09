@@ -78,6 +78,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
             capture.sourceType = .PhotoLibrary
         }
         self.presentViewController(capture, animated: true, completion: nil)
+
     }
     
     // Delegate Methods

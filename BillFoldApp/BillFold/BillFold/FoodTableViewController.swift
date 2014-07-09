@@ -22,7 +22,7 @@ class FoodTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
-        let currentDiner = sharedDinerController.dinerList[currentDinerIndex]
+        let currentDiner = sharedDinerStorage.dinerList[currentDinerIndex]
         let selectedFood = sharedFoodController.foodAndPrices[indexPath.row] as ParsedFood
         
         currentDiner.foodItems += selectedFood
@@ -44,7 +44,7 @@ class FoodTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
-        var currentDiner = sharedDinerController.dinerList[currentDinerIndex]
+        var currentDiner = sharedDinerStorage.dinerList[currentDinerIndex]
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

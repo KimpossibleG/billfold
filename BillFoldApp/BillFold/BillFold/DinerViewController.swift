@@ -41,7 +41,7 @@ class DinerViewController: UITableViewController {
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             var deletePerson = indexPath.row
-            sharedDinerController.dinerList.removeAtIndex(deletePerson)
+            sharedDinerStorage.dinerList.removeAtIndex(deletePerson)
             self.tableView.reloadData()
         }
     }
@@ -57,6 +57,15 @@ class DinerViewController: UITableViewController {
         sharedRegexController.deleteSubtotal(foodCollection)
         sharedRegexController.summarizeTaxes(foodCollection)
 
+        var image:UIImage = UIImage(named: "photo.JPG")
+        var imageString:NSString = TesseractController.recognizeImage(image) as NSString
+        var foodCollection = TesseractController.regexDo(imageString)
+        //        println(foodCollection)
+        sharedFoodController.foodAndPrices = foodCollection
+        
+        sharedRegexController.deleteNonFood(foodCollection)
+        sharedRegexController.summarizeTaxes(foodCollection)
+        
         toolbarView.barTintColor = lightColor
         toolbarView.translucent = true
         
@@ -88,13 +97,13 @@ class DinerViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
-        return sharedDinerController.dinerList.count
+        return sharedDinerStorage.dinerList.count
     }
 
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
         let dinerCell = tableView!.dequeueReusableCellWithIdentifier("diner", forIndexPath: indexPath) as UITableViewCell
 
-        dinerCell.text = sharedDinerController.dinerList[indexPath.row].name
+        dinerCell.text = sharedDinerStorage.dinerList[indexPath.row].name
 
         return dinerCell
     }

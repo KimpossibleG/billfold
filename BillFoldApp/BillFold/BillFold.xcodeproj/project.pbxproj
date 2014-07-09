@@ -29,10 +29,12 @@
 		17F1504A1966434000F35CAF /* libtesseract_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F150431966434000F35CAF /* libtesseract_all.a */; };
 		17F1504B1966434000F35CAF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 17F150441966434000F35CAF /* README.md */; };
 		17F1504D1966434E00F35CAF /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 17F1504C1966434E00F35CAF /* tessdata */; };
+		17FA96B9196D77D1008FF270 /* TestDiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA96B8196D77D1008FF270 /* TestDiner.swift */; };
+		17FA96BE196D8451008FF270 /* TestDinerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA96BD196D8450008FF270 /* TestDinerController.swift */; };
 		17FFBA9A196B22DE00B9A867 /* parsedFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FFBA99196B22DE00B9A867 /* parsedFood.m */; };
 		AA5083D01967767C0005F4D7 /* TesseractController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5083CF1967767C0005F4D7 /* TesseractController.m */; };
 		AA5229F91968B476000C2A7E /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229F81968B476000C2A7E /* FoodTableViewController.swift */; };
-		AA5229FB1968C37E000C2A7E /* DinerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229FA1968C37E000C2A7E /* DinerController.swift */; };
+		AA5229FB1968C37E000C2A7E /* DinerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229FA1968C37E000C2A7E /* DinerModel.swift */; };
 		AA5229FD1968D221000C2A7E /* foodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5229FC1968D221000C2A7E /* foodController.swift */; };
 		AAA0020D19662AF2000D2D24 /* DinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0020C19662AF2000D2D24 /* DinerViewController.swift */; };
 		AAA0021119662B61000D2D24 /* AddDinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0021019662B61000D2D24 /* AddDinerViewController.swift */; };
@@ -284,13 +286,15 @@
 		17F150431966434000F35CAF /* libtesseract_all.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtesseract_all.a; sourceTree = "<group>"; };
 		17F150441966434000F35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		17F1504C1966434E00F35CAF /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = BillFold/tessdata; sourceTree = "<group>"; };
+		17FA96B8196D77D1008FF270 /* TestDiner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDiner.swift; sourceTree = "<group>"; };
+		17FA96BD196D8450008FF270 /* TestDinerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDinerController.swift; sourceTree = "<group>"; };
 		17FFBA98196B22DE00B9A867 /* parsedFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parsedFood.h; sourceTree = "<group>"; };
 		17FFBA99196B22DE00B9A867 /* parsedFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parsedFood.m; sourceTree = "<group>"; };
 		17FFBA9C196C39C000B9A867 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 		AA5083CE196776570005F4D7 /* TesseractController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesseractController.h; sourceTree = "<group>"; };
 		AA5083CF1967767C0005F4D7 /* TesseractController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TesseractController.m; sourceTree = "<group>"; };
 		AA5229F81968B476000C2A7E /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
-		AA5229FA1968C37E000C2A7E /* DinerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerController.swift; sourceTree = "<group>"; };
+		AA5229FA1968C37E000C2A7E /* DinerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerModel.swift; sourceTree = "<group>"; };
 		AA5229FC1968D221000C2A7E /* foodController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodController.swift; sourceTree = "<group>"; };
 		AAA0020C19662AF2000D2D24 /* DinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerViewController.swift; sourceTree = "<group>"; };
 		AAA0021019662B61000D2D24 /* AddDinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDinerViewController.swift; sourceTree = "<group>"; };
@@ -598,7 +602,7 @@
 				AAEE45AB1966207B007660E7 /* BFBoard.storyboard */,
 				AAA0021019662B61000D2D24 /* AddDinerViewController.swift */,
 				AACEAE7E196AE1DE007070CC /* AddFoodViewController.swift */,
-				AA5229FA1968C37E000C2A7E /* DinerController.swift */,
+				AA5229FA1968C37E000C2A7E /* DinerModel.swift */,
 				AAA0020C19662AF2000D2D24 /* DinerViewController.swift */,
 				AA5229FC1968D221000C2A7E /* foodController.swift */,
 				AA5229F81968B476000C2A7E /* FoodTableViewController.swift */,
@@ -626,6 +630,8 @@
 		AAEE459E19662032007660E7 /* BillFoldTests */ = {
 			isa = PBXGroup;
 			children = (
+				17FA96BD196D8450008FF270 /* TestDinerController.swift */,
+				17FA96B8196D77D1008FF270 /* TestDiner.swift */,
 				AAEE45A119662032007660E7 /* BillFoldTests.swift */,
 				AAEE459F19662032007660E7 /* Supporting Files */,
 			);
@@ -809,7 +815,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA5229FB1968C37E000C2A7E /* DinerController.swift in Sources */,
+				AA5229FB1968C37E000C2A7E /* DinerModel.swift in Sources */,
 				AA5229FD1968D221000C2A7E /* foodController.swift in Sources */,
 				17F1504B1966434000F35CAF /* README.md in Sources */,
 				AA5229F91968B476000C2A7E /* FoodTableViewController.swift in Sources */,
@@ -831,7 +837,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17FA96B9196D77D1008FF270 /* TestDiner.swift in Sources */,
 				AAEE45A219662032007660E7 /* BillFoldTests.swift in Sources */,
+				17FA96BE196D8451008FF270 /* TestDinerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
