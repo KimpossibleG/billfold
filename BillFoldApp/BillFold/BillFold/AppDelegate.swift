@@ -10,6 +10,7 @@ import UIKit
 
 let black = UIColor.blackColor()
 let lightColor: UIColor = UIColor(red: 1, green: 0.212, blue: 0, alpha: 1)
+let translucentOrange: UIColor = UIColor(red: 1, green: 0.212, blue: 0, alpha: 0.1)
 let lightBlue = UIColor(red: 0.698, green: 0.831, blue: 0.863, alpha: 1)
 let darkBlue = UIColor(red: 0.165, green: 0.227, blue: 0.282, alpha: 1)
 

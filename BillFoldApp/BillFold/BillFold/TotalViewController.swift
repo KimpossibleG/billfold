@@ -69,7 +69,6 @@ class TotalViewController: UITableViewController {
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        let diner = sharedDinerStorage.dinerList[section]
         return sharedDinerStorage.dinerList[section].foodItems.count
     }
 
@@ -78,14 +77,14 @@ class TotalViewController: UITableViewController {
         
         let totalCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "totalCell") as UITableViewCell
         
-        var specificDiner = sharedDinerStorage.dinerList[indexPath.section]
+        let specificDiner = sharedDinerStorage.dinerList[indexPath.section]
         
-        var specificFoodItem = specificDiner.foodItems[indexPath.row].food as String
-        var specificFoodPrice = specificDiner.foodItems[indexPath.row].price as NSString
-        var price = specificFoodPrice.doubleValue
-        var foodCount = specificDiner.foodItems[indexPath.row].counter
-        var yourSplit = price/Double(foodCount)
-        var total = floor(yourSplit * 100)/100
+        let specificFoodItem = specificDiner.foodItems[indexPath.row].food as String
+        let specificFoodPrice = specificDiner.foodItems[indexPath.row].price as NSString
+        let price = specificFoodPrice.doubleValue
+        let foodCount = specificDiner.foodItems[indexPath.row].counter
+        let yourSplit = price/Double(foodCount)
+        let total = floor(yourSplit * 100)/100
         
         totalCell.textLabel.text = "Total = \(specificDiner.totalOwed)"
         totalCell.text = specificFoodItem

@@ -30,14 +30,14 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         overLayLoader.hidden = true
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
-        if self.image!.image == nil {
-            photoAlert()
-            return false
-        } else {
-            return true
-        }
-    }
+//    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+//        if self.image!.image == nil {
+//            photoAlert()
+//            return false
+//        } else {
+//            return true
+//        }
+//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         var segueImage:UIImage = UIImage(named: "photo.JPG")
