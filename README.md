@@ -20,7 +20,7 @@ No additional software is required.
 
 - [xCode 6 Beta](https://developer.apple.com/xcode/): Development toolset, including text editor, storyboard, and simulator
 
-Note: The BillFold 
+Note: The BillFold gitHub content statistics are misleading, as they indicate 95% of BillFold's code is in C++ and/or Objective C. This is because the Tesseract library is extremely large relative to BillFold's overall implementation. 
 
 ## RESOURCES:
 - [tessaract](https://github.com/ldiqual/tesseract-ios)
