@@ -75,7 +75,7 @@ class TotalViewController: UITableViewController {
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
         
-        let totalCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "totalCell") as UITableViewCell
+        var totalCell = tableView?.dequeueReusableCellWithIdentifier("dinerAndTotal",forIndexPath: indexPath) as UITableViewCell
         
         let specificDiner = sharedDinerStorage.dinerList[indexPath.section]
         
