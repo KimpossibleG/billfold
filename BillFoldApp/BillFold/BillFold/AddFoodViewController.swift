@@ -25,7 +25,7 @@ class AddFoodViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = lightBlue
         foodItemName.tintColor = black
         foodItemPrice.tintColor = black
         addFoodButton.tintColor = black

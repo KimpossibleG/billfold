@@ -13,6 +13,7 @@ class DinerViewController: UITableViewController {
     @IBOutlet var totalUpdater: UILabel
     var currentDinerIndex:NSInteger = NSInteger()
     var total = Double()
+    let attributeDictionary = [UITextAttributeTextColor: UIColor.whiteColor()]
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -26,7 +27,7 @@ class DinerViewController: UITableViewController {
     override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
         currentDinerIndex = indexPath!.row
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if segue.destinationViewController is FoodTableViewController {
             var foodTableControllerWithName = segue.destinationViewController as FoodTableViewController
@@ -48,22 +49,26 @@ class DinerViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         let parsedFoodView = ParsedReceiptViewController() as UITableViewController
         let navController = UINavigationController(rootViewController: parsedFoodView)
         self.presentViewController(navController, animated: true, completion: nil)
-        
         self.navigationItem.hidesBackButton = true
-
-        toolbarView.barTintColor = lightColor
         toolbarView.translucent = true
         
-        totalUpdater.textAlignment = NSTextAlignment.Center
+        
         totalUpdater.text = "Loading Current Total"
+        
+        //styling
+        navigationController.navigationBar.setTitleVerticalPositionAdjustment(2, forBarMetrics: UIBarMetrics.Default)
+        navigationController.navigationBar.titleTextAttributes = attributeDictionary
+        totalUpdater.textAlignment = NSTextAlignment.Center
+        navigationItem.title = "Diner List"
+        self.tableView.backgroundColor = lightBlue
+        
     }
 
     override func viewDidAppear(animated: Bool){
-        total = sharedFoodController.calcTotalBill()
+                total = sharedFoodController.calcTotalBill()
         totalUpdater.text = "Current Total: $\(String(total))"
         self.tableView.reloadData()
     }

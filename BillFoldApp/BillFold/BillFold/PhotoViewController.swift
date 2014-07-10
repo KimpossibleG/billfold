@@ -9,9 +9,16 @@
 import UIKit
 
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    let lightColor: UIColor = UIColor(red: 1, green: 0.600, blue: 0, alpha: 1)
+
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
     var overLayLoader = UIView()
+    
+    @IBAction func buttonTap(sender: AnyObject) {
+        
+    }
+
+    // FONT STLYING //
+    let attributeDictionary = [UITextAttributeTextColor: UIColor.whiteColor(), UITextAttributeFont: UIFont(name: "Noteworthy-Bold", size: 35)]
     
     func makeSpinner() {
         overLayLoader.frame = UIScreen.mainScreen().bounds
@@ -23,24 +30,18 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         overLayLoader.hidden = true
     }
     
-    func loadImage() {
-        
-    }
-    
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
-        if self.image!.image === nil {
+        if self.image!.image == nil {
+            photoAlert()
             return false
         } else {
             return true
         }
     }
     
-    override func performSegueWithIdentifier(identifier: String!, sender: AnyObject!) {
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        var image:UIImage = UIImage(named: "photo.JPG")
-        var imageString:NSString = TesseractController.recognizeImage(image) as NSString
+        var segueImage:UIImage = UIImage(named: "photo.JPG")
+        var imageString:NSString = TesseractController.recognizeImage(segueImage) as NSString
         var foodCollection = TesseractController.regexDo(imageString)
         foodCollection.enumerateObjectsUsingBlock(
             {
@@ -50,17 +51,9 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         )
         sharedRegexController.deleteNonFood(foodCollection)
         sharedRegexController.summarizeTaxes(foodCollection)
-    
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        makeSpinner()
-        photoButton.title = "Photo"
-        navigationController.navigationBar.barTintColor = lightColor
-        navigationController.navigationBar
-    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -71,20 +64,36 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet var Instructions: UILabel
     @IBOutlet var Continue: UILabel
     @IBOutlet var Welcome: UILabel
-
     @IBOutlet var image: UIImageView?
-    
+    @IBOutlet var doneButton: UIBarButtonItem
     @IBOutlet var choosePhotoButton: UIBarButtonItem
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController.navigationBar.setTitleVerticalPositionAdjustment(8, forBarMetrics: UIBarMetrics.Default)
+        self.view.backgroundColor = lightBlue
+        self.navigationItem.title = "BillFold"
+        navigationController.navigationBar.titleTextAttributes = attributeDictionary
+        photoButton.title = "Photo"
+        navigationController.navigationBar.barTintColor = lightColor
+    }
+    
+    
+    func photoAlert() {
+        var photoAlert = UIAlertController(title: "No Photo Found", message: "Please take a photo", preferredStyle: UIAlertControllerStyle.Alert)
+        photoAlert.addAction(UIAlertAction(title: "Okay!", style: UIAlertActionStyle.Default, handler: nil))
+         self.presentViewController(photoAlert, animated: true, completion: nil)
+    }
+    
     // Actions
+    
     @IBAction func choosePhoto(sender: UIBarButtonItem) {
         let capture = UIImagePickerController()
         capture.delegate = self
         capture.sourceType = .PhotoLibrary
         self.presentViewController(capture, animated: true, completion: nil)
     }
-    
-    
+
     @IBAction func takePhoto(sender : UIBarButtonItem) {
         let capture = UIImagePickerController()
         capture.delegate = self
@@ -103,9 +112,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
         self.image!.image = image as UIImage
         self.dismissModalViewControllerAnimated(true)
-        Continue.hidden = false
-        Instructions.hidden = true
-        Welcome.hidden = true
         var cameraOverlayView: UITableView!
     }
     
