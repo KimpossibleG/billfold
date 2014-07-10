@@ -13,10 +13,10 @@ No additional software is required.
 
 ## Technologies
 
-BillFold 
+- [Swift](https://developer.apple.com/swift/) 
 - Tesseract
 - xCode 6 Beta
-- Swift
+
 - Objective C
 
 
