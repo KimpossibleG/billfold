@@ -24,8 +24,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem width="193" style="plain" systemItem="fixedSpace" id="b7m-0b-y7M"/>
-                                <barButtonItem title="Get my totals" id="Vnn-Sv-4hs">
+                                <barButtonItem width="180" style="plain" systemItem="fixedSpace" id="b7m-0b-y7M"/>
+                                <barButtonItem title="Get Our Totals" id="Vnn-Sv-4hs">
                                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <segue destination="wpO-nV-ziD" kind="push" id="grr-iW-rv7"/>

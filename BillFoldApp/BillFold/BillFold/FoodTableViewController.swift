@@ -53,6 +53,7 @@ class FoodTableViewController: UITableViewController {
         navigationItem.title = "Foods"
         navigationController.navigationBar.titleTextAttributes = attributeDictionary
         navigationController.navigationBar.setTitleVerticalPositionAdjustment(2, forBarMetrics: UIBarMetrics.Default)
+        self.tableView.backgroundColor = lightBlue
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
     }
