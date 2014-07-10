@@ -23,6 +23,7 @@ class AddDinerViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        self.view.backgroundColor = lightBlue
         addDinerButton.tintColor = black
         addDinerField.tintColor = black
         super.viewDidLoad()
