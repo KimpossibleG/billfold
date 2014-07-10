@@ -9,15 +9,17 @@
 import UIKit
 
 let black = UIColor.blackColor()
-let lightColor: UIColor = UIColor(red: 1, green: 0.800, blue: 0.2, alpha: 1)
+let lightColor: UIColor = UIColor(red: 1, green: 0.212, blue: 0, alpha: 1)
+let lightBlue = UIColor(red: 0.698, green: 0.831, blue: 0.863, alpha: 1)
+let darkBlue = UIColor(red: 0.165, green: 0.227, blue: 0.282, alpha: 1)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
-    var window: UIWindow?
-
+    var window: UIWindow!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+        application.statusBarStyle = UIStatusBarStyle.LightContent
         
         return true
     }

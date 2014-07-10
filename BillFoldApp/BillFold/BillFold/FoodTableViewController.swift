@@ -11,6 +11,7 @@ import UIKit
 class FoodTableViewController: UITableViewController {
     
     var currentDinerIndex:NSInteger = NSInteger()
+    let attributeDictionary = [UITextAttributeTextColor: UIColor.whiteColor(), UITextAttributeFont: UIFont(name: "Helvetica Neue", size: 25)]
     
     init(style: UITableViewStyle) {
         super.init(style: style)
@@ -49,6 +50,9 @@ class FoodTableViewController: UITableViewController {
         var currentDiner = sharedDinerStorage.dinerList[currentDinerIndex]
         let nib = UINib(nibName: "BNRItemCell", bundle: nil)
         self.tableView!.registerNib(nib, forCellReuseIdentifier: "BNRItemCell")
+        navigationItem.title = "Foods"
+        navigationController.navigationBar.titleTextAttributes = attributeDictionary
+        navigationController.navigationBar.setTitleVerticalPositionAdjustment(2, forBarMetrics: UIBarMetrics.Default)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
     }
@@ -77,11 +81,6 @@ class FoodTableViewController: UITableViewController {
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
             
         var foodCell = tableView?.dequeueReusableCellWithIdentifier("BNRItemCell",forIndexPath: indexPath) as BNRItemCell
-        
-//        if !foodCell {
-//            foodCell = BNRItemCell()
-//            
-//        }
         
         var specificFood = sharedFoodController.foodAndPrices[indexPath.row].food as String
         var specificPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String

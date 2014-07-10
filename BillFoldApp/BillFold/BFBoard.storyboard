@@ -26,6 +26,7 @@
                             <items>
                                 <barButtonItem width="193" style="plain" systemItem="fixedSpace" id="b7m-0b-y7M"/>
                                 <barButtonItem title="Get my totals" id="Vnn-Sv-4hs">
+                                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <segue destination="wpO-nV-ziD" kind="push" id="grr-iW-rv7"/>
                                     </connections>
@@ -49,7 +50,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="6bn-RU-ZA3">
-                        <barButtonItem key="rightBarButtonItem" title="Add A Diner" id="QmV-6N-vNA">
+                        <barButtonItem key="rightBarButtonItem" title="Add Diner" id="QmV-6N-vNA">
                             <connections>
                                 <segue destination="UgA-Hs-gRg" kind="push" id="d2e-JS-qi3"/>
                             </connections>
@@ -86,7 +87,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="i84-eo-l5S">
-                        <barButtonItem key="rightBarButtonItem" title="Add Food Item" id="Xha-XH-bpk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xha-XH-bpk">
                             <connections>
                                 <segue destination="KAY-PF-VC8" kind="push" id="cA4-4U-7ms"/>
                             </connections>
@@ -241,41 +242,29 @@
         <scene sceneID="tig-iE-BAa">
             <objects>
                 <viewController id="T1X-hO-DKI" customClass="PhotoViewController" customModule="BillFold" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wm6-B5-Oy0">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Wm6-B5-Oy0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click camera button on upper left to take picture of receipt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jCn-mR-knA">
-                                <rect key="frame" x="36" y="121" width="253" height="140"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Nl-3f-AOA">
+                                <rect key="frame" x="32" y="402" width="257" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If it looks like a good picture... click done" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0jG-uu-Ohj">
-                                <rect key="frame" x="33" y="72" width="254" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to BillFold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n4s-ZE-FI1">
-                                <rect key="frame" x="1" y="67" width="319" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="-2" height="-1"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="dre-un-3bJ">
-                                <rect key="frame" x="-1" y="132" width="322" height="430"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" red="0.99215692281723022" green="0.48627454042434692" blue="0.15294118225574493" alpha="0.0" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Receipt From Roll">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="T1X-hO-DKI" eventType="touchUpInside" id="LSK-jy-rMx"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Q5g-30-1zv">
-                                <rect key="frame" x="92" y="406" width="137" height="26"/>
+                                <rect key="frame" x="72" y="209" width="176" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Take Photo">
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Take Photo" image="Photo-Video-Slr-camera-icon.png">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -283,34 +272,53 @@
                                     <action selector="takePhoto:" destination="T1X-hO-DKI" eventType="touchUpInside" id="klK-zT-QRx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Nl-3f-AOA">
-                                <rect key="frame" x="43" y="460" width="239" height="44"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- or -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JTo-mo-H9t">
+                                <rect key="frame" x="139" y="388" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Choose Photo From Library">
-                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="choosePhoto:" destination="T1X-hO-DKI" eventType="touchUpInside" id="LSK-jy-rMx"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.97927635908126831" green="0.96609293688949449" blue="0.94861245153677409" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the camera to take a picture of your receipt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1tV-o4-BwX">
+                                <rect key="frame" x="24" y="127" width="272" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87486443982568796" green="0.97494894872667537" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="j9Y-u6-ghW">
+                                <rect key="frame" x="93" y="256" width="12" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.79517510079999998" green="1" blue="0.82074562549999996" alpha="0.0" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="7Zs-4J-P2T">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="iBk-7m-Jbx">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="UYR-9c-XTc">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ah5-91-4Dh">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTap:" destination="T1X-hO-DKI" eventType="touchUpInside" id="X1y-Kn-Ddl"/>
+                                    <segue destination="ojk-Wl-DRV" kind="push" id="bGn-mr-VDJ"/>
+                                </connections>
+                            </button>
                             <connections>
-                                <action selector="doneButtonPress:" destination="T1X-hO-DKI" id="bwa-xJ-mcW"/>
-                                <segue destination="ojk-Wl-DRV" kind="push" id="nNL-xn-Dpf"/>
+                                <action selector="buttonTap:" destination="T1X-hO-DKI" id="sHA-xo-kKw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="Continue" destination="0jG-uu-Ohj" id="neG-L7-cHZ"/>
-                        <outlet property="Instructions" destination="jCn-mR-knA" id="oBj-H7-Vu0"/>
-                        <outlet property="Welcome" destination="n4s-ZE-FI1" id="ykw-Q9-MHs"/>
                         <outlet property="choosePhotoButton" destination="3Nl-3f-AOA" id="pBv-LW-rKx"/>
-                        <outlet property="image" destination="dre-un-3bJ" id="Xed-eX-g2m"/>
+                        <outlet property="image" destination="j9Y-u6-ghW" id="dbK-rP-Dam"/>
                         <outlet property="photoButton" destination="Q5g-30-1zv" id="q2K-9h-mdw"/>
                     </connections>
                 </viewController>
@@ -319,6 +327,9 @@
             <point key="canvasLocation" x="1007" y="379"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Photo-Video-Slr-camera-icon.png" width="512" height="512"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

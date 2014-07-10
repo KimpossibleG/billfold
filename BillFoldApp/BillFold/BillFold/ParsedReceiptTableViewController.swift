@@ -13,6 +13,7 @@ class ParsedReceiptViewController: UITableViewController {
     var foodToKeep = ParsedFood[]()
     let doneButton = UIBarButtonItem()
     let addFoodButton = UIBarButtonItem()
+    let attributeDictionary = [UITextAttributeTextColor: UIColor.whiteColor()]
     
     func doneButtonTap(sender: UIButton!) {
         sharedFoodController.foodAndPrices = foodToKeep
@@ -33,6 +34,11 @@ class ParsedReceiptViewController: UITableViewController {
         doneButton.title = "Done"
         doneButton.target = self
         doneButton.action = "doneButtonTap:"
+
+        // colors
+        doneButton.tintColor = UIColor.whiteColor()
+        navigationController.navigationBar.barTintColor = lightColor
+        navigationController.navigationBar.titleTextAttributes = attributeDictionary
     }
 
     override func didReceiveMemoryWarning() {
