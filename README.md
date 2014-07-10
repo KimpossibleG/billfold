@@ -11,6 +11,13 @@ BillFold is available for the iPhone 4/4s/5/5s, and requires iOS 8. During devel
 
 No additional software is required.
 
+## Technologies
+
+BillFold 
+- Tesseract
+- xCode 6 Beta
+- Swift
+- Objective C
 
 
 ## RESOURCES:
