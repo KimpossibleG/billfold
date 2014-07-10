@@ -62,7 +62,7 @@ class TotalViewController: UITableViewController {
         var currentDiner = sharedDinerStorage.dinerList[section].name
         var totalOwed = sharedDinerStorage.dinerList[section].totalOwed
         
-        var nameAndTotal = "\(currentDiner) — Owed: $\(totalOwed)"
+        var nameAndTotal = "\(currentDiner) — Owes: $\(totalOwed)"
         return nameAndTotal as String
     }
     
