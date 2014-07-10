@@ -39,4 +39,6 @@ The BillFold team comprises [Rick Dsida](mailto:rick.dsida@icloud.com), [Kim Gir
 5. git push origin {your_branch_name}
 6. On GitHub, submit a pull request
 
+## Licensing
 
+This code is free to use under the terms of the MIT license.
