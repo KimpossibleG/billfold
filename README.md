@@ -27,18 +27,16 @@ Note: The GitHub content statistics for BillFold are misleading, as they indicat
 The BillFold team comprises [Rick Dsida](mailto:rick.dsida@icloud.com), [Kim Girard](mailto:kimberley.girard@gmail.com), [Mikee Pourhadi](mailto:mikeepourhadi@gmail.com), and [Caleb Rugg](mailto:calebrugg@gmail.com). If you have questions about the app or would like to contribute, please open an issue and/or submit a pull request to this respository using the below process:
 
 ### To start working on the app:
-```
-1. git clone "the master"
-2. git checkout -b "your_branch_name"
-3. git pull origin master
-```
+1. `git clone "the master"`
+2. `git checkout -b your_branch_name`
+3. `git pull origin master`
+
 ### To submit a pull request:
-```
-1. git checkout {your_branch_name}
-2. git add/commit your changes
-3. git pull origin master (will try to merge; fix conflicts if necessary)
-4. git add/commit any changes
-5. git push origin {your_branch_name}
+1. `git checkout your_branch_name`
+2. `git add/commit your changes`
+3. `git pull origin master` (will try to merge; fix conflicts if necessary)
+4. `git add/commit any changes`
+5. `git push origin your_branch_name`
 6. On GitHub, submit a pull request
 ```
 
