@@ -91,7 +91,9 @@ class FoodTableViewController: UITableViewController {
         foodCell.nameLabel.text = specificFood
         foodCell.priceLabel.text = "Cost: $\(specificPrice)"
         foodCell.counterLabel.text = specificCounter
-        
+        if sharedFoodController.foodAndPrices[indexPath.row].counter > 0 {
+            foodCell.backgroundColor = UIColor.greenColor()
+        }
         return foodCell
     }
     
