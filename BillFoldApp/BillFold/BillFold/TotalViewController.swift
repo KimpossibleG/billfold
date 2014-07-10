@@ -22,7 +22,6 @@ class TotalViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -41,13 +40,14 @@ class TotalViewController: UITableViewController {
     // delete item from specific user
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         
-        var currentDiner = sharedDinerStorage.dinerList[indexPath.section]
+        
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            let item = sharedDinerStorage.dinerList[indexPath.section].foodItems[indexPath.row] as ParsedFood
-            item.counter -= 1
-            currentDiner.foodItems.removeAtIndex(indexPath.row)
+            var foodItem = sharedDinerStorage.dinerList[indexPath.section].foodItems[indexPath.row]
+            foodItem.counter -= 1
+            sharedDinerStorage.dinerList[indexPath.section].foodItems.removeAtIndex(indexPath.row)
+            
         }
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     
@@ -76,7 +76,8 @@ class TotalViewController: UITableViewController {
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
         
-        let totalCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "totalCell") as UITableViewCell
+        var totalCell = tableView!.dequeueReusableCellWithIdentifier("dinerAndTotal", forIndexPath: indexPath) as UITableViewCell
+        
         
         var specificDiner = sharedDinerStorage.dinerList[indexPath.section]
         
@@ -89,7 +90,7 @@ class TotalViewController: UITableViewController {
         
         totalCell.textLabel.text = "Total = \(specificDiner.totalOwed)"
         totalCell.text = specificFoodItem
-        totalCell.detailTextLabel.text = "Cost: $\(total)"
+        totalCell.detailTextLabel!.text = "Cost: $\(total)"
         
         return totalCell
     }
