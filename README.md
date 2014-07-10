@@ -9,7 +9,7 @@ BillFold is a stand-alone iPhone app that facilitates splitting restaurant bills
 
 BillFold is available for the iPhone 5/5s, and requires iOS 8. During development, BillFold is only available for deployment to an iPhone by users with an Apple Developer license, available [here](https://developer.apple.com/programs/ios/). Detailed instructions for deploying a phone can be found [here](http://mobiforge.com/design-development/deploying-iphone-apps-real-devices).
 
-Users with a Mac OS X of 10.9.4 or higher can clone the app from this repo to their machines, and can use xCode 6 Beta to build and run the app with the iOS simulator. 
+Users with a Mac OS X 10.9.4 or higher can clone this repo to their machines, and can use xCode 6 Beta to build and run the app with the iOS simulator. 
 
 No additional software is required.
 
