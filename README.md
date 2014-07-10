@@ -13,12 +13,14 @@ No additional software is required.
 
 ## Technologies
 
-- [Swift](https://developer.apple.com/swift/) 
-- [Tesseract](https://code.google.com/p/tesseract-ocr/), with Leptonica
-- xCode 6 Beta
+- [Swift](https://developer.apple.com/swift/): Primary development language for BillFold
+- [Objective C](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html): Secondary development language, used primarily for interacting with Tesseract
 
-- Objective C
+- [Tesseract](https://code.google.com/p/tesseract-ocr/), with [Leptonica](http://leptonica.com/): Optical Character Recognition library incorporated into BillFold
 
+- [xCode 6 Beta](https://developer.apple.com/xcode/): Development toolset, including text editor, storyboard, and simulator
+
+Note: The BillFold 
 
 ## RESOURCES:
 - [tessaract](https://github.com/ldiqual/tesseract-ios)
