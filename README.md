@@ -39,7 +39,7 @@ The BillFold team comprises [Rick Dsida](mailto:rick.dsida@icloud.com), [Kim Gir
 5. `git add . `
 6. `git commit -m "indicate your changes here"`
 7. `git push origin your_branch_name`
-8. On GitHub, submit a pull request
+8. On the [GitHub repo](https://github.com/KimpossibleG/billfold), submit a pull request.
 
 ## Licensing
 
