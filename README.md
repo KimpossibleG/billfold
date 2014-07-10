@@ -14,7 +14,7 @@ No additional software is required.
 ## Technologies
 
 - [Swift](https://developer.apple.com/swift/) 
-- Tesseract
+- [Tesseract](https://code.google.com/p/tesseract-ocr/), with Leptonica
 - xCode 6 Beta
 
 - Objective C
