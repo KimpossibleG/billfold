@@ -24,9 +24,7 @@ Note: The GitHub content statistics for BillFold are misleading, as they indicat
 
 ## Contributing
 
-The BillFold team comprises [Rick Dsida](mailto:rick.dsida@icloud.com), [Kim Girard](mailto:kimberley.girard@gmail.com), [Mikee Pourhadi](mailto:mikeepourhadi@gmail.com), and [Caleb Rugg](mailto:calebrugg@gmail.com). If you have questions about the app or would like to contribute, please open an issue and/or submit a pull request to this respository.
-
-## Pickles-Approved Git Process
+The BillFold team comprises [Rick Dsida](mailto:rick.dsida@icloud.com), [Kim Girard](mailto:kimberley.girard@gmail.com), [Mikee Pourhadi](mailto:mikeepourhadi@gmail.com), and [Caleb Rugg](mailto:calebrugg@gmail.com). If you have questions about the app or would like to contribute, please open an issue and/or submit a pull request to this respository using the below process:
 
 ### To start working on the app:
 1. git clone "the master"
