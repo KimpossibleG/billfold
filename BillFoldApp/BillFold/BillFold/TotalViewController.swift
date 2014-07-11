@@ -53,6 +53,7 @@ class TotalViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
+    
         return sharedDinerStorage.dinerList.count
     }
     override func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String {
