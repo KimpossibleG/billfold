@@ -23,9 +23,10 @@ class FoodTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, didHighlightRowAtIndexPath indexPath: NSIndexPath!) {
+        
         let currentDiner = sharedDinerStorage.dinerList[currentDinerIndex]
         let selectedFood = sharedFoodController.foodAndPrices[indexPath.row] as ParsedFood
-        
+    
         currentDiner.foodItems += selectedFood
     
         selectedFood.counter += 1
@@ -86,13 +87,12 @@ class FoodTableViewController: UITableViewController {
         var specificFood = sharedFoodController.foodAndPrices[indexPath.row].food as String
         var specificPrice = sharedFoodController.foodAndPrices[indexPath.row].price as String
 
-
         var specificCounter = String(sharedFoodController.foodAndPrices[indexPath.row].counter)
         foodCell.nameLabel.text = specificFood
         foodCell.priceLabel.text = "Cost: $\(specificPrice)"
         foodCell.counterLabel.text = specificCounter
         if sharedFoodController.foodAndPrices[indexPath.row].counter > 0 {
-            foodCell.backgroundColor = UIColor.greenColor()
+            foodCell.backgroundColor = translucentOrange
         }
         return foodCell
     }

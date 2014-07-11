@@ -13,7 +13,7 @@ class DinerViewController: UITableViewController {
     @IBOutlet var totalUpdater: UILabel
     var currentDinerIndex:NSInteger = NSInteger()
     var total = Double()
-    let attributeDictionary = [UITextAttributeTextColor: UIColor.whiteColor()]
+    let attributeDictionary = [UITextAttributeTextColor: UIColor.whiteColor(), UITextAttributeFont: UIFont(name: "Helvetica Neue", size: 25)]
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -41,6 +41,9 @@ class DinerViewController: UITableViewController {
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             var deletePerson = indexPath.row
+            for foodItem in sharedDinerStorage.dinerList[deletePerson].foodItems {
+                foodItem.counter -= 1
+            }
             sharedDinerStorage.dinerList.removeAtIndex(deletePerson)
             self.tableView.reloadData()
         }
@@ -62,9 +65,8 @@ class DinerViewController: UITableViewController {
         navigationController.navigationBar.setTitleVerticalPositionAdjustment(2, forBarMetrics: UIBarMetrics.Default)
         navigationController.navigationBar.titleTextAttributes = attributeDictionary
         totalUpdater.textAlignment = NSTextAlignment.Center
-        navigationItem.title = "Diner List"
+        navigationItem.title = "Diners"
         self.tableView.backgroundColor = lightBlue
-        
     }
 
     override func viewDidAppear(animated: Bool){

@@ -9,9 +9,9 @@
 import UIKit
 
 class TotalViewController: UITableViewController {
-    
-    var index = 0
 
+    var cellArray = NSMutableArray()
+    
     init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
@@ -40,28 +40,26 @@ class TotalViewController: UITableViewController {
     // delete item from specific user
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         
-        
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             var foodItem = sharedDinerStorage.dinerList[indexPath.section].foodItems[indexPath.row]
             foodItem.counter -= 1
             sharedDinerStorage.dinerList[indexPath.section].foodItems.removeAtIndex(indexPath.row)
-            
         }
         tableView.reloadData()
     }
-    
     
     // #pragma mark - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
+    
         return sharedDinerStorage.dinerList.count
     }
     override func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String {
+        tableView.sectionHeaderHeight = 55
         var currentDiner = sharedDinerStorage.dinerList[section].name
         var totalOwed = sharedDinerStorage.dinerList[section].totalOwed
-        
         var nameAndTotal = "\(currentDiner) — Owes: $\(totalOwed)"
         return nameAndTotal as String
     }
@@ -69,29 +67,26 @@ class TotalViewController: UITableViewController {
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        let diner = sharedDinerStorage.dinerList[section]
         return sharedDinerStorage.dinerList[section].foodItems.count
     }
-
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
         
         var totalCell = tableView!.dequeueReusableCellWithIdentifier("dinerAndTotal", forIndexPath: indexPath) as UITableViewCell
         
-        
-        var specificDiner = sharedDinerStorage.dinerList[indexPath.section]
-        
-        var specificFoodItem = specificDiner.foodItems[indexPath.row].food as String
-        var specificFoodPrice = specificDiner.foodItems[indexPath.row].price as NSString
-        var price = specificFoodPrice.doubleValue
-        var foodCount = specificDiner.foodItems[indexPath.row].counter
-        var yourSplit = price/Double(foodCount)
-        var total = floor(yourSplit * 100)/100
+        let specificDiner = sharedDinerStorage.dinerList[indexPath.section]
+
+        let specificFoodItem = specificDiner.foodItems[indexPath.row].food as String
+        let specificFoodPrice = specificDiner.foodItems[indexPath.row].price as NSString
+        let price = specificFoodPrice.doubleValue
+        let foodCount = specificDiner.foodItems[indexPath.row].counter
+        let yourSplit = price/Double(foodCount)
+        let total = floor(yourSplit * 100)/100
         
         totalCell.textLabel.text = "Total = \(specificDiner.totalOwed)"
         totalCell.text = specificFoodItem
         totalCell.detailTextLabel!.text = "Cost: $\(total)"
-        
+    
         return totalCell
     }
     
