@@ -88,10 +88,9 @@ class ParsedReceiptViewController: UITableViewController {
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
         
         let foodCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "foodItem") as UITableViewCell
-//        foodCell.multipleSelectionBackgroundView
+        
         let specificFoodItem = sharedFoodController.foodAndPrices[indexPath.row].food
         let price = sharedFoodController.foodAndPrices[indexPath.row].price
-        
         
         foodCell.text = specificFoodItem
         foodCell.detailTextLabel.text = "Cost: $\(price)"

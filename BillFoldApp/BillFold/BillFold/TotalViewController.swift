@@ -9,9 +9,9 @@
 import UIKit
 
 class TotalViewController: UITableViewController {
-    
-    var index = 0
 
+    var cellArray = NSMutableArray()
+    
     init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
@@ -40,16 +40,13 @@ class TotalViewController: UITableViewController {
     // delete item from specific user
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         
-        
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             var foodItem = sharedDinerStorage.dinerList[indexPath.section].foodItems[indexPath.row]
             foodItem.counter -= 1
             sharedDinerStorage.dinerList[indexPath.section].foodItems.removeAtIndex(indexPath.row)
-            
         }
         tableView.reloadData()
     }
-    
     
     // #pragma mark - Table view data source
 
@@ -59,9 +56,9 @@ class TotalViewController: UITableViewController {
         return sharedDinerStorage.dinerList.count
     }
     override func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String {
+        tableView.sectionHeaderHeight = 55
         var currentDiner = sharedDinerStorage.dinerList[section].name
         var totalOwed = sharedDinerStorage.dinerList[section].totalOwed
-        
         var nameAndTotal = "\(currentDiner) — Owes: $\(totalOwed)"
         return nameAndTotal as String
     }
@@ -71,14 +68,13 @@ class TotalViewController: UITableViewController {
         // Return the number of rows in the section.
         return sharedDinerStorage.dinerList[section].foodItems.count
     }
-
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell? {
         
         var totalCell = tableView!.dequeueReusableCellWithIdentifier("dinerAndTotal", forIndexPath: indexPath) as UITableViewCell
         
         let specificDiner = sharedDinerStorage.dinerList[indexPath.section]
-        
+
         let specificFoodItem = specificDiner.foodItems[indexPath.row].food as String
         let specificFoodPrice = specificDiner.foodItems[indexPath.row].price as NSString
         let price = specificFoodPrice.doubleValue
@@ -89,7 +85,7 @@ class TotalViewController: UITableViewController {
         totalCell.textLabel.text = "Total = \(specificDiner.totalOwed)"
         totalCell.text = specificFoodItem
         totalCell.detailTextLabel!.text = "Cost: $\(total)"
-        
+    
         return totalCell
     }
     
