@@ -40,7 +40,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        var segueImage:UIImage = UIImage(named: "photo.JPG")
+        var segueImage=self.image!.image
         var imageString:NSString = TesseractController.recognizeImage(segueImage) as NSString
         var foodCollection = TesseractController.regexDo(imageString)
         foodCollection.enumerateObjectsUsingBlock(
